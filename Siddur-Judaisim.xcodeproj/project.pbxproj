@@ -1,0 +1,1624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D3724B62BC44E3F003BAFAD /* מז.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724AD2BC44E3E003BAFAD /* מז.txt */; };
+		4D3724B72BC44E3F003BAFAD /* מח.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724AE2BC44E3E003BAFAD /* מח.txt */; };
+		4D3724B82BC44E3F003BAFAD /* מה.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724AF2BC44E3E003BAFAD /* מה.txt */; };
+		4D3724B92BC44E3F003BAFAD /* מט.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724B02BC44E3F003BAFAD /* מט.txt */; };
+		4D3724BA2BC44E3F003BAFAD /* מו.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724B12BC44E3F003BAFAD /* מו.txt */; };
+		4D3724BB2BC44E3F003BAFAD /* נ.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724B22BC44E3F003BAFAD /* נ.txt */; };
+		4D3724BC2BC44E3F003BAFAD /* מג.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724B32BC44E3F003BAFAD /* מג.txt */; };
+		4D3724BD2BC44E3F003BAFAD /* מב.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724B42BC44E3F003BAFAD /* מב.txt */; };
+		4D3724BE2BC44E3F003BAFAD /* מד.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724B52BC44E3F003BAFAD /* מד.txt */; };
+		4D3724D52BC4723D003BAFAD /* עא.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724BF2BC4723C003BAFAD /* עא.txt */; };
+		4D3724D62BC4723D003BAFAD /* סא.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724C02BC4723C003BAFAD /* סא.txt */; };
+		4D3724D72BC4723D003BAFAD /* סח.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724C12BC4723C003BAFAD /* סח.txt */; };
+		4D3724D82BC4723D003BAFAD /* עב.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724C22BC4723C003BAFAD /* עב.txt */; };
+		4D3724D92BC4723D003BAFAD /* סט.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724C32BC4723C003BAFAD /* סט.txt */; };
+		4D3724DA2BC4723D003BAFAD /* נז.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724C42BC4723C003BAFAD /* נז.txt */; };
+		4D3724DB2BC4723D003BAFAD /* ס.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724C52BC4723C003BAFAD /* ס.txt */; };
+		4D3724DC2BC4723D003BAFAD /* סב.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724C62BC4723C003BAFAD /* סב.txt */; };
+		4D3724DD2BC4723D003BAFAD /* נד.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724C72BC4723C003BAFAD /* נד.txt */; };
+		4D3724DE2BC4723D003BAFAD /* סג.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724C82BC4723C003BAFAD /* סג.txt */; };
+		4D3724DF2BC4723D003BAFAD /* נה.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724C92BC4723C003BAFAD /* נה.txt */; };
+		4D3724E02BC4723D003BAFAD /* סד.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724CA2BC4723C003BAFAD /* סד.txt */; };
+		4D3724E12BC4723D003BAFAD /* סז.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724CB2BC4723C003BAFAD /* סז.txt */; };
+		4D3724E22BC4723D003BAFAD /* נט.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724CC2BC4723C003BAFAD /* נט.txt */; };
+		4D3724E32BC4723D003BAFAD /* נג.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724CD2BC4723D003BAFAD /* נג.txt */; };
+		4D3724E42BC4723D003BAFAD /* ע.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724CE2BC4723D003BAFAD /* ע.txt */; };
+		4D3724E52BC4723D003BAFAD /* נא.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724CF2BC4723D003BAFAD /* נא.txt */; };
+		4D3724E62BC4723D003BAFAD /* נב.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724D02BC4723D003BAFAD /* נב.txt */; };
+		4D3724E72BC4723D003BAFAD /* נו.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724D12BC4723D003BAFAD /* נו.txt */; };
+		4D3724E82BC4723D003BAFAD /* נח.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724D22BC4723D003BAFAD /* נח.txt */; };
+		4D3724E92BC4723D003BAFAD /* סה.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724D32BC4723D003BAFAD /* סה.txt */; };
+		4D3724EA2BC4723D003BAFAD /* סו.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724D42BC4723D003BAFAD /* סו.txt */; };
+		4D3724FC2BC47A50003BAFAD /* עד.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724EB2BC47A4F003BAFAD /* עד.txt */; };
+		4D3724FD2BC47A50003BAFAD /* עג.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724EC2BC47A4F003BAFAD /* עג.txt */; };
+		4D3724FE2BC47A50003BAFAD /* פו.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724ED2BC47A4F003BAFAD /* פו.txt */; };
+		4D3724FF2BC47A50003BAFAD /* פד.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724EE2BC47A4F003BAFAD /* פד.txt */; };
+		4D3725002BC47A50003BAFAD /* פב.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724EF2BC47A50003BAFAD /* פב.txt */; };
+		4D3725012BC47A50003BAFAD /* עח.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724F02BC47A50003BAFAD /* עח.txt */; };
+		4D3725022BC47A50003BAFAD /* עה.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724F12BC47A50003BAFAD /* עה.txt */; };
+		4D3725032BC47A50003BAFAD /* עז.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724F22BC47A50003BAFAD /* עז.txt */; };
+		4D3725042BC47A50003BAFAD /* עט.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724F32BC47A50003BAFAD /* עט.txt */; };
+		4D3725052BC47A50003BAFAD /* פח.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724F42BC47A50003BAFAD /* פח.txt */; };
+		4D3725062BC47A50003BAFAD /* פט.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724F52BC47A50003BAFAD /* פט.txt */; };
+		4D3725072BC47A50003BAFAD /* פ.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724F62BC47A50003BAFAD /* פ.txt */; };
+		4D3725082BC47A50003BAFAD /* פה.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724F72BC47A50003BAFAD /* פה.txt */; };
+		4D3725092BC47A50003BAFAD /* פא.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724F82BC47A50003BAFAD /* פא.txt */; };
+		4D37250A2BC47A50003BAFAD /* פז.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724F92BC47A50003BAFAD /* פז.txt */; };
+		4D37250B2BC47A50003BAFAD /* פג.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724FA2BC47A50003BAFAD /* פג.txt */; };
+		4D37250C2BC47A50003BAFAD /* עו.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724FB2BC47A50003BAFAD /* עו.txt */; };
+		4D3725452BC6911C003BAFAD /* קד.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3725342BC6911C003BAFAD /* קד.txt */; };
+		4D3725462BC6911C003BAFAD /* צט.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3725352BC6911C003BAFAD /* צט.txt */; };
+		4D3725472BC6911C003BAFAD /* צא.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3725362BC6911C003BAFAD /* צא.txt */; };
+		4D3725482BC6911C003BAFAD /* צז.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3725372BC6911C003BAFAD /* צז.txt */; };
+		4D3725492BC6911C003BAFAD /* ק.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3725382BC6911C003BAFAD /* ק.txt */; };
+		4D37254A2BC6911C003BAFAD /* צב.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3725392BC6911C003BAFAD /* צב.txt */; };
+		4D37254B2BC6911C003BAFAD /* צ.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D37253A2BC6911C003BAFAD /* צ.txt */; };
+		4D37254C2BC6911C003BAFAD /* קב.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D37253B2BC6911C003BAFAD /* קב.txt */; };
+		4D37254D2BC6911C003BAFAD /* צו.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D37253C2BC6911C003BAFAD /* צו.txt */; };
+		4D37254E2BC6911C003BAFAD /* צה.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D37253D2BC6911C003BAFAD /* צה.txt */; };
+		4D37254F2BC6911C003BAFAD /* צד.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D37253E2BC6911C003BAFAD /* צד.txt */; };
+		4D3725502BC6911C003BAFAD /* צג.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D37253F2BC6911C003BAFAD /* צג.txt */; };
+		4D3725512BC6911C003BAFAD /* קג.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3725402BC6911C003BAFAD /* קג.txt */; };
+		4D3725522BC6911C003BAFAD /* קו.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3725412BC6911C003BAFAD /* קו.txt */; };
+		4D3725532BC6911C003BAFAD /* צח.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3725422BC6911C003BAFAD /* צח.txt */; };
+		4D3725542BC6911C003BAFAD /* קא.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3725432BC6911C003BAFAD /* קא.txt */; };
+		4D3725552BC6911C003BAFAD /* קה.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3725442BC6911C003BAFAD /* קה.txt */; };
+		4D37255B2BC6C667003BAFAD /* shachar.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D37255A2BC6C667003BAFAD /* shachar.txt */; };
+		4D37255D2BC6C746003BAFAD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37255C2BC6C746003BAFAD /* Utilities.swift */; };
+		4D575EC72C6384E6006C5D98 /* HebrewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D575EC62C6384E6006C5D98 /* HebrewViewModel.swift */; };
+		4D575EC82C6384E6006C5D98 /* HebrewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D575EC62C6384E6006C5D98 /* HebrewViewModel.swift */; };
+		4D575ECA2C638650006C5D98 /* LocationManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D575EC92C638650006C5D98 /* LocationManagerModel.swift */; };
+		4D575ECB2C638650006C5D98 /* LocationManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D575EC92C638650006C5D98 /* LocationManagerModel.swift */; };
+		4D575EDD2C63AE32006C5D98 /* CarPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D575EDC2C63AE32006C5D98 /* CarPlay.framework */; };
+		4D610F772C4F9D6F009B785E /* קיז.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F6A2C4F9D6F009B785E /* קיז.txt */; };
+		4D610F782C4F9D6F009B785E /* קטז.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F6B2C4F9D6F009B785E /* קטז.txt */; };
+		4D610F792C4F9D6F009B785E /* קיח.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F6C2C4F9D6F009B785E /* קיח.txt */; };
+		4D610F7A2C4F9D6F009B785E /* קיא.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F6D2C4F9D6F009B785E /* קיא.txt */; };
+		4D610F7B2C4F9D6F009B785E /* קיד.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F6E2C4F9D6F009B785E /* קיד.txt */; };
+		4D610F7C2C4F9D6F009B785E /* קט.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F6F2C4F9D6F009B785E /* קט.txt */; };
+		4D610F7D2C4F9D6F009B785E /* קיט.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F702C4F9D6F009B785E /* קיט.txt */; };
+		4D610F7E2C4F9D6F009B785E /* קז.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F712C4F9D6F009B785E /* קז.txt */; };
+		4D610F7F2C4F9D6F009B785E /* קטו.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F722C4F9D6F009B785E /* קטו.txt */; };
+		4D610F802C4F9D6F009B785E /* קח.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F732C4F9D6F009B785E /* קח.txt */; };
+		4D610F812C4F9D6F009B785E /* קי.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F742C4F9D6F009B785E /* קי.txt */; };
+		4D610F822C4F9D6F009B785E /* קיג.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F752C4F9D6F009B785E /* קיג.txt */; };
+		4D610F832C4F9D6F009B785E /* קיב.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F762C4F9D6F009B785E /* קיב.txt */; };
+		4D610FA32C4FA554009B785E /* קלה.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F842C4FA553009B785E /* קלה.txt */; };
+		4D610FA42C4FA554009B785E /* קכה.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F852C4FA553009B785E /* קכה.txt */; };
+		4D610FA52C4FA554009B785E /* קכא.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F862C4FA553009B785E /* קכא.txt */; };
+		4D610FA62C4FA554009B785E /* קלז.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F872C4FA553009B785E /* קלז.txt */; };
+		4D610FA72C4FA554009B785E /* קלו.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F882C4FA553009B785E /* קלו.txt */; };
+		4D610FA82C4FA554009B785E /* קמג.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F892C4FA553009B785E /* קמג.txt */; };
+		4D610FA92C4FA554009B785E /* קנ.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F8A2C4FA554009B785E /* קנ.txt */; };
+		4D610FAA2C4FA554009B785E /* קמב.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F8B2C4FA554009B785E /* קמב.txt */; };
+		4D610FAB2C4FA554009B785E /* קכו.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F8C2C4FA554009B785E /* קכו.txt */; };
+		4D610FAC2C4FA554009B785E /* קכח.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F8D2C4FA554009B785E /* קכח.txt */; };
+		4D610FAD2C4FA554009B785E /* קמז.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F8E2C4FA554009B785E /* קמז.txt */; };
+		4D610FAE2C4FA554009B785E /* קלח.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F8F2C4FA554009B785E /* קלח.txt */; };
+		4D610FAF2C4FA554009B785E /* קכב.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F902C4FA554009B785E /* קכב.txt */; };
+		4D610FB02C4FA554009B785E /* קמא.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F912C4FA554009B785E /* קמא.txt */; };
+		4D610FB12C4FA554009B785E /* קלט.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F922C4FA554009B785E /* קלט.txt */; };
+		4D610FB22C4FA554009B785E /* קלב.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F932C4FA554009B785E /* קלב.txt */; };
+		4D610FB32C4FA554009B785E /* קמח.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F942C4FA554009B785E /* קמח.txt */; };
+		4D610FB42C4FA554009B785E /* קכט.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F952C4FA554009B785E /* קכט.txt */; };
+		4D610FB52C4FA554009B785E /* קל.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F962C4FA554009B785E /* קל.txt */; };
+		4D610FB62C4FA554009B785E /* קכד.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F972C4FA554009B785E /* קכד.txt */; };
+		4D610FB72C4FA554009B785E /* קכז.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F982C4FA554009B785E /* קכז.txt */; };
+		4D610FB82C4FA554009B785E /* קכ.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F992C4FA554009B785E /* קכ.txt */; };
+		4D610FB92C4FA554009B785E /* קכג.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F9A2C4FA554009B785E /* קכג.txt */; };
+		4D610FBA2C4FA554009B785E /* קלד.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F9B2C4FA554009B785E /* קלד.txt */; };
+		4D610FBB2C4FA554009B785E /* קלא.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F9C2C4FA554009B785E /* קלא.txt */; };
+		4D610FBC2C4FA554009B785E /* קמד.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F9D2C4FA554009B785E /* קמד.txt */; };
+		4D610FBD2C4FA554009B785E /* קמה.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F9E2C4FA554009B785E /* קמה.txt */; };
+		4D610FBE2C4FA554009B785E /* קמ.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610F9F2C4FA554009B785E /* קמ.txt */; };
+		4D610FBF2C4FA554009B785E /* קמו.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610FA02C4FA554009B785E /* קמו.txt */; };
+		4D610FC02C4FA554009B785E /* קלג.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610FA12C4FA554009B785E /* קלג.txt */; };
+		4D610FC12C4FA554009B785E /* קמט.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D610FA22C4FA554009B785E /* קמט.txt */; };
+		4D81496D2BB9C0CA00DA919E /* Siddur_JudaisimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81496C2BB9C0CA00DA919E /* Siddur_JudaisimApp.swift */; };
+		4D81496F2BB9C0CA00DA919E /* SiddurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81496E2BB9C0CA00DA919E /* SiddurView.swift */; };
+		4D8149712BB9C0CB00DA919E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D8149702BB9C0CB00DA919E /* Assets.xcassets */; };
+		4D8149742BB9C0CB00DA919E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D8149732BB9C0CB00DA919E /* Preview Assets.xcassets */; };
+		4D81497E2BB9C0CB00DA919E /* Siddur_JudaisimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81497D2BB9C0CB00DA919E /* Siddur_JudaisimTests.swift */; };
+		4D8149882BB9C0CB00DA919E /* Siddur_JudaisimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8149872BB9C0CB00DA919E /* Siddur_JudaisimUITests.swift */; };
+		4D81498A2BB9C0CB00DA919E /* Siddur_JudaisimUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8149892BB9C0CB00DA919E /* Siddur_JudaisimUITestsLaunchTests.swift */; };
+		4D8149982BB9C0F600DA919E /* Hebcal in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8149972BB9C0F600DA919E /* Hebcal */; };
+		4D81499A2BB9C14700DA919E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8149992BB9C14700DA919E /* SettingsView.swift */; };
+		4D81499C2BB9C16A00DA919E /* PrayerPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81499B2BB9C16A00DA919E /* PrayerPageView.swift */; };
+		4D81499E2BB9C19100DA919E /* PrayersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81499D2BB9C19100DA919E /* PrayersData.swift */; };
+		4D8149A22BB9C1CB00DA919E /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8149A12BB9C1CB00DA919E /* AboutView.swift */; };
+		4D8149A62BB9C25E00DA919E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 4D8149A52BB9C25E00DA919E /* Localizable.xcstrings */; };
+		4D8149AB2BB9CDC300DA919E /* TehillimPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8149AA2BB9CDC300DA919E /* TehillimPageView.swift */; };
+		4D8149CB2BB9D65700DA919E /* TehillimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8149CA2BB9D65700DA919E /* TehillimView.swift */; };
+		4D8A115C2BC29A6300907B01 /* TehillimViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A115B2BC29A6300907B01 /* TehillimViewModel.swift */; };
+		4D9BCB572BBE5F0C004FA4F5 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9BCB562BBE5F0C004FA4F5 /* NotificationHandler.swift */; };
+		4D9BCB592BBE8F13004FA4F5 /* ZemanimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9BCB582BBE8F13004FA4F5 /* ZemanimView.swift */; };
+		4D9BCB802BBEB6C1004FA4F5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9BCB602BBEA1EA004FA4F5 /* WidgetKit.framework */; };
+		4D9BCB812BBEB6C1004FA4F5 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9BCB622BBEA1EA004FA4F5 /* SwiftUI.framework */; };
+		4D9BCB842BBEB6C1004FA4F5 /* ZmanimWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9BCB832BBEB6C1004FA4F5 /* ZmanimWidgetBundle.swift */; };
+		4D9BCB862BBEB6C1004FA4F5 /* ZmanimWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9BCB852BBEB6C1004FA4F5 /* ZmanimWidget.swift */; };
+		4D9BCB882BBEB6C3004FA4F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9BCB872BBEB6C3004FA4F5 /* Assets.xcassets */; };
+		4D9BCB8C2BBEB6C3004FA4F5 /* ZmanimWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4D9BCB7F2BBEB6C1004FA4F5 /* ZmanimWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4D9BCB922BBEBEA8004FA4F5 /* Hebcal in Frameworks */ = {isa = PBXBuildFile; productRef = 4D9BCB912BBEBEA8004FA4F5 /* Hebcal */; };
+		4DDBC1B42BBBD3DA006E39D4 /* ט.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC18B2BBBD3D9006E39D4 /* ט.txt */; };
+		4DDBC1B52BBBD3DA006E39D4 /* כה.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC18C2BBBD3D9006E39D4 /* כה.txt */; };
+		4DDBC1B62BBBD3DA006E39D4 /* א.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC18D2BBBD3D9006E39D4 /* א.txt */; };
+		4DDBC1B72BBBD3DA006E39D4 /* יא.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC18E2BBBD3D9006E39D4 /* יא.txt */; };
+		4DDBC1B82BBBD3DA006E39D4 /* כט.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC18F2BBBD3D9006E39D4 /* כט.txt */; };
+		4DDBC1B92BBBD3DA006E39D4 /* לו.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1902BBBD3D9006E39D4 /* לו.txt */; };
+		4DDBC1BA2BBBD3DA006E39D4 /* לב.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1912BBBD3D9006E39D4 /* לב.txt */; };
+		4DDBC1BB2BBBD3DA006E39D4 /* יז.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1922BBBD3D9006E39D4 /* יז.txt */; };
+		4DDBC1BC2BBBD3DA006E39D4 /* טו.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1932BBBD3D9006E39D4 /* טו.txt */; };
+		4DDBC1BD2BBBD3DA006E39D4 /* כח.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1942BBBD3D9006E39D4 /* כח.txt */; };
+		4DDBC1BE2BBBD3DA006E39D4 /* יד.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1952BBBD3D9006E39D4 /* יד.txt */; };
+		4DDBC1BF2BBBD3DA006E39D4 /* כו.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1962BBBD3D9006E39D4 /* כו.txt */; };
+		4DDBC1C02BBBD3DA006E39D4 /* לא.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1972BBBD3D9006E39D4 /* לא.txt */; };
+		4DDBC1C12BBBD3DA006E39D4 /* לג.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1982BBBD3D9006E39D4 /* לג.txt */; };
+		4DDBC1C22BBBD3DA006E39D4 /* יט.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1992BBBD3D9006E39D4 /* יט.txt */; };
+		4DDBC1C32BBBD3DA006E39D4 /* כב.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC19A2BBBD3D9006E39D4 /* כב.txt */; };
+		4DDBC1C42BBBD3DA006E39D4 /* כד.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC19B2BBBD3D9006E39D4 /* כד.txt */; };
+		4DDBC1C52BBBD3DA006E39D4 /* ד.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC19C2BBBD3D9006E39D4 /* ד.txt */; };
+		4DDBC1C62BBBD3DA006E39D4 /* לט.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC19D2BBBD3D9006E39D4 /* לט.txt */; };
+		4DDBC1C72BBBD3DA006E39D4 /* ג.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC19E2BBBD3D9006E39D4 /* ג.txt */; };
+		4DDBC1C82BBBD3DA006E39D4 /* כ.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC19F2BBBD3D9006E39D4 /* כ.txt */; };
+		4DDBC1C92BBBD3DA006E39D4 /* כג.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1A02BBBD3D9006E39D4 /* כג.txt */; };
+		4DDBC1CA2BBBD3DA006E39D4 /* ה.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1A12BBBD3D9006E39D4 /* ה.txt */; };
+		4DDBC1CB2BBBD3DA006E39D4 /* יג.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1A22BBBD3D9006E39D4 /* יג.txt */; };
+		4DDBC1CC2BBBD3DA006E39D4 /* ז.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1A32BBBD3D9006E39D4 /* ז.txt */; };
+		4DDBC1CD2BBBD3DA006E39D4 /* יב.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1A42BBBD3D9006E39D4 /* יב.txt */; };
+		4DDBC1CE2BBBD3DA006E39D4 /* ו.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1A52BBBD3D9006E39D4 /* ו.txt */; };
+		4DDBC1CF2BBBD3DA006E39D4 /* מא.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1A62BBBD3D9006E39D4 /* מא.txt */; };
+		4DDBC1D02BBBD3DA006E39D4 /* לד.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1A72BBBD3D9006E39D4 /* לד.txt */; };
+		4DDBC1D12BBBD3DA006E39D4 /* לז.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1A82BBBD3D9006E39D4 /* לז.txt */; };
+		4DDBC1D22BBBD3DA006E39D4 /* לח.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1A92BBBD3D9006E39D4 /* לח.txt */; };
+		4DDBC1D32BBBD3DA006E39D4 /* י.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1AA2BBBD3D9006E39D4 /* י.txt */; };
+		4DDBC1D42BBBD3DA006E39D4 /* טז.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1AB2BBBD3D9006E39D4 /* טז.txt */; };
+		4DDBC1D52BBBD3DA006E39D4 /* לה.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1AC2BBBD3D9006E39D4 /* לה.txt */; };
+		4DDBC1D62BBBD3DA006E39D4 /* יח.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1AD2BBBD3D9006E39D4 /* יח.txt */; };
+		4DDBC1D72BBBD3DA006E39D4 /* כז.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1AE2BBBD3D9006E39D4 /* כז.txt */; };
+		4DDBC1D82BBBD3DA006E39D4 /* ב.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1AF2BBBD3DA006E39D4 /* ב.txt */; };
+		4DDBC1D92BBBD3DA006E39D4 /* כא.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1B02BBBD3DA006E39D4 /* כא.txt */; };
+		4DDBC1DA2BBBD3DA006E39D4 /* מ.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1B12BBBD3DA006E39D4 /* מ.txt */; };
+		4DDBC1DB2BBBD3DA006E39D4 /* ח.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1B22BBBD3DA006E39D4 /* ח.txt */; };
+		4DDBC1DC2BBBD3DA006E39D4 /* ל.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1B32BBBD3DA006E39D4 /* ל.txt */; };
+		4DDBC1F12BBC08DC006E39D4 /* Guttman Drogolin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1F02BBC08DC006E39D4 /* Guttman Drogolin.ttf */; };
+		4DDBC1F62BBC0C29006E39D4 /* Guttman Vilna-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1F42BBC0C29006E39D4 /* Guttman Vilna-Bold.ttf */; };
+		4DDBC1F72BBC0C29006E39D4 /* Guttman Drogolin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1F52BBC0C29006E39D4 /* Guttman Drogolin-Bold.ttf */; };
+		4DDBC2012BBD9EF0006E39D4 /* tehilim.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC2002BBD9EF0006E39D4 /* tehilim.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D81497A2BB9C0CB00DA919E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D8149612BB9C0CA00DA919E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D8149682BB9C0CA00DA919E;
+			remoteInfo = "Siddur-Judaisim";
+		};
+		4D8149842BB9C0CB00DA919E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D8149612BB9C0CA00DA919E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D8149682BB9C0CA00DA919E;
+			remoteInfo = "Siddur-Judaisim";
+		};
+		4D9BCB8A2BBEB6C3004FA4F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D8149612BB9C0CA00DA919E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D9BCB7E2BBEB6C1004FA4F5;
+			remoteInfo = ZmanimWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4D20961B2C63C7D000417806 /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D9BCB902BBEB6C3004FA4F5 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4D9BCB8C2BBEB6C3004FA4F5 /* ZmanimWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4D3724AD2BC44E3E003BAFAD /* מז.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "מז.txt"; sourceTree = "<group>"; };
+		4D3724AE2BC44E3E003BAFAD /* מח.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "מח.txt"; sourceTree = "<group>"; };
+		4D3724AF2BC44E3E003BAFAD /* מה.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "מה.txt"; sourceTree = "<group>"; };
+		4D3724B02BC44E3F003BAFAD /* מט.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "מט.txt"; sourceTree = "<group>"; };
+		4D3724B12BC44E3F003BAFAD /* מו.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "מו.txt"; sourceTree = "<group>"; };
+		4D3724B22BC44E3F003BAFAD /* נ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "נ.txt"; sourceTree = "<group>"; };
+		4D3724B32BC44E3F003BAFAD /* מג.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "מג.txt"; sourceTree = "<group>"; };
+		4D3724B42BC44E3F003BAFAD /* מב.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "מב.txt"; sourceTree = "<group>"; };
+		4D3724B52BC44E3F003BAFAD /* מד.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "מד.txt"; sourceTree = "<group>"; };
+		4D3724BF2BC4723C003BAFAD /* עא.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "עא.txt"; sourceTree = "<group>"; };
+		4D3724C02BC4723C003BAFAD /* סא.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "סא.txt"; sourceTree = "<group>"; };
+		4D3724C12BC4723C003BAFAD /* סח.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "סח.txt"; sourceTree = "<group>"; };
+		4D3724C22BC4723C003BAFAD /* עב.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "עב.txt"; sourceTree = "<group>"; };
+		4D3724C32BC4723C003BAFAD /* סט.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "סט.txt"; sourceTree = "<group>"; };
+		4D3724C42BC4723C003BAFAD /* נז.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "נז.txt"; sourceTree = "<group>"; };
+		4D3724C52BC4723C003BAFAD /* ס.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ס.txt"; sourceTree = "<group>"; };
+		4D3724C62BC4723C003BAFAD /* סב.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "סב.txt"; sourceTree = "<group>"; };
+		4D3724C72BC4723C003BAFAD /* נד.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "נד.txt"; sourceTree = "<group>"; };
+		4D3724C82BC4723C003BAFAD /* סג.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "סג.txt"; sourceTree = "<group>"; };
+		4D3724C92BC4723C003BAFAD /* נה.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "נה.txt"; sourceTree = "<group>"; };
+		4D3724CA2BC4723C003BAFAD /* סד.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "סד.txt"; sourceTree = "<group>"; };
+		4D3724CB2BC4723C003BAFAD /* סז.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "סז.txt"; sourceTree = "<group>"; };
+		4D3724CC2BC4723C003BAFAD /* נט.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "נט.txt"; sourceTree = "<group>"; };
+		4D3724CD2BC4723D003BAFAD /* נג.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "נג.txt"; sourceTree = "<group>"; };
+		4D3724CE2BC4723D003BAFAD /* ע.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ע.txt"; sourceTree = "<group>"; };
+		4D3724CF2BC4723D003BAFAD /* נא.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "נא.txt"; sourceTree = "<group>"; };
+		4D3724D02BC4723D003BAFAD /* נב.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "נב.txt"; sourceTree = "<group>"; };
+		4D3724D12BC4723D003BAFAD /* נו.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "נו.txt"; sourceTree = "<group>"; };
+		4D3724D22BC4723D003BAFAD /* נח.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "נח.txt"; sourceTree = "<group>"; };
+		4D3724D32BC4723D003BAFAD /* סה.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "סה.txt"; sourceTree = "<group>"; };
+		4D3724D42BC4723D003BAFAD /* סו.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "סו.txt"; sourceTree = "<group>"; };
+		4D3724EB2BC47A4F003BAFAD /* עד.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "עד.txt"; sourceTree = "<group>"; };
+		4D3724EC2BC47A4F003BAFAD /* עג.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "עג.txt"; sourceTree = "<group>"; };
+		4D3724ED2BC47A4F003BAFAD /* פו.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "פו.txt"; sourceTree = "<group>"; };
+		4D3724EE2BC47A4F003BAFAD /* פד.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "פד.txt"; sourceTree = "<group>"; };
+		4D3724EF2BC47A50003BAFAD /* פב.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "פב.txt"; sourceTree = "<group>"; };
+		4D3724F02BC47A50003BAFAD /* עח.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "עח.txt"; sourceTree = "<group>"; };
+		4D3724F12BC47A50003BAFAD /* עה.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "עה.txt"; sourceTree = "<group>"; };
+		4D3724F22BC47A50003BAFAD /* עז.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "עז.txt"; sourceTree = "<group>"; };
+		4D3724F32BC47A50003BAFAD /* עט.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "עט.txt"; sourceTree = "<group>"; };
+		4D3724F42BC47A50003BAFAD /* פח.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "פח.txt"; sourceTree = "<group>"; };
+		4D3724F52BC47A50003BAFAD /* פט.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "פט.txt"; sourceTree = "<group>"; };
+		4D3724F62BC47A50003BAFAD /* פ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "פ.txt"; sourceTree = "<group>"; };
+		4D3724F72BC47A50003BAFAD /* פה.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "פה.txt"; sourceTree = "<group>"; };
+		4D3724F82BC47A50003BAFAD /* פא.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "פא.txt"; sourceTree = "<group>"; };
+		4D3724F92BC47A50003BAFAD /* פז.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "פז.txt"; sourceTree = "<group>"; };
+		4D3724FA2BC47A50003BAFAD /* פג.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "פג.txt"; sourceTree = "<group>"; };
+		4D3724FB2BC47A50003BAFAD /* עו.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "עו.txt"; sourceTree = "<group>"; };
+		4D3725342BC6911C003BAFAD /* קד.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קד.txt"; sourceTree = "<group>"; };
+		4D3725352BC6911C003BAFAD /* צט.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "צט.txt"; sourceTree = "<group>"; };
+		4D3725362BC6911C003BAFAD /* צא.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "צא.txt"; sourceTree = "<group>"; };
+		4D3725372BC6911C003BAFAD /* צז.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "צז.txt"; sourceTree = "<group>"; };
+		4D3725382BC6911C003BAFAD /* ק.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ק.txt"; sourceTree = "<group>"; };
+		4D3725392BC6911C003BAFAD /* צב.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "צב.txt"; sourceTree = "<group>"; };
+		4D37253A2BC6911C003BAFAD /* צ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "צ.txt"; sourceTree = "<group>"; };
+		4D37253B2BC6911C003BAFAD /* קב.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קב.txt"; sourceTree = "<group>"; };
+		4D37253C2BC6911C003BAFAD /* צו.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "צו.txt"; sourceTree = "<group>"; };
+		4D37253D2BC6911C003BAFAD /* צה.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "צה.txt"; sourceTree = "<group>"; };
+		4D37253E2BC6911C003BAFAD /* צד.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "צד.txt"; sourceTree = "<group>"; };
+		4D37253F2BC6911C003BAFAD /* צג.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "צג.txt"; sourceTree = "<group>"; };
+		4D3725402BC6911C003BAFAD /* קג.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קג.txt"; sourceTree = "<group>"; };
+		4D3725412BC6911C003BAFAD /* קו.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קו.txt"; sourceTree = "<group>"; };
+		4D3725422BC6911C003BAFAD /* צח.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "צח.txt"; sourceTree = "<group>"; };
+		4D3725432BC6911C003BAFAD /* קא.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קא.txt"; sourceTree = "<group>"; };
+		4D3725442BC6911C003BAFAD /* קה.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קה.txt"; sourceTree = "<group>"; };
+		4D37255A2BC6C667003BAFAD /* shachar.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shachar.txt; sourceTree = "<group>"; };
+		4D37255C2BC6C746003BAFAD /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		4D575EC62C6384E6006C5D98 /* HebrewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HebrewViewModel.swift; sourceTree = "<group>"; };
+		4D575EC92C638650006C5D98 /* LocationManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerModel.swift; sourceTree = "<group>"; };
+		4D575EDC2C63AE32006C5D98 /* CarPlay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CarPlay.framework; path = System/Library/Frameworks/CarPlay.framework; sourceTree = SDKROOT; };
+		4D610F6A2C4F9D6F009B785E /* קיז.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קיז.txt"; sourceTree = "<group>"; };
+		4D610F6B2C4F9D6F009B785E /* קטז.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קטז.txt"; sourceTree = "<group>"; };
+		4D610F6C2C4F9D6F009B785E /* קיח.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קיח.txt"; sourceTree = "<group>"; };
+		4D610F6D2C4F9D6F009B785E /* קיא.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קיא.txt"; sourceTree = "<group>"; };
+		4D610F6E2C4F9D6F009B785E /* קיד.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קיד.txt"; sourceTree = "<group>"; };
+		4D610F6F2C4F9D6F009B785E /* קט.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קט.txt"; sourceTree = "<group>"; };
+		4D610F702C4F9D6F009B785E /* קיט.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קיט.txt"; sourceTree = "<group>"; };
+		4D610F712C4F9D6F009B785E /* קז.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קז.txt"; sourceTree = "<group>"; };
+		4D610F722C4F9D6F009B785E /* קטו.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קטו.txt"; sourceTree = "<group>"; };
+		4D610F732C4F9D6F009B785E /* קח.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קח.txt"; sourceTree = "<group>"; };
+		4D610F742C4F9D6F009B785E /* קי.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קי.txt"; sourceTree = "<group>"; };
+		4D610F752C4F9D6F009B785E /* קיג.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קיג.txt"; sourceTree = "<group>"; };
+		4D610F762C4F9D6F009B785E /* קיב.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קיב.txt"; sourceTree = "<group>"; };
+		4D610F842C4FA553009B785E /* קלה.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קלה.txt"; sourceTree = "<group>"; };
+		4D610F852C4FA553009B785E /* קכה.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קכה.txt"; sourceTree = "<group>"; };
+		4D610F862C4FA553009B785E /* קכא.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קכא.txt"; sourceTree = "<group>"; };
+		4D610F872C4FA553009B785E /* קלז.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קלז.txt"; sourceTree = "<group>"; };
+		4D610F882C4FA553009B785E /* קלו.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קלו.txt"; sourceTree = "<group>"; };
+		4D610F892C4FA553009B785E /* קמג.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קמג.txt"; sourceTree = "<group>"; };
+		4D610F8A2C4FA554009B785E /* קנ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קנ.txt"; sourceTree = "<group>"; };
+		4D610F8B2C4FA554009B785E /* קמב.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קמב.txt"; sourceTree = "<group>"; };
+		4D610F8C2C4FA554009B785E /* קכו.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קכו.txt"; sourceTree = "<group>"; };
+		4D610F8D2C4FA554009B785E /* קכח.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קכח.txt"; sourceTree = "<group>"; };
+		4D610F8E2C4FA554009B785E /* קמז.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קמז.txt"; sourceTree = "<group>"; };
+		4D610F8F2C4FA554009B785E /* קלח.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קלח.txt"; sourceTree = "<group>"; };
+		4D610F902C4FA554009B785E /* קכב.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קכב.txt"; sourceTree = "<group>"; };
+		4D610F912C4FA554009B785E /* קמא.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קמא.txt"; sourceTree = "<group>"; };
+		4D610F922C4FA554009B785E /* קלט.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קלט.txt"; sourceTree = "<group>"; };
+		4D610F932C4FA554009B785E /* קלב.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קלב.txt"; sourceTree = "<group>"; };
+		4D610F942C4FA554009B785E /* קמח.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קמח.txt"; sourceTree = "<group>"; };
+		4D610F952C4FA554009B785E /* קכט.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קכט.txt"; sourceTree = "<group>"; };
+		4D610F962C4FA554009B785E /* קל.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קל.txt"; sourceTree = "<group>"; };
+		4D610F972C4FA554009B785E /* קכד.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קכד.txt"; sourceTree = "<group>"; };
+		4D610F982C4FA554009B785E /* קכז.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קכז.txt"; sourceTree = "<group>"; };
+		4D610F992C4FA554009B785E /* קכ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קכ.txt"; sourceTree = "<group>"; };
+		4D610F9A2C4FA554009B785E /* קכג.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קכג.txt"; sourceTree = "<group>"; };
+		4D610F9B2C4FA554009B785E /* קלד.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קלד.txt"; sourceTree = "<group>"; };
+		4D610F9C2C4FA554009B785E /* קלא.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קלא.txt"; sourceTree = "<group>"; };
+		4D610F9D2C4FA554009B785E /* קמד.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קמד.txt"; sourceTree = "<group>"; };
+		4D610F9E2C4FA554009B785E /* קמה.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קמה.txt"; sourceTree = "<group>"; };
+		4D610F9F2C4FA554009B785E /* קמ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קמ.txt"; sourceTree = "<group>"; };
+		4D610FA02C4FA554009B785E /* קמו.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קמו.txt"; sourceTree = "<group>"; };
+		4D610FA12C4FA554009B785E /* קלג.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קלג.txt"; sourceTree = "<group>"; };
+		4D610FA22C4FA554009B785E /* קמט.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קמט.txt"; sourceTree = "<group>"; };
+		4D8149692BB9C0CA00DA919E /* Siddur-Judaisim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Siddur-Judaisim.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D81496C2BB9C0CA00DA919E /* Siddur_JudaisimApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Siddur_JudaisimApp.swift; sourceTree = "<group>"; };
+		4D81496E2BB9C0CA00DA919E /* SiddurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiddurView.swift; sourceTree = "<group>"; };
+		4D8149702BB9C0CB00DA919E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D8149732BB9C0CB00DA919E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4D8149792BB9C0CB00DA919E /* Siddur-JudaisimTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Siddur-JudaisimTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D81497D2BB9C0CB00DA919E /* Siddur_JudaisimTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Siddur_JudaisimTests.swift; sourceTree = "<group>"; };
+		4D8149832BB9C0CB00DA919E /* Siddur-JudaisimUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Siddur-JudaisimUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D8149872BB9C0CB00DA919E /* Siddur_JudaisimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Siddur_JudaisimUITests.swift; sourceTree = "<group>"; };
+		4D8149892BB9C0CB00DA919E /* Siddur_JudaisimUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Siddur_JudaisimUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4D8149992BB9C14700DA919E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4D81499B2BB9C16A00DA919E /* PrayerPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerPageView.swift; sourceTree = "<group>"; };
+		4D81499D2BB9C19100DA919E /* PrayersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersData.swift; sourceTree = "<group>"; };
+		4D8149A12BB9C1CB00DA919E /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		4D8149A52BB9C25E00DA919E /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		4D8149AA2BB9CDC300DA919E /* TehillimPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TehillimPageView.swift; sourceTree = "<group>"; };
+		4D8149CA2BB9D65700DA919E /* TehillimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TehillimView.swift; sourceTree = "<group>"; };
+		4D8A115B2BC29A6300907B01 /* TehillimViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TehillimViewModel.swift; sourceTree = "<group>"; };
+		4D9BCB562BBE5F0C004FA4F5 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
+		4D9BCB582BBE8F13004FA4F5 /* ZemanimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZemanimView.swift; sourceTree = "<group>"; };
+		4D9BCB602BBEA1EA004FA4F5 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		4D9BCB622BBEA1EA004FA4F5 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		4D9BCB7F2BBEB6C1004FA4F5 /* ZmanimWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ZmanimWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D9BCB832BBEB6C1004FA4F5 /* ZmanimWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZmanimWidgetBundle.swift; sourceTree = "<group>"; };
+		4D9BCB852BBEB6C1004FA4F5 /* ZmanimWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZmanimWidget.swift; sourceTree = "<group>"; };
+		4D9BCB872BBEB6C3004FA4F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D9BCB892BBEB6C3004FA4F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DDBC18B2BBBD3D9006E39D4 /* ט.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ט.txt"; sourceTree = "<group>"; };
+		4DDBC18C2BBBD3D9006E39D4 /* כה.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "כה.txt"; sourceTree = "<group>"; };
+		4DDBC18D2BBBD3D9006E39D4 /* א.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "א.txt"; sourceTree = "<group>"; };
+		4DDBC18E2BBBD3D9006E39D4 /* יא.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "יא.txt"; sourceTree = "<group>"; };
+		4DDBC18F2BBBD3D9006E39D4 /* כט.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "כט.txt"; sourceTree = "<group>"; };
+		4DDBC1902BBBD3D9006E39D4 /* לו.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "לו.txt"; sourceTree = "<group>"; };
+		4DDBC1912BBBD3D9006E39D4 /* לב.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "לב.txt"; sourceTree = "<group>"; };
+		4DDBC1922BBBD3D9006E39D4 /* יז.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "יז.txt"; sourceTree = "<group>"; };
+		4DDBC1932BBBD3D9006E39D4 /* טו.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "טו.txt"; sourceTree = "<group>"; };
+		4DDBC1942BBBD3D9006E39D4 /* כח.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "כח.txt"; sourceTree = "<group>"; };
+		4DDBC1952BBBD3D9006E39D4 /* יד.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "יד.txt"; sourceTree = "<group>"; };
+		4DDBC1962BBBD3D9006E39D4 /* כו.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "כו.txt"; sourceTree = "<group>"; };
+		4DDBC1972BBBD3D9006E39D4 /* לא.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "לא.txt"; sourceTree = "<group>"; };
+		4DDBC1982BBBD3D9006E39D4 /* לג.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "לג.txt"; sourceTree = "<group>"; };
+		4DDBC1992BBBD3D9006E39D4 /* יט.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "יט.txt"; sourceTree = "<group>"; };
+		4DDBC19A2BBBD3D9006E39D4 /* כב.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "כב.txt"; sourceTree = "<group>"; };
+		4DDBC19B2BBBD3D9006E39D4 /* כד.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "כד.txt"; sourceTree = "<group>"; };
+		4DDBC19C2BBBD3D9006E39D4 /* ד.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ד.txt"; sourceTree = "<group>"; };
+		4DDBC19D2BBBD3D9006E39D4 /* לט.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "לט.txt"; sourceTree = "<group>"; };
+		4DDBC19E2BBBD3D9006E39D4 /* ג.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ג.txt"; sourceTree = "<group>"; };
+		4DDBC19F2BBBD3D9006E39D4 /* כ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "כ.txt"; sourceTree = "<group>"; };
+		4DDBC1A02BBBD3D9006E39D4 /* כג.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "כג.txt"; sourceTree = "<group>"; };
+		4DDBC1A12BBBD3D9006E39D4 /* ה.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ה.txt"; sourceTree = "<group>"; };
+		4DDBC1A22BBBD3D9006E39D4 /* יג.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "יג.txt"; sourceTree = "<group>"; };
+		4DDBC1A32BBBD3D9006E39D4 /* ז.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ז.txt"; sourceTree = "<group>"; };
+		4DDBC1A42BBBD3D9006E39D4 /* יב.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "יב.txt"; sourceTree = "<group>"; };
+		4DDBC1A52BBBD3D9006E39D4 /* ו.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ו.txt"; sourceTree = "<group>"; };
+		4DDBC1A62BBBD3D9006E39D4 /* מא.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "מא.txt"; sourceTree = "<group>"; };
+		4DDBC1A72BBBD3D9006E39D4 /* לד.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "לד.txt"; sourceTree = "<group>"; };
+		4DDBC1A82BBBD3D9006E39D4 /* לז.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "לז.txt"; sourceTree = "<group>"; };
+		4DDBC1A92BBBD3D9006E39D4 /* לח.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "לח.txt"; sourceTree = "<group>"; };
+		4DDBC1AA2BBBD3D9006E39D4 /* י.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "י.txt"; sourceTree = "<group>"; };
+		4DDBC1AB2BBBD3D9006E39D4 /* טז.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "טז.txt"; sourceTree = "<group>"; };
+		4DDBC1AC2BBBD3D9006E39D4 /* לה.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "לה.txt"; sourceTree = "<group>"; };
+		4DDBC1AD2BBBD3D9006E39D4 /* יח.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "יח.txt"; sourceTree = "<group>"; };
+		4DDBC1AE2BBBD3D9006E39D4 /* כז.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "כז.txt"; sourceTree = "<group>"; };
+		4DDBC1AF2BBBD3DA006E39D4 /* ב.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ב.txt"; sourceTree = "<group>"; };
+		4DDBC1B02BBBD3DA006E39D4 /* כא.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "כא.txt"; sourceTree = "<group>"; };
+		4DDBC1B12BBBD3DA006E39D4 /* מ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "מ.txt"; sourceTree = "<group>"; };
+		4DDBC1B22BBBD3DA006E39D4 /* ח.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ח.txt"; sourceTree = "<group>"; };
+		4DDBC1B32BBBD3DA006E39D4 /* ל.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ל.txt"; sourceTree = "<group>"; };
+		4DDBC1F02BBC08DC006E39D4 /* Guttman Drogolin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Guttman Drogolin.ttf"; sourceTree = "<group>"; };
+		4DDBC1F42BBC0C29006E39D4 /* Guttman Vilna-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Guttman Vilna-Bold.ttf"; sourceTree = "<group>"; };
+		4DDBC1F52BBC0C29006E39D4 /* Guttman Drogolin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Guttman Drogolin-Bold.ttf"; sourceTree = "<group>"; };
+		4DDBC2002BBD9EF0006E39D4 /* tehilim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tehilim.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D8149662BB9C0CA00DA919E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D8149982BB9C0F600DA919E /* Hebcal in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D8149762BB9C0CB00DA919E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D8149802BB9C0CB00DA919E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D9BCB7C2BBEB6C1004FA4F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D9BCB812BBEB6C1004FA4F5 /* SwiftUI.framework in Frameworks */,
+				4D575EDD2C63AE32006C5D98 /* CarPlay.framework in Frameworks */,
+				4D9BCB922BBEBEA8004FA4F5 /* Hebcal in Frameworks */,
+				4D9BCB802BBEB6C1004FA4F5 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D37250D2BC51782003BAFAD /* Day1 */ = {
+			isa = PBXGroup;
+			children = (
+				4DDBC18D2BBBD3D9006E39D4 /* א.txt */,
+				4DDBC1AF2BBBD3DA006E39D4 /* ב.txt */,
+				4DDBC19E2BBBD3D9006E39D4 /* ג.txt */,
+				4DDBC19C2BBBD3D9006E39D4 /* ד.txt */,
+				4DDBC1A12BBBD3D9006E39D4 /* ה.txt */,
+				4DDBC1A52BBBD3D9006E39D4 /* ו.txt */,
+				4DDBC1A32BBBD3D9006E39D4 /* ז.txt */,
+				4DDBC1B22BBBD3DA006E39D4 /* ח.txt */,
+				4DDBC18B2BBBD3D9006E39D4 /* ט.txt */,
+				4DDBC1AA2BBBD3D9006E39D4 /* י.txt */,
+				4DDBC18E2BBBD3D9006E39D4 /* יא.txt */,
+				4DDBC1A42BBBD3D9006E39D4 /* יב.txt */,
+				4DDBC1A22BBBD3D9006E39D4 /* יג.txt */,
+				4DDBC1952BBBD3D9006E39D4 /* יד.txt */,
+				4DDBC1932BBBD3D9006E39D4 /* טו.txt */,
+				4DDBC1AB2BBBD3D9006E39D4 /* טז.txt */,
+				4DDBC1922BBBD3D9006E39D4 /* יז.txt */,
+				4DDBC1AD2BBBD3D9006E39D4 /* יח.txt */,
+				4DDBC1992BBBD3D9006E39D4 /* יט.txt */,
+				4DDBC19F2BBBD3D9006E39D4 /* כ.txt */,
+				4DDBC1B02BBBD3DA006E39D4 /* כא.txt */,
+				4DDBC19A2BBBD3D9006E39D4 /* כב.txt */,
+				4DDBC1A02BBBD3D9006E39D4 /* כג.txt */,
+				4DDBC19B2BBBD3D9006E39D4 /* כד.txt */,
+				4DDBC18C2BBBD3D9006E39D4 /* כה.txt */,
+				4DDBC1962BBBD3D9006E39D4 /* כו.txt */,
+				4DDBC1AE2BBBD3D9006E39D4 /* כז.txt */,
+				4DDBC1942BBBD3D9006E39D4 /* כח.txt */,
+				4DDBC18F2BBBD3D9006E39D4 /* כט.txt */,
+			);
+			path = Day1;
+			sourceTree = "<group>";
+		};
+		4D37250E2BC517DE003BAFAD /* Day2 */ = {
+			isa = PBXGroup;
+			children = (
+				4DDBC1B32BBBD3DA006E39D4 /* ל.txt */,
+				4DDBC1972BBBD3D9006E39D4 /* לא.txt */,
+				4DDBC1912BBBD3D9006E39D4 /* לב.txt */,
+				4DDBC1982BBBD3D9006E39D4 /* לג.txt */,
+				4DDBC1A72BBBD3D9006E39D4 /* לד.txt */,
+				4DDBC1AC2BBBD3D9006E39D4 /* לה.txt */,
+				4DDBC1902BBBD3D9006E39D4 /* לו.txt */,
+				4DDBC1A82BBBD3D9006E39D4 /* לז.txt */,
+				4DDBC1A92BBBD3D9006E39D4 /* לח.txt */,
+				4DDBC19D2BBBD3D9006E39D4 /* לט.txt */,
+				4DDBC1B12BBBD3DA006E39D4 /* מ.txt */,
+				4DDBC1A62BBBD3D9006E39D4 /* מא.txt */,
+				4D3724B42BC44E3F003BAFAD /* מב.txt */,
+				4D3724B32BC44E3F003BAFAD /* מג.txt */,
+				4D3724B52BC44E3F003BAFAD /* מד.txt */,
+				4D3724AF2BC44E3E003BAFAD /* מה.txt */,
+				4D3724B12BC44E3F003BAFAD /* מו.txt */,
+				4D3724AD2BC44E3E003BAFAD /* מז.txt */,
+				4D3724AE2BC44E3E003BAFAD /* מח.txt */,
+				4D3724B02BC44E3F003BAFAD /* מט.txt */,
+				4D3724B22BC44E3F003BAFAD /* נ.txt */,
+			);
+			path = Day2;
+			sourceTree = "<group>";
+		};
+		4D37250F2BC517FD003BAFAD /* Day3 */ = {
+			isa = PBXGroup;
+			children = (
+				4D3724CF2BC4723D003BAFAD /* נא.txt */,
+				4D3724D02BC4723D003BAFAD /* נב.txt */,
+				4D3724CD2BC4723D003BAFAD /* נג.txt */,
+				4D3724C72BC4723C003BAFAD /* נד.txt */,
+				4D3724C92BC4723C003BAFAD /* נה.txt */,
+				4D3724D12BC4723D003BAFAD /* נו.txt */,
+				4D3724C42BC4723C003BAFAD /* נז.txt */,
+				4D3724D22BC4723D003BAFAD /* נח.txt */,
+				4D3724CC2BC4723C003BAFAD /* נט.txt */,
+				4D3724C52BC4723C003BAFAD /* ס.txt */,
+				4D3724C02BC4723C003BAFAD /* סא.txt */,
+				4D3724C62BC4723C003BAFAD /* סב.txt */,
+				4D3724C82BC4723C003BAFAD /* סג.txt */,
+				4D3724CA2BC4723C003BAFAD /* סד.txt */,
+				4D3724D32BC4723D003BAFAD /* סה.txt */,
+				4D3724D42BC4723D003BAFAD /* סו.txt */,
+				4D3724CB2BC4723C003BAFAD /* סז.txt */,
+				4D3724C12BC4723C003BAFAD /* סח.txt */,
+				4D3724C32BC4723C003BAFAD /* סט.txt */,
+				4D3724CE2BC4723D003BAFAD /* ע.txt */,
+				4D3724BF2BC4723C003BAFAD /* עא.txt */,
+				4D3724C22BC4723C003BAFAD /* עב.txt */,
+			);
+			path = Day3;
+			sourceTree = "<group>";
+		};
+		4D3725102BC5182B003BAFAD /* Day4 */ = {
+			isa = PBXGroup;
+			children = (
+				4D3724EC2BC47A4F003BAFAD /* עג.txt */,
+				4D3724EB2BC47A4F003BAFAD /* עד.txt */,
+				4D3724F12BC47A50003BAFAD /* עה.txt */,
+				4D3724FB2BC47A50003BAFAD /* עו.txt */,
+				4D3724F22BC47A50003BAFAD /* עז.txt */,
+				4D3724F02BC47A50003BAFAD /* עח.txt */,
+				4D3724F32BC47A50003BAFAD /* עט.txt */,
+				4D3724F62BC47A50003BAFAD /* פ.txt */,
+				4D3724F82BC47A50003BAFAD /* פא.txt */,
+				4D3724EF2BC47A50003BAFAD /* פב.txt */,
+				4D3724FA2BC47A50003BAFAD /* פג.txt */,
+				4D3724EE2BC47A4F003BAFAD /* פד.txt */,
+				4D3724F72BC47A50003BAFAD /* פה.txt */,
+				4D3724ED2BC47A4F003BAFAD /* פו.txt */,
+				4D3724F92BC47A50003BAFAD /* פז.txt */,
+				4D3724F42BC47A50003BAFAD /* פח.txt */,
+				4D3724F52BC47A50003BAFAD /* פט.txt */,
+			);
+			path = Day4;
+			sourceTree = "<group>";
+		};
+		4D3725112BC686C3003BAFAD /* Day5 */ = {
+			isa = PBXGroup;
+			children = (
+				4D37253A2BC6911C003BAFAD /* צ.txt */,
+				4D3725362BC6911C003BAFAD /* צא.txt */,
+				4D3725392BC6911C003BAFAD /* צב.txt */,
+				4D37253F2BC6911C003BAFAD /* צג.txt */,
+				4D37253E2BC6911C003BAFAD /* צד.txt */,
+				4D37253D2BC6911C003BAFAD /* צה.txt */,
+				4D37253C2BC6911C003BAFAD /* צו.txt */,
+				4D3725372BC6911C003BAFAD /* צז.txt */,
+				4D3725422BC6911C003BAFAD /* צח.txt */,
+				4D3725352BC6911C003BAFAD /* צט.txt */,
+				4D3725382BC6911C003BAFAD /* ק.txt */,
+				4D3725432BC6911C003BAFAD /* קא.txt */,
+				4D37253B2BC6911C003BAFAD /* קב.txt */,
+				4D3725402BC6911C003BAFAD /* קג.txt */,
+				4D3725342BC6911C003BAFAD /* קד.txt */,
+				4D3725442BC6911C003BAFAD /* קה.txt */,
+				4D3725412BC6911C003BAFAD /* קו.txt */,
+			);
+			path = Day5;
+			sourceTree = "<group>";
+		};
+		4D3725562BC6916F003BAFAD /* Day6 */ = {
+			isa = PBXGroup;
+			children = (
+				4D610F712C4F9D6F009B785E /* קז.txt */,
+				4D610F732C4F9D6F009B785E /* קח.txt */,
+				4D610F6F2C4F9D6F009B785E /* קט.txt */,
+				4D610F722C4F9D6F009B785E /* קטו.txt */,
+				4D610F6B2C4F9D6F009B785E /* קטז.txt */,
+				4D610F742C4F9D6F009B785E /* קי.txt */,
+				4D610F6D2C4F9D6F009B785E /* קיא.txt */,
+				4D610F762C4F9D6F009B785E /* קיב.txt */,
+				4D610F752C4F9D6F009B785E /* קיג.txt */,
+				4D610F6E2C4F9D6F009B785E /* קיד.txt */,
+				4D610F6A2C4F9D6F009B785E /* קיז.txt */,
+				4D610F6C2C4F9D6F009B785E /* קיח.txt */,
+				4D610F702C4F9D6F009B785E /* קיט.txt */,
+			);
+			path = Day6;
+			sourceTree = "<group>";
+		};
+		4D3725572BC6917C003BAFAD /* Day7 */ = {
+			isa = PBXGroup;
+			children = (
+				4D610F992C4FA554009B785E /* קכ.txt */,
+				4D610F862C4FA553009B785E /* קכא.txt */,
+				4D610F902C4FA554009B785E /* קכב.txt */,
+				4D610F9A2C4FA554009B785E /* קכג.txt */,
+				4D610F972C4FA554009B785E /* קכד.txt */,
+				4D610F852C4FA553009B785E /* קכה.txt */,
+				4D610F8C2C4FA554009B785E /* קכו.txt */,
+				4D610F982C4FA554009B785E /* קכז.txt */,
+				4D610F8D2C4FA554009B785E /* קכח.txt */,
+				4D610F952C4FA554009B785E /* קכט.txt */,
+				4D610F962C4FA554009B785E /* קל.txt */,
+				4D610F9C2C4FA554009B785E /* קלא.txt */,
+				4D610F932C4FA554009B785E /* קלב.txt */,
+				4D610FA12C4FA554009B785E /* קלג.txt */,
+				4D610F9B2C4FA554009B785E /* קלד.txt */,
+				4D610F842C4FA553009B785E /* קלה.txt */,
+				4D610F882C4FA553009B785E /* קלו.txt */,
+				4D610F872C4FA553009B785E /* קלז.txt */,
+				4D610F8F2C4FA554009B785E /* קלח.txt */,
+				4D610F922C4FA554009B785E /* קלט.txt */,
+				4D610F9F2C4FA554009B785E /* קמ.txt */,
+				4D610F912C4FA554009B785E /* קמא.txt */,
+				4D610F8B2C4FA554009B785E /* קמב.txt */,
+				4D610F892C4FA553009B785E /* קמג.txt */,
+				4D610F9D2C4FA554009B785E /* קמד.txt */,
+				4D610F9E2C4FA554009B785E /* קמה.txt */,
+				4D610FA02C4FA554009B785E /* קמו.txt */,
+				4D610F8E2C4FA554009B785E /* קמז.txt */,
+				4D610F942C4FA554009B785E /* קמח.txt */,
+				4D610FA22C4FA554009B785E /* קמט.txt */,
+				4D610F8A2C4FA554009B785E /* קנ.txt */,
+			);
+			path = Day7;
+			sourceTree = "<group>";
+		};
+		4D3725582BC6C5FC003BAFAD /* Prayers */ = {
+			isa = PBXGroup;
+			children = (
+				4D3725592BC6C614003BAFAD /* Shachar */,
+			);
+			path = Prayers;
+			sourceTree = "<group>";
+		};
+		4D3725592BC6C614003BAFAD /* Shachar */ = {
+			isa = PBXGroup;
+			children = (
+				4D37255A2BC6C667003BAFAD /* shachar.txt */,
+			);
+			path = Shachar;
+			sourceTree = "<group>";
+		};
+		4D8149602BB9C0CA00DA919E = {
+			isa = PBXGroup;
+			children = (
+				4D8149A52BB9C25E00DA919E /* Localizable.xcstrings */,
+				4D81496B2BB9C0CA00DA919E /* Siddur-Judaisim */,
+				4D81497C2BB9C0CB00DA919E /* Siddur-JudaisimTests */,
+				4D8149862BB9C0CB00DA919E /* Siddur-JudaisimUITests */,
+				4D9BCB822BBEB6C1004FA4F5 /* ZmanimWidget */,
+				4D9BCB5F2BBEA1EA004FA4F5 /* Frameworks */,
+				4D81496A2BB9C0CA00DA919E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4D81496A2BB9C0CA00DA919E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D8149692BB9C0CA00DA919E /* Siddur-Judaisim.app */,
+				4D8149792BB9C0CB00DA919E /* Siddur-JudaisimTests.xctest */,
+				4D8149832BB9C0CB00DA919E /* Siddur-JudaisimUITests.xctest */,
+				4D9BCB7F2BBEB6C1004FA4F5 /* ZmanimWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D81496B2BB9C0CA00DA919E /* Siddur-Judaisim */ = {
+			isa = PBXGroup;
+			children = (
+				4DDBC2032BBE5DB4006E39D4 /* Views */,
+				4D9BCB552BBE5EC0004FA4F5 /* Handlers */,
+				4D81496C2BB9C0CA00DA919E /* Siddur_JudaisimApp.swift */,
+				4DDBC1E52BBBF763006E39D4 /* Font */,
+				4D3725582BC6C5FC003BAFAD /* Prayers */,
+				4D8149A72BB9CD0100DA919E /* Tehilim */,
+				4D8149702BB9C0CB00DA919E /* Assets.xcassets */,
+				4D8149722BB9C0CB00DA919E /* Preview Content */,
+			);
+			path = "Siddur-Judaisim";
+			sourceTree = "<group>";
+		};
+		4D8149722BB9C0CB00DA919E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4DDBC2002BBD9EF0006E39D4 /* tehilim.json */,
+				4D8149732BB9C0CB00DA919E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4D81497C2BB9C0CB00DA919E /* Siddur-JudaisimTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D81497D2BB9C0CB00DA919E /* Siddur_JudaisimTests.swift */,
+			);
+			path = "Siddur-JudaisimTests";
+			sourceTree = "<group>";
+		};
+		4D8149862BB9C0CB00DA919E /* Siddur-JudaisimUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4D8149872BB9C0CB00DA919E /* Siddur_JudaisimUITests.swift */,
+				4D8149892BB9C0CB00DA919E /* Siddur_JudaisimUITestsLaunchTests.swift */,
+			);
+			path = "Siddur-JudaisimUITests";
+			sourceTree = "<group>";
+		};
+		4D8149A72BB9CD0100DA919E /* Tehilim */ = {
+			isa = PBXGroup;
+			children = (
+				4D37250D2BC51782003BAFAD /* Day1 */,
+				4D37250E2BC517DE003BAFAD /* Day2 */,
+				4D37250F2BC517FD003BAFAD /* Day3 */,
+				4D3725102BC5182B003BAFAD /* Day4 */,
+				4D3725112BC686C3003BAFAD /* Day5 */,
+				4D3725562BC6916F003BAFAD /* Day6 */,
+				4D3725572BC6917C003BAFAD /* Day7 */,
+			);
+			path = Tehilim;
+			sourceTree = "<group>";
+		};
+		4D9BCB552BBE5EC0004FA4F5 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				4D81499D2BB9C19100DA919E /* PrayersData.swift */,
+				4D8A115B2BC29A6300907B01 /* TehillimViewModel.swift */,
+				4D575EC62C6384E6006C5D98 /* HebrewViewModel.swift */,
+				4D9BCB562BBE5F0C004FA4F5 /* NotificationHandler.swift */,
+				4D575EC92C638650006C5D98 /* LocationManagerModel.swift */,
+				4D37255C2BC6C746003BAFAD /* Utilities.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		4D9BCB5F2BBEA1EA004FA4F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D575EDC2C63AE32006C5D98 /* CarPlay.framework */,
+				4D9BCB602BBEA1EA004FA4F5 /* WidgetKit.framework */,
+				4D9BCB622BBEA1EA004FA4F5 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D9BCB822BBEB6C1004FA4F5 /* ZmanimWidget */ = {
+			isa = PBXGroup;
+			children = (
+				4D9BCB832BBEB6C1004FA4F5 /* ZmanimWidgetBundle.swift */,
+				4D9BCB852BBEB6C1004FA4F5 /* ZmanimWidget.swift */,
+				4D9BCB872BBEB6C3004FA4F5 /* Assets.xcassets */,
+				4D9BCB892BBEB6C3004FA4F5 /* Info.plist */,
+			);
+			path = ZmanimWidget;
+			sourceTree = "<group>";
+		};
+		4DDBC1E52BBBF763006E39D4 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				4DDBC1F52BBC0C29006E39D4 /* Guttman Drogolin-Bold.ttf */,
+				4DDBC1F42BBC0C29006E39D4 /* Guttman Vilna-Bold.ttf */,
+				4DDBC1F02BBC08DC006E39D4 /* Guttman Drogolin.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		4DDBC2032BBE5DB4006E39D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D81496E2BB9C0CA00DA919E /* SiddurView.swift */,
+				4D81499B2BB9C16A00DA919E /* PrayerPageView.swift */,
+				4D8149CA2BB9D65700DA919E /* TehillimView.swift */,
+				4D8149AA2BB9CDC300DA919E /* TehillimPageView.swift */,
+				4D8149992BB9C14700DA919E /* SettingsView.swift */,
+				4D8149A12BB9C1CB00DA919E /* AboutView.swift */,
+				4D9BCB582BBE8F13004FA4F5 /* ZemanimView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D8149682BB9C0CA00DA919E /* Siddur-Judaisim */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D81498D2BB9C0CB00DA919E /* Build configuration list for PBXNativeTarget "Siddur-Judaisim" */;
+			buildPhases = (
+				4D8149652BB9C0CA00DA919E /* Sources */,
+				4D8149662BB9C0CA00DA919E /* Frameworks */,
+				4D8149672BB9C0CA00DA919E /* Resources */,
+				4D9BCB902BBEB6C3004FA4F5 /* Embed Foundation Extensions */,
+				4D20961B2C63C7D000417806 /* Embed ExtensionKit Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D9BCB8B2BBEB6C3004FA4F5 /* PBXTargetDependency */,
+			);
+			name = "Siddur-Judaisim";
+			packageProductDependencies = (
+				4D8149972BB9C0F600DA919E /* Hebcal */,
+			);
+			productName = "Siddur-Judaisim";
+			productReference = 4D8149692BB9C0CA00DA919E /* Siddur-Judaisim.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4D8149782BB9C0CB00DA919E /* Siddur-JudaisimTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D8149902BB9C0CB00DA919E /* Build configuration list for PBXNativeTarget "Siddur-JudaisimTests" */;
+			buildPhases = (
+				4D8149752BB9C0CB00DA919E /* Sources */,
+				4D8149762BB9C0CB00DA919E /* Frameworks */,
+				4D8149772BB9C0CB00DA919E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D81497B2BB9C0CB00DA919E /* PBXTargetDependency */,
+			);
+			name = "Siddur-JudaisimTests";
+			productName = "Siddur-JudaisimTests";
+			productReference = 4D8149792BB9C0CB00DA919E /* Siddur-JudaisimTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4D8149822BB9C0CB00DA919E /* Siddur-JudaisimUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D8149932BB9C0CB00DA919E /* Build configuration list for PBXNativeTarget "Siddur-JudaisimUITests" */;
+			buildPhases = (
+				4D81497F2BB9C0CB00DA919E /* Sources */,
+				4D8149802BB9C0CB00DA919E /* Frameworks */,
+				4D8149812BB9C0CB00DA919E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D8149852BB9C0CB00DA919E /* PBXTargetDependency */,
+			);
+			name = "Siddur-JudaisimUITests";
+			productName = "Siddur-JudaisimUITests";
+			productReference = 4D8149832BB9C0CB00DA919E /* Siddur-JudaisimUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		4D9BCB7E2BBEB6C1004FA4F5 /* ZmanimWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D9BCB8D2BBEB6C3004FA4F5 /* Build configuration list for PBXNativeTarget "ZmanimWidgetExtension" */;
+			buildPhases = (
+				4D9BCB7B2BBEB6C1004FA4F5 /* Sources */,
+				4D9BCB7C2BBEB6C1004FA4F5 /* Frameworks */,
+				4D9BCB7D2BBEB6C1004FA4F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZmanimWidgetExtension;
+			packageProductDependencies = (
+				4D9BCB912BBEBEA8004FA4F5 /* Hebcal */,
+			);
+			productName = ZmanimWidgetExtension;
+			productReference = 4D9BCB7F2BBEB6C1004FA4F5 /* ZmanimWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D8149612BB9C0CA00DA919E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					4D8149682BB9C0CA00DA919E = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					4D8149782BB9C0CB00DA919E = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 4D8149682BB9C0CA00DA919E;
+					};
+					4D8149822BB9C0CB00DA919E = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 4D8149682BB9C0CA00DA919E;
+					};
+					4D9BCB7E2BBEB6C1004FA4F5 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 4D8149642BB9C0CA00DA919E /* Build configuration list for PBXProject "Siddur-Judaisim" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				he,
+			);
+			mainGroup = 4D8149602BB9C0CA00DA919E;
+			packageReferences = (
+				4D8149962BB9C0F600DA919E /* XCRemoteSwiftPackageReference "hebcal-swift" */,
+			);
+			productRefGroup = 4D81496A2BB9C0CA00DA919E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D8149682BB9C0CA00DA919E /* Siddur-Judaisim */,
+				4D8149782BB9C0CB00DA919E /* Siddur-JudaisimTests */,
+				4D8149822BB9C0CB00DA919E /* Siddur-JudaisimUITests */,
+				4D9BCB7E2BBEB6C1004FA4F5 /* ZmanimWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D8149672BB9C0CA00DA919E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D610FA42C4FA554009B785E /* קכה.txt in Resources */,
+				4D610F7D2C4F9D6F009B785E /* קיט.txt in Resources */,
+				4D3724E52BC4723D003BAFAD /* נא.txt in Resources */,
+				4D3724DC2BC4723D003BAFAD /* סב.txt in Resources */,
+				4D3724D72BC4723D003BAFAD /* סח.txt in Resources */,
+				4D610F7A2C4F9D6F009B785E /* קיא.txt in Resources */,
+				4DDBC1F62BBC0C29006E39D4 /* Guttman Vilna-Bold.ttf in Resources */,
+				4D610FA92C4FA554009B785E /* קנ.txt in Resources */,
+				4D610F802C4F9D6F009B785E /* קח.txt in Resources */,
+				4D3725462BC6911C003BAFAD /* צט.txt in Resources */,
+				4DDBC1CB2BBBD3DA006E39D4 /* יג.txt in Resources */,
+				4D610FA82C4FA554009B785E /* קמג.txt in Resources */,
+				4D610F792C4F9D6F009B785E /* קיח.txt in Resources */,
+				4D3725032BC47A50003BAFAD /* עז.txt in Resources */,
+				4DDBC1CC2BBBD3DA006E39D4 /* ז.txt in Resources */,
+				4DDBC1C02BBBD3DA006E39D4 /* לא.txt in Resources */,
+				4D3724E42BC4723D003BAFAD /* ע.txt in Resources */,
+				4D3724B62BC44E3F003BAFAD /* מז.txt in Resources */,
+				4D3724FD2BC47A50003BAFAD /* עג.txt in Resources */,
+				4D3724B72BC44E3F003BAFAD /* מח.txt in Resources */,
+				4D3724DF2BC4723D003BAFAD /* נה.txt in Resources */,
+				4DDBC1D02BBBD3DA006E39D4 /* לד.txt in Resources */,
+				4DDBC1BD2BBBD3DA006E39D4 /* כח.txt in Resources */,
+				4D3725072BC47A50003BAFAD /* פ.txt in Resources */,
+				4D3725532BC6911C003BAFAD /* צח.txt in Resources */,
+				4DDBC1D12BBBD3DA006E39D4 /* לז.txt in Resources */,
+				4DDBC1B92BBBD3DA006E39D4 /* לו.txt in Resources */,
+				4D3724D82BC4723D003BAFAD /* עב.txt in Resources */,
+				4DDBC1C22BBBD3DA006E39D4 /* יט.txt in Resources */,
+				4D610FB72C4FA554009B785E /* קכז.txt in Resources */,
+				4D3724E12BC4723D003BAFAD /* סז.txt in Resources */,
+				4D3725062BC47A50003BAFAD /* פט.txt in Resources */,
+				4DDBC1B52BBBD3DA006E39D4 /* כה.txt in Resources */,
+				4D3724D52BC4723D003BAFAD /* עא.txt in Resources */,
+				4D3724E82BC4723D003BAFAD /* נח.txt in Resources */,
+				4D3725542BC6911C003BAFAD /* קא.txt in Resources */,
+				4D8149742BB9C0CB00DA919E /* Preview Assets.xcassets in Resources */,
+				4DDBC1D42BBBD3DA006E39D4 /* טז.txt in Resources */,
+				4DDBC1DC2BBBD3DA006E39D4 /* ל.txt in Resources */,
+				4D3725082BC47A50003BAFAD /* פה.txt in Resources */,
+				4D3725522BC6911C003BAFAD /* קו.txt in Resources */,
+				4D610F7C2C4F9D6F009B785E /* קט.txt in Resources */,
+				4D3724BC2BC44E3F003BAFAD /* מג.txt in Resources */,
+				4D3724FC2BC47A50003BAFAD /* עד.txt in Resources */,
+				4D3724D92BC4723D003BAFAD /* סט.txt in Resources */,
+				4D610FB92C4FA554009B785E /* קכג.txt in Resources */,
+				4D3724DD2BC4723D003BAFAD /* נד.txt in Resources */,
+				4D610FB52C4FA554009B785E /* קל.txt in Resources */,
+				4DDBC1D92BBBD3DA006E39D4 /* כא.txt in Resources */,
+				4D37254A2BC6911C003BAFAD /* צב.txt in Resources */,
+				4D610FC12C4FA554009B785E /* קמט.txt in Resources */,
+				4D610FA32C4FA554009B785E /* קלה.txt in Resources */,
+				4D610FBC2C4FA554009B785E /* קמד.txt in Resources */,
+				4D37250A2BC47A50003BAFAD /* פז.txt in Resources */,
+				4D3724FF2BC47A50003BAFAD /* פד.txt in Resources */,
+				4D3724BA2BC44E3F003BAFAD /* מו.txt in Resources */,
+				4D3725452BC6911C003BAFAD /* קד.txt in Resources */,
+				4D3725052BC47A50003BAFAD /* פח.txt in Resources */,
+				4D610F7F2C4F9D6F009B785E /* קטו.txt in Resources */,
+				4DDBC1D52BBBD3DA006E39D4 /* לה.txt in Resources */,
+				4D3725552BC6911C003BAFAD /* קה.txt in Resources */,
+				4D3724BD2BC44E3F003BAFAD /* מב.txt in Resources */,
+				4D610FAC2C4FA554009B785E /* קכח.txt in Resources */,
+				4DDBC1D32BBBD3DA006E39D4 /* י.txt in Resources */,
+				4DDBC2012BBD9EF0006E39D4 /* tehilim.json in Resources */,
+				4D610FA62C4FA554009B785E /* קלז.txt in Resources */,
+				4DDBC1D72BBBD3DA006E39D4 /* כז.txt in Resources */,
+				4DDBC1C82BBBD3DA006E39D4 /* כ.txt in Resources */,
+				4D37254F2BC6911C003BAFAD /* צד.txt in Resources */,
+				4D3725092BC47A50003BAFAD /* פא.txt in Resources */,
+				4D610FB62C4FA554009B785E /* קכד.txt in Resources */,
+				4DDBC1C52BBBD3DA006E39D4 /* ד.txt in Resources */,
+				4D610F782C4F9D6F009B785E /* קטז.txt in Resources */,
+				4D3725492BC6911C003BAFAD /* ק.txt in Resources */,
+				4DDBC1BE2BBBD3DA006E39D4 /* יד.txt in Resources */,
+				4D610F822C4F9D6F009B785E /* קיג.txt in Resources */,
+				4DDBC1BF2BBBD3DA006E39D4 /* כו.txt in Resources */,
+				4D37254C2BC6911C003BAFAD /* קב.txt in Resources */,
+				4D8149712BB9C0CB00DA919E /* Assets.xcassets in Resources */,
+				4D3724E92BC4723D003BAFAD /* סה.txt in Resources */,
+				4D37254D2BC6911C003BAFAD /* צו.txt in Resources */,
+				4D37250B2BC47A50003BAFAD /* פג.txt in Resources */,
+				4DDBC1C62BBBD3DA006E39D4 /* לט.txt in Resources */,
+				4D3724BB2BC44E3F003BAFAD /* נ.txt in Resources */,
+				4D3724E22BC4723D003BAFAD /* נט.txt in Resources */,
+				4D3724E72BC4723D003BAFAD /* נו.txt in Resources */,
+				4D610FBE2C4FA554009B785E /* קמ.txt in Resources */,
+				4D3724B92BC44E3F003BAFAD /* מט.txt in Resources */,
+				4D610FB32C4FA554009B785E /* קמח.txt in Resources */,
+				4DDBC1B62BBBD3DA006E39D4 /* א.txt in Resources */,
+				4DDBC1C42BBBD3DA006E39D4 /* כד.txt in Resources */,
+				4D3724EA2BC4723D003BAFAD /* סו.txt in Resources */,
+				4D610FAD2C4FA554009B785E /* קמז.txt in Resources */,
+				4DDBC1BC2BBBD3DA006E39D4 /* טו.txt in Resources */,
+				4DDBC1F12BBC08DC006E39D4 /* Guttman Drogolin.ttf in Resources */,
+				4D3724B82BC44E3F003BAFAD /* מה.txt in Resources */,
+				4D610FBA2C4FA554009B785E /* קלד.txt in Resources */,
+				4D3725512BC6911C003BAFAD /* קג.txt in Resources */,
+				4DDBC1C92BBBD3DA006E39D4 /* כג.txt in Resources */,
+				4D3724E32BC4723D003BAFAD /* נג.txt in Resources */,
+				4D610FC02C4FA554009B785E /* קלג.txt in Resources */,
+				4D610FAE2C4FA554009B785E /* קלח.txt in Resources */,
+				4DDBC1CE2BBBD3DA006E39D4 /* ו.txt in Resources */,
+				4D610FAA2C4FA554009B785E /* קמב.txt in Resources */,
+				4D3724E62BC4723D003BAFAD /* נב.txt in Resources */,
+				4D3724D62BC4723D003BAFAD /* סא.txt in Resources */,
+				4D610FAF2C4FA554009B785E /* קכב.txt in Resources */,
+				4D3724E02BC4723D003BAFAD /* סד.txt in Resources */,
+				4D610F7B2C4F9D6F009B785E /* קיד.txt in Resources */,
+				4DDBC1BA2BBBD3DA006E39D4 /* לב.txt in Resources */,
+				4D37255B2BC6C667003BAFAD /* shachar.txt in Resources */,
+				4DDBC1CA2BBBD3DA006E39D4 /* ה.txt in Resources */,
+				4D37254B2BC6911C003BAFAD /* צ.txt in Resources */,
+				4D610F832C4F9D6F009B785E /* קיב.txt in Resources */,
+				4DDBC1D62BBBD3DA006E39D4 /* יח.txt in Resources */,
+				4D610FA52C4FA554009B785E /* קכא.txt in Resources */,
+				4D8149A62BB9C25E00DA919E /* Localizable.xcstrings in Resources */,
+				4DDBC1C12BBBD3DA006E39D4 /* לג.txt in Resources */,
+				4DDBC1CD2BBBD3DA006E39D4 /* יב.txt in Resources */,
+				4DDBC1C32BBBD3DA006E39D4 /* כב.txt in Resources */,
+				4D37254E2BC6911C003BAFAD /* צה.txt in Resources */,
+				4D37250C2BC47A50003BAFAD /* עו.txt in Resources */,
+				4D610FAB2C4FA554009B785E /* קכו.txt in Resources */,
+				4D610FBD2C4FA554009B785E /* קמה.txt in Resources */,
+				4D3724DE2BC4723D003BAFAD /* סג.txt in Resources */,
+				4D610FBB2C4FA554009B785E /* קלא.txt in Resources */,
+				4DDBC1D22BBBD3DA006E39D4 /* לח.txt in Resources */,
+				4D3725482BC6911C003BAFAD /* צז.txt in Resources */,
+				4D3725502BC6911C003BAFAD /* צג.txt in Resources */,
+				4D610F772C4F9D6F009B785E /* קיז.txt in Resources */,
+				4D3725042BC47A50003BAFAD /* עט.txt in Resources */,
+				4D610F812C4F9D6F009B785E /* קי.txt in Resources */,
+				4D3725002BC47A50003BAFAD /* פב.txt in Resources */,
+				4D3725022BC47A50003BAFAD /* עה.txt in Resources */,
+				4D610FB82C4FA554009B785E /* קכ.txt in Resources */,
+				4D3724DA2BC4723D003BAFAD /* נז.txt in Resources */,
+				4D610FB42C4FA554009B785E /* קכט.txt in Resources */,
+				4D610FBF2C4FA554009B785E /* קמו.txt in Resources */,
+				4D3724DB2BC4723D003BAFAD /* ס.txt in Resources */,
+				4DDBC1B42BBBD3DA006E39D4 /* ט.txt in Resources */,
+				4D610FA72C4FA554009B785E /* קלו.txt in Resources */,
+				4D610FB02C4FA554009B785E /* קמא.txt in Resources */,
+				4DDBC1BB2BBBD3DA006E39D4 /* יז.txt in Resources */,
+				4DDBC1F72BBC0C29006E39D4 /* Guttman Drogolin-Bold.ttf in Resources */,
+				4D3724FE2BC47A50003BAFAD /* פו.txt in Resources */,
+				4D3724BE2BC44E3F003BAFAD /* מד.txt in Resources */,
+				4D3725472BC6911C003BAFAD /* צא.txt in Resources */,
+				4D610FB12C4FA554009B785E /* קלט.txt in Resources */,
+				4D610F7E2C4F9D6F009B785E /* קז.txt in Resources */,
+				4DDBC1CF2BBBD3DA006E39D4 /* מא.txt in Resources */,
+				4DDBC1D82BBBD3DA006E39D4 /* ב.txt in Resources */,
+				4DDBC1B72BBBD3DA006E39D4 /* יא.txt in Resources */,
+				4D3725012BC47A50003BAFAD /* עח.txt in Resources */,
+				4DDBC1DA2BBBD3DA006E39D4 /* מ.txt in Resources */,
+				4DDBC1DB2BBBD3DA006E39D4 /* ח.txt in Resources */,
+				4DDBC1B82BBBD3DA006E39D4 /* כט.txt in Resources */,
+				4DDBC1C72BBBD3DA006E39D4 /* ג.txt in Resources */,
+				4D610FB22C4FA554009B785E /* קלב.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D8149772BB9C0CB00DA919E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D8149812BB9C0CB00DA919E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D9BCB7D2BBEB6C1004FA4F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D9BCB882BBEB6C3004FA4F5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D8149652BB9C0CA00DA919E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D8149AB2BB9CDC300DA919E /* TehillimPageView.swift in Sources */,
+				4D8A115C2BC29A6300907B01 /* TehillimViewModel.swift in Sources */,
+				4D81499E2BB9C19100DA919E /* PrayersData.swift in Sources */,
+				4D37255D2BC6C746003BAFAD /* Utilities.swift in Sources */,
+				4D9BCB572BBE5F0C004FA4F5 /* NotificationHandler.swift in Sources */,
+				4D9BCB592BBE8F13004FA4F5 /* ZemanimView.swift in Sources */,
+				4D8149A22BB9C1CB00DA919E /* AboutView.swift in Sources */,
+				4D81499A2BB9C14700DA919E /* SettingsView.swift in Sources */,
+				4D81496F2BB9C0CA00DA919E /* SiddurView.swift in Sources */,
+				4D81499C2BB9C16A00DA919E /* PrayerPageView.swift in Sources */,
+				4D575ECA2C638650006C5D98 /* LocationManagerModel.swift in Sources */,
+				4D575EC72C6384E6006C5D98 /* HebrewViewModel.swift in Sources */,
+				4D81496D2BB9C0CA00DA919E /* Siddur_JudaisimApp.swift in Sources */,
+				4D8149CB2BB9D65700DA919E /* TehillimView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D8149752BB9C0CB00DA919E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D81497E2BB9C0CB00DA919E /* Siddur_JudaisimTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D81497F2BB9C0CB00DA919E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D8149882BB9C0CB00DA919E /* Siddur_JudaisimUITests.swift in Sources */,
+				4D81498A2BB9C0CB00DA919E /* Siddur_JudaisimUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D9BCB7B2BBEB6C1004FA4F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D9BCB842BBEB6C1004FA4F5 /* ZmanimWidgetBundle.swift in Sources */,
+				4D575EC82C6384E6006C5D98 /* HebrewViewModel.swift in Sources */,
+				4D575ECB2C638650006C5D98 /* LocationManagerModel.swift in Sources */,
+				4D9BCB862BBEB6C1004FA4F5 /* ZmanimWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4D81497B2BB9C0CB00DA919E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D8149682BB9C0CA00DA919E /* Siddur-Judaisim */;
+			targetProxy = 4D81497A2BB9C0CB00DA919E /* PBXContainerItemProxy */;
+		};
+		4D8149852BB9C0CB00DA919E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D8149682BB9C0CA00DA919E /* Siddur-Judaisim */;
+			targetProxy = 4D8149842BB9C0CB00DA919E /* PBXContainerItemProxy */;
+		};
+		4D9BCB8B2BBEB6C3004FA4F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D9BCB7E2BBEB6C1004FA4F5 /* ZmanimWidgetExtension */;
+			targetProxy = 4D9BCB8A2BBEB6C3004FA4F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4D81498B2BB9C0CB00DA919E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4D81498C2BB9C0CB00DA919E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D81498E2BB9C0CB00DA919E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Siddur-Judaisim/Preview Content\"";
+				DEVELOPMENT_TEAM = TWGJ6B7A5K;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Siddur-Judaisim/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Using your current location let you get day times in your location.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to provide better services";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Yarden-Dali.Siddur-Judaisim";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D81498F2BB9C0CB00DA919E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Siddur-Judaisim/Preview Content\"";
+				DEVELOPMENT_TEAM = TWGJ6B7A5K;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Siddur-Judaisim/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Using your current location let you get day times in your location.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to provide better services";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Yarden-Dali.Siddur-Judaisim";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4D8149912BB9C0CB00DA919E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TWGJ6B7A5K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Yarden-Dali.Siddur-JudaisimTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Siddur-Judaisim.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Siddur-Judaisim";
+			};
+			name = Debug;
+		};
+		4D8149922BB9C0CB00DA919E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TWGJ6B7A5K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Yarden-Dali.Siddur-JudaisimTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Siddur-Judaisim.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Siddur-Judaisim";
+			};
+			name = Release;
+		};
+		4D8149942BB9C0CB00DA919E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TWGJ6B7A5K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Yarden-Dali.Siddur-JudaisimUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Siddur-Judaisim";
+			};
+			name = Debug;
+		};
+		4D8149952BB9C0CB00DA919E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TWGJ6B7A5K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Yarden-Dali.Siddur-JudaisimUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Siddur-Judaisim";
+			};
+			name = Release;
+		};
+		4D9BCB8E2BBEB6C3004FA4F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TWGJ6B7A5K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZmanimWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ZmanimWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location to provide accurate Shabbat times even when the app is not in use.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to provide accurate Shabbat times.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Yarden-Dali.Siddur-Judaisim.ZmanimWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D9BCB8F2BBEB6C3004FA4F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TWGJ6B7A5K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZmanimWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ZmanimWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location to provide accurate Shabbat times even when the app is not in use.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to provide accurate Shabbat times.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Yarden-Dali.Siddur-Judaisim.ZmanimWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D8149642BB9C0CA00DA919E /* Build configuration list for PBXProject "Siddur-Judaisim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D81498B2BB9C0CB00DA919E /* Debug */,
+				4D81498C2BB9C0CB00DA919E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D81498D2BB9C0CB00DA919E /* Build configuration list for PBXNativeTarget "Siddur-Judaisim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D81498E2BB9C0CB00DA919E /* Debug */,
+				4D81498F2BB9C0CB00DA919E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D8149902BB9C0CB00DA919E /* Build configuration list for PBXNativeTarget "Siddur-JudaisimTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D8149912BB9C0CB00DA919E /* Debug */,
+				4D8149922BB9C0CB00DA919E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D8149932BB9C0CB00DA919E /* Build configuration list for PBXNativeTarget "Siddur-JudaisimUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D8149942BB9C0CB00DA919E /* Debug */,
+				4D8149952BB9C0CB00DA919E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D9BCB8D2BBEB6C3004FA4F5 /* Build configuration list for PBXNativeTarget "ZmanimWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D9BCB8E2BBEB6C3004FA4F5 /* Debug */,
+				4D9BCB8F2BBEB6C3004FA4F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4D8149962BB9C0F600DA919E /* XCRemoteSwiftPackageReference "hebcal-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hebcal/hebcal-swift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4D8149972BB9C0F600DA919E /* Hebcal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D8149962BB9C0F600DA919E /* XCRemoteSwiftPackageReference "hebcal-swift" */;
+			productName = Hebcal;
+		};
+		4D9BCB912BBEBEA8004FA4F5 /* Hebcal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D8149962BB9C0F600DA919E /* XCRemoteSwiftPackageReference "hebcal-swift" */;
+			productName = Hebcal;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 4D8149612BB9C0CA00DA919E /* Project object */;
+}
