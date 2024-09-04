@@ -16,17 +16,20 @@ struct SlichotPageView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(prayers) { prayer in
-                    if let textContent = loadContent(fileName: prayer.name) {
-                        Text(textContent.string)
-//                            .font(.custom("Guttman Drogolin-Bold", size: textSize))
-                            .font(.custom("Guttman Drogolin", size: appSettings.textSize))
-//                            .font(.custom("Guttman Vilna-Bold", size: appSettings.textSize))
-                            .padding()
-                            .foregroundColor(CustomPalette.black.color)
-                    } else {
-                        Text("CONTENT_FAIL_LOADING")
+                LazyVStack {
+                    ForEach(prayers) { prayer in
+                        if let textContent = loadContent(fileName: prayer.name) {
+                            Text(textContent.string)
+    //                            .font(.custom("Guttman Drogolin-Bold", size: textSize))
+                                .font(.custom("Guttman Drogolin", size: appSettings.textSize))
+    //                            .font(.custom("Guttman Vilna-Bold", size: appSettings.textSize))
+                                .padding()
+                                .foregroundColor(CustomPalette.black.color)
+                        } else {
+                            Text("CONTENT_FAIL_LOADING")
+                        }
                     }
+
                 }
             }
             .padding(.top, 1)

@@ -11,6 +11,8 @@ import UIKit
 
 
 struct PrayerPageView: View {
+    @EnvironmentObject var appSettings: AppSettings
+    
     var prayerID: UUID
     var prayers: [Prayer]
     @State private var selectedPrayerIndex = 0
@@ -31,8 +33,26 @@ struct PrayerPageView: View {
             }
         }
         .navigationBarTitle(NSLocalizedString(prayers[selectedPrayerIndex].name, comment: ""), displayMode: .inline)
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                textSizeAdjustmentMenu
+            }
+        }
+    }
+    
+    private var textSizeAdjustmentMenu: some View {
+        Menu {
+            Stepper("\(NSLocalizedString("TEXT_SIZE_LOC_STRING", comment: "")): \(Int(appSettings.textSize))", value: $appSettings.textSize, step: 1)
+            
+            Button(action: { appSettings.textSize = 20.0 }) {
+                Text(NSLocalizedString("RESET_TO_DEFAULT", comment:""))
+            }
+        } label: {
+            Label("TEXT_SIZE_LOC_STRING", systemImage: "textformat.size")
+        }
     }
 }
+
 
 
 struct PrayerDetailView: View {
