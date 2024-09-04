@@ -148,6 +148,7 @@
 		4D9BCB882BBEB6C3004FA4F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9BCB872BBEB6C3004FA4F5 /* Assets.xcassets */; };
 		4D9BCB8C2BBEB6C3004FA4F5 /* ZmanimWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4D9BCB7F2BBEB6C1004FA4F5 /* ZmanimWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4D9BCB922BBEBEA8004FA4F5 /* Hebcal in Frameworks */ = {isa = PBXBuildFile; productRef = 4D9BCB912BBEBEA8004FA4F5 /* Hebcal */; };
+		4DBBF7B32C7EFFEB0091C580 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF7B22C7EFFEB0091C580 /* AlertHandler.swift */; };
 		4DDBC1B42BBBD3DA006E39D4 /* ט.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC18B2BBBD3D9006E39D4 /* ט.txt */; };
 		4DDBC1B52BBBD3DA006E39D4 /* כה.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC18C2BBBD3D9006E39D4 /* כה.txt */; };
 		4DDBC1B62BBBD3DA006E39D4 /* א.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC18D2BBBD3D9006E39D4 /* א.txt */; };
@@ -385,6 +386,7 @@
 		4D9BCB852BBEB6C1004FA4F5 /* ZmanimWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZmanimWidget.swift; sourceTree = "<group>"; };
 		4D9BCB872BBEB6C3004FA4F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D9BCB892BBEB6C3004FA4F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DBBF7B22C7EFFEB0091C580 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		4DDBC18B2BBBD3D9006E39D4 /* ט.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ט.txt"; sourceTree = "<group>"; };
 		4DDBC18C2BBBD3D9006E39D4 /* כה.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "כה.txt"; sourceTree = "<group>"; };
 		4DDBC18D2BBBD3D9006E39D4 /* א.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "א.txt"; sourceTree = "<group>"; };
@@ -772,6 +774,7 @@
 				4D9BCB562BBE5F0C004FA4F5 /* NotificationHandler.swift */,
 				4D575EC92C638650006C5D98 /* LocationManagerModel.swift */,
 				4D37255C2BC6C746003BAFAD /* Utilities.swift */,
+				4DBBF7B22C7EFFEB0091C580 /* AlertHandler.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -1163,6 +1166,7 @@
 				4D575EC72C6384E6006C5D98 /* HebrewViewModel.swift in Sources */,
 				4D81496D2BB9C0CA00DA919E /* Siddur_JudaisimApp.swift in Sources */,
 				4D8149CB2BB9D65700DA919E /* TehillimView.swift in Sources */,
+				4DBBF7B32C7EFFEB0091C580 /* AlertHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -71,7 +71,7 @@ struct Book: View {
                 LinearGradient(gradient: Gradient(colors: [CustomPalette.brown.color, Color.brown.opacity(0.7)]), startPoint: .topLeading, endPoint: .bottomTrailing)
                     .frame(width: 44, height: 150)
                     .border(Color.black)
-                    .cornerRadius(4)
+                    .cornerRadius(6)
                     .containerRelativeFrame(.horizontal, count: 8, spacing: 11)
                 
                 VStack(spacing: 80) {
@@ -114,9 +114,14 @@ struct EpisodeGroupView: View {
     let group: EpisodeGroup
     
     var body: some View {
-        Section(header: Text(NSLocalizedString(group.title, comment: ""))) {
+        Section {
+            Text(NSLocalizedString(group.title, comment: ""))
+                .padding(.top, 5)
+                .bold()
+            
             ScrollView(.horizontal) {
                 HStack {
+                    
                     ForEach(group.episodes) { episode in
                         Book(episode: episode, episodeGroup: group)
                     }

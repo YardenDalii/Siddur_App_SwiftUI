@@ -1,16 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
-      "localizations" : {
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        }
-      }
-    },
     "(item.category ?? \"\")" : {
       "localizations" : {
         "he" : {
@@ -160,23 +150,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "שפת האפליקציה"
-          }
-        }
-      }
-    },
-    "APPEARANCE_LOC_STRING" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Appearance"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "תצוגה"
           }
         }
       }

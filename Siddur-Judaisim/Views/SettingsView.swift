@@ -15,11 +15,7 @@ struct SettingsView: View {
         NavigationStack {
             List {
                 Section(header: Text("SETTINGS_LOC_STRING")) {
-//                    IconNavLink(iconImage: "paintbrush.fill",
-//                                linkName: "APPEARANCE_LOC_STRING",
-//                                iconColor: Color.purple,
-//                                destination: AppearanceSettingsView())
-//                    
+                  
                     IconNavLink(iconImage: "globe",
                                 linkName: "APP_LANG_LOC",
                                 iconColor: Color.blue,

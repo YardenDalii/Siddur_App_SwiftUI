@@ -11,13 +11,134 @@ import MapKit
 
 
 
+//struct ZemanimView: View {
+//    @EnvironmentObject var appSettings: AppSettings
+//    @EnvironmentObject var locationManager: LocationManager
+//    
+//    @StateObject private var viewModel = HebrewTimeModel()
+//    
+//    @State private var showTitle = false
+//    @State private var showAddLocationSheet = false
+//    
+//    @State var localLocation: LocationItem?
+//    
+//    var body: some View {
+//        NavigationStack {
+//            VStack {
+//                if localLocation != nil {
+//                    ScrollView {
+//                        VStack {
+//                            headerView
+//                            
+//                            if let temp = localLocation {
+//                                ExpandableCardView(item: temp)
+//                                    .padding(.horizontal)
+//                            }
+//                            
+//                            ForEach(locationManager.savedLocations) { location in
+//                                ExpandableCardView(item: location)
+//                                    .padding(.horizontal)
+//                                    .contextMenu {
+//                                        Button(role: .destructive) {
+//                                            deleteLocation(location)
+//                                        } label: {
+//                                            Label("DELETE_LOC_STRING", systemImage: "trash")
+//                                        }
+//                                    }
+//                            }
+//                        }
+//                    }
+//                    .coordinateSpace(name: "scroll")
+//                } else {
+//                    ProgressView()
+//                        .progressViewStyle(CircularProgressViewStyle())
+//                        .scaleEffect(2)
+//                }
+//            }
+//            .background {
+//                Image("pageBG")
+//            }
+//            .navigationBarTitleDisplayMode(.inline)
+//            .navigationTitle(showTitle ? "ZEMANIM" : "")
+//            .toolbar {
+//                ToolbarItem(placement: .navigationBarTrailing) {
+//                    Button(action: {
+//                        showAddLocationSheet = true
+//                    }) {
+//                        Image(systemName: "plus")
+//                            .foregroundStyle(CustomPalette.golden.color)
+//                    }
+//                }
+//            }
+//            .sheet(isPresented: $showAddLocationSheet) {
+//                AddLocationView()
+//                    .environmentObject(appSettings)
+//            }
+//            .onAppear {
+//                if let location = locationManager.currentLocation {
+//                    viewModel.fetchZmanim(latitude: location.latitude, longitude: location.longitude)
+//                    viewModel.fetchShabbatTimes(latitude: location.latitude, longitude: location.longitude)
+//                    localLocation = LocationItem(name: "Local", symbol: "location.fill", latitude: location.latitude, longitude: location.longitude)
+//                    print("Location: \(location)")
+//                    print("Latitude: \(location.latitude), Longitude: \(location.longitude)")
+//                }
+//            }
+//        }
+//        
+//    }
+//    
+//    @ViewBuilder
+//    var headerView: some View {
+//        HStack {
+//            VStack(alignment: .leading) {
+//                if Locale.current.identifier.starts(with: "en") {
+//                    Text(HDate(date: appSettings.currentDate, calendar: .current).render(lang: TranslationLang.en))
+//                        .foregroundStyle(CustomPalette.lightGray.color)
+//                        .bold()
+//                } else {
+//                    Text(HDate(date: appSettings.currentDate, calendar: .current).render(lang: TranslationLang.he))
+//                        .foregroundStyle(CustomPalette.lightGray.color)
+//                        .bold()
+//                }
+//                Text("ZEMANIM")
+//                    .font(.largeTitle)
+//                    .bold()
+//            }
+//            
+//            Spacer()
+//            
+//        }
+//        .padding(.leading)
+//        
+//        GeometryReader { geometry in
+//            Color.clear
+//                .onChange(of: geometry.frame(in: .named("scroll")).origin.y) {
+//                    if (geometry.frame(in: .named("scroll")).origin.y < 40) {
+//                        self.showTitle = true
+//                    } else {
+//                        self.showTitle = false
+//                    }
+//                }
+//        }
+//        .frame(height: 0)
+//    }
+//    
+//    private func deleteLocation(_ location: LocationItem) {
+//        if let index = locationManager.savedLocations.firstIndex(where: { $0.id == location.id }) {
+//            locationManager.savedLocations.remove(at: index)
+//            locationManager.saveLocations()
+//        }
+//    }
+//}
+
+
+
 struct ZemanimView: View {
     @EnvironmentObject var appSettings: AppSettings
     @EnvironmentObject var locationManager: LocationManager
     
     @StateObject private var viewModel = HebrewTimeModel()
     
-    @State private var showTitle = false
     @State private var showAddLocationSheet = false
     
     @State var localLocation: LocationItem?
@@ -28,27 +149,24 @@ struct ZemanimView: View {
                 if localLocation != nil {
                     ScrollView {
                         VStack {
-                            headerView
-                            
                             if let temp = localLocation {
                                 ExpandableCardView(item: temp)
-                                    .padding(.horizontal)
-                            }
-                            
-                            ForEach(locationManager.savedLocations) { location in
-                                ExpandableCardView(item: location)
-                                    .padding(.horizontal)
-                                    .contextMenu {
-                                        Button(role: .destructive) {
-                                            deleteLocation(location)
-                                        } label: {
-                                            Label("DELETE_LOC_STRING", systemImage: "trash")
+                                
+                                ForEach(locationManager.savedLocations) { location in
+                                    ExpandableCardView(item: location)
+                                        .contextMenu {
+                                            Button(role: .destructive) {
+                                                deleteLocation(location)
+                                            } label: {
+                                                Label("DELETE_LOC_STRING", systemImage: "trash")
+                                            }
                                         }
-                                    }
+                                }
                             }
                         }
+                        .padding()
                     }
-                    .coordinateSpace(name: "scroll")
+                    
                 } else {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle())
@@ -58,15 +176,26 @@ struct ZemanimView: View {
             .background {
                 Image("pageBG")
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle(showTitle ? "ZEMANIM" : "")
+            .navigationTitle("ZEMANIM")
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {
                         showAddLocationSheet = true
                     }) {
                         Image(systemName: "plus")
                             .foregroundStyle(CustomPalette.golden.color)
+                    }
+                }
+                
+                ToolbarItem(placement: .topBarLeading) {
+                    if Locale.current.identifier.starts(with: "en") {
+                        Text(HDate(date: appSettings.currentDate, calendar: .current).render(lang: TranslationLang.en))
+                            .foregroundStyle(CustomPalette.lightGray.color)
+                            .bold()
+                    } else {
+                        Text(HDate(date: appSettings.currentDate, calendar: .current).render(lang: TranslationLang.he))
+                            .foregroundStyle(CustomPalette.lightGray.color)
+                            .bold()
                     }
                 }
             }
@@ -85,42 +214,6 @@ struct ZemanimView: View {
             }
         }
         
-    }
-    
-    @ViewBuilder
-    var headerView: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                if Locale.current.identifier.starts(with: "en") {
-                    Text(HDate(date: appSettings.currentDate, calendar: .current).render(lang: TranslationLang.en))
-                        .foregroundStyle(CustomPalette.lightGray.color)
-                        .bold()
-                } else {
-                    Text(HDate(date: appSettings.currentDate, calendar: .current).render(lang: TranslationLang.he))
-                        .foregroundStyle(CustomPalette.lightGray.color)
-                        .bold()
-                }
-                Text("ZEMANIM")
-                    .font(.largeTitle)
-                    .bold()
-            }
-            
-            Spacer()
-            
-        }
-        .padding(.leading)
-        
-        GeometryReader { geometry in
-            Color.clear
-                .onChange(of: geometry.frame(in: .named("scroll")).origin.y) {
-                    if (geometry.frame(in: .named("scroll")).origin.y < 40) {
-                        self.showTitle = true
-                    } else {
-                        self.showTitle = false
-                    }
-                }
-        }
-        .frame(height: 0)
     }
     
     private func deleteLocation(_ location: LocationItem) {
