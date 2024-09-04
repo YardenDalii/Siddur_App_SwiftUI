@@ -82,6 +82,13 @@ struct PrayersView: View {
             List {
                 prayerSection(title: NSLocalizedString("DAILY_PRAYES_LOC", comment: ""), prayers: prayers.dailyPrayers)
                 prayerSection(title: NSLocalizedString("MAZON_PRAYES_LOC", comment: ""), prayers: prayers.mazonPrayers)
+                Section {
+                    NavigationLink(destination: SlichotPageView(prayers: prayers.slichot)) {
+                        Text(NSLocalizedString("SLICHOT_LOC", comment: ""))
+                    }
+                }
+//                prayerSection(title: NSLocalizedString("SLICHOT_LOC", comment: ""), prayers: prayers.slichot)
+
             }
 //            .listStyle(PlainListStyle())
             .background(
@@ -101,7 +108,7 @@ struct PrayersView: View {
         Section(header: Text(title).bold()) {
             ForEach(prayers) { prayer in
                 NavigationLink(destination: PrayerPageView(prayerID: prayer.id, prayers: prayers)) {
-                    Text(prayer.name)
+                    Text(NSLocalizedString(prayer.name, comment: ""))
                 }
             }
         }

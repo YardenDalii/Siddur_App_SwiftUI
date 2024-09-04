@@ -30,7 +30,7 @@ struct PrayerPageView: View {
                 }
             }
         }
-        .navigationBarTitle(prayers[selectedPrayerIndex].name, displayMode: .inline)
+        .navigationBarTitle(NSLocalizedString(prayers[selectedPrayerIndex].name, comment: ""), displayMode: .inline)
     }
 }
 
@@ -41,30 +41,54 @@ struct PrayerDetailView: View {
     
     var body: some View {
         ScrollView {
-            Text(prayer.name) // Customize as needed
-                .foregroundColor(CustomPalette.black.color)
-            //            if let textContent = loadContent(fileName: prayer.name) {
-            //                Text(textContent.string)
-            ////                    .font(.custom("Guttman Drogolin-Bold", size: textSize))
-            ////                    .font(.custom("Guttman Drogolin", size: textSize))
-            //                    .font(.custom("Guttman Vilna-Bold", size: appSettings.textSize))
-            //                    .padding()
-            //                    .foregroundColor(CustomPalette.black.color)
-            //
-            //                
-            //            } else {
-            //                Text("Failed to load the content.")
-            //            }
+            if let textContent = loadContent(fileName: prayer.name) {
+                Text(textContent.string)
+//                    .font(.custom("Guttman Drogolin-Bold", size: textSize))
+                    .font(.custom("Guttman Drogolin", size: appSettings.textSize))
+//                    .font(.custom("Guttman Vilna-Bold", size: appSettings.textSize))
+                    .padding()
+                    .foregroundColor(CustomPalette.black.color)
+                
+            } else {
+                Text("Failed to load the content.")
+            }
         }
+        .padding(.top, 1)
+        .environment(\.layoutDirection, .rightToLeft)
         .background {
             Image("pageBG")
         }
+        
     }
 }
+
+//struct PrayerDetailView: View {
+//    var prayer: Prayer
+//    @EnvironmentObject var appSettings: AppSettings
+//
+//    var body: some View {
+//        ScrollView {
+//            if let textContent = loadContent(fileName: prayer.name) {
+//                AttributedTextView(attributedString: textContent, customFontName: "Guttman Drogolin", fontSize: appSettings.textSize)
+//                    .font(.custom("Guttman Drogolin", size: appSettings.textSize))
+//                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+//                    .padding()
+//            } else {
+//                Text("Failed to load the content.")
+//                    .padding()
+//            }
+//        }
+//        .padding(.top, 1)
+//        .environment(\.layoutDirection, .rightToLeft)
+//        .background {
+//            Image("pageBG")
+//        }
+//    }
+//}
 
 
 #Preview {
     //    PrayerPageView(prayer: Prayer(name:"template"))
-    PrayerPageView(prayerID: UUID(), prayers: MockPray().dailyPrayers)
+    PrayerPageView(prayerID: UUID(), prayers: MockPray().dailyPrayers).environmentObject(AppSettings())
     
 }

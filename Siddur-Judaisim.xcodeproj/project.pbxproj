@@ -72,7 +72,6 @@
 		4D3725532BC6911C003BAFAD /* צח.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3725422BC6911C003BAFAD /* צח.txt */; };
 		4D3725542BC6911C003BAFAD /* קא.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3725432BC6911C003BAFAD /* קא.txt */; };
 		4D3725552BC6911C003BAFAD /* קה.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3725442BC6911C003BAFAD /* קה.txt */; };
-		4D37255B2BC6C667003BAFAD /* shachar.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D37255A2BC6C667003BAFAD /* shachar.txt */; };
 		4D37255D2BC6C746003BAFAD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37255C2BC6C746003BAFAD /* Utilities.swift */; };
 		4D575EC72C6384E6006C5D98 /* HebrewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D575EC62C6384E6006C5D98 /* HebrewViewModel.swift */; };
 		4D575EC82C6384E6006C5D98 /* HebrewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D575EC62C6384E6006C5D98 /* HebrewViewModel.swift */; };
@@ -194,6 +193,15 @@
 		4DDBC1F62BBC0C29006E39D4 /* Guttman Vilna-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1F42BBC0C29006E39D4 /* Guttman Vilna-Bold.ttf */; };
 		4DDBC1F72BBC0C29006E39D4 /* Guttman Drogolin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1F52BBC0C29006E39D4 /* Guttman Drogolin-Bold.ttf */; };
 		4DDBC2012BBD9EF0006E39D4 /* tehilim.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC2002BBD9EF0006E39D4 /* tehilim.json */; };
+		4DFDF2E72C88477E00E1FD0D /* SlichotPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFDF2E62C88477E00E1FD0D /* SlichotPageView.swift */; };
+		4DFDF2EB2C884DCD00E1FD0D /* slichot1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DFDF2EA2C884DCD00E1FD0D /* slichot1.txt */; };
+		4DFDF2F52C885B2C00E1FD0D /* Shachar.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DFDF2F42C885B2C00E1FD0D /* Shachar.txt */; };
+		4DFDF2FB2C8865E900E1FD0D /* slichot2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DFDF2FA2C8865E800E1FD0D /* slichot2.txt */; };
+		4DFDF2FD2C8869D600E1FD0D /* slichot3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DFDF2FC2C8869D600E1FD0D /* slichot3.txt */; };
+		4DFDF2FF2C8869F700E1FD0D /* slichot4.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DFDF2FE2C8869F700E1FD0D /* slichot4.txt */; };
+		4DFDF3012C886A1600E1FD0D /* slichot5.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DFDF3002C886A1600E1FD0D /* slichot5.txt */; };
+		4DFDF3032C886A5400E1FD0D /* slichot6.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DFDF3022C886A5400E1FD0D /* slichot6.txt */; };
+		4DFDF3052C886A5800E1FD0D /* slichot7.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DFDF3042C886A5800E1FD0D /* slichot7.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -310,7 +318,6 @@
 		4D3725422BC6911C003BAFAD /* צח.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "צח.txt"; sourceTree = "<group>"; };
 		4D3725432BC6911C003BAFAD /* קא.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קא.txt"; sourceTree = "<group>"; };
 		4D3725442BC6911C003BAFAD /* קה.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קה.txt"; sourceTree = "<group>"; };
-		4D37255A2BC6C667003BAFAD /* shachar.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shachar.txt; sourceTree = "<group>"; };
 		4D37255C2BC6C746003BAFAD /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		4D575EC62C6384E6006C5D98 /* HebrewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HebrewViewModel.swift; sourceTree = "<group>"; };
 		4D575EC92C638650006C5D98 /* LocationManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerModel.swift; sourceTree = "<group>"; };
@@ -432,6 +439,15 @@
 		4DDBC1F42BBC0C29006E39D4 /* Guttman Vilna-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Guttman Vilna-Bold.ttf"; sourceTree = "<group>"; };
 		4DDBC1F52BBC0C29006E39D4 /* Guttman Drogolin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Guttman Drogolin-Bold.ttf"; sourceTree = "<group>"; };
 		4DDBC2002BBD9EF0006E39D4 /* tehilim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tehilim.json; sourceTree = "<group>"; };
+		4DFDF2E62C88477E00E1FD0D /* SlichotPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlichotPageView.swift; sourceTree = "<group>"; };
+		4DFDF2EA2C884DCD00E1FD0D /* slichot1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = slichot1.txt; sourceTree = "<group>"; };
+		4DFDF2F42C885B2C00E1FD0D /* Shachar.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Shachar.txt; sourceTree = "<group>"; };
+		4DFDF2FA2C8865E800E1FD0D /* slichot2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = slichot2.txt; sourceTree = "<group>"; };
+		4DFDF2FC2C8869D600E1FD0D /* slichot3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = slichot3.txt; sourceTree = "<group>"; };
+		4DFDF2FE2C8869F700E1FD0D /* slichot4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = slichot4.txt; sourceTree = "<group>"; };
+		4DFDF3002C886A1600E1FD0D /* slichot5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = slichot5.txt; sourceTree = "<group>"; };
+		4DFDF3022C886A5400E1FD0D /* slichot6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = slichot6.txt; sourceTree = "<group>"; };
+		4DFDF3042C886A5800E1FD0D /* slichot7.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = slichot7.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -681,7 +697,7 @@
 		4D3725592BC6C614003BAFAD /* Shachar */ = {
 			isa = PBXGroup;
 			children = (
-				4D37255A2BC6C667003BAFAD /* shachar.txt */,
+				4DFDF2F42C885B2C00E1FD0D /* Shachar.txt */,
 			);
 			path = Shachar;
 			sourceTree = "<group>";
@@ -719,6 +735,7 @@
 				4DDBC1E52BBBF763006E39D4 /* Font */,
 				4D3725582BC6C5FC003BAFAD /* Prayers */,
 				4D8149A72BB9CD0100DA919E /* Tehilim */,
+				4DFDF2E12C8845BE00E1FD0D /* Slichot */,
 				4D8149702BB9C0CB00DA919E /* Assets.xcassets */,
 				4D8149722BB9C0CB00DA919E /* Preview Content */,
 			);
@@ -820,8 +837,23 @@
 				4D8149992BB9C14700DA919E /* SettingsView.swift */,
 				4D8149A12BB9C1CB00DA919E /* AboutView.swift */,
 				4D9BCB582BBE8F13004FA4F5 /* ZemanimView.swift */,
+				4DFDF2E62C88477E00E1FD0D /* SlichotPageView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4DFDF2E12C8845BE00E1FD0D /* Slichot */ = {
+			isa = PBXGroup;
+			children = (
+				4DFDF2EA2C884DCD00E1FD0D /* slichot1.txt */,
+				4DFDF2FA2C8865E800E1FD0D /* slichot2.txt */,
+				4DFDF2FC2C8869D600E1FD0D /* slichot3.txt */,
+				4DFDF2FE2C8869F700E1FD0D /* slichot4.txt */,
+				4DFDF3002C886A1600E1FD0D /* slichot5.txt */,
+				4DFDF3022C886A5400E1FD0D /* slichot6.txt */,
+				4DFDF3042C886A5800E1FD0D /* slichot7.txt */,
+			);
+			path = Slichot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -964,7 +996,10 @@
 			files = (
 				4D610FA42C4FA554009B785E /* קכה.txt in Resources */,
 				4D610F7D2C4F9D6F009B785E /* קיט.txt in Resources */,
+				4DFDF3052C886A5800E1FD0D /* slichot7.txt in Resources */,
+				4DFDF2FB2C8865E900E1FD0D /* slichot2.txt in Resources */,
 				4D3724E52BC4723D003BAFAD /* נא.txt in Resources */,
+				4DFDF2EB2C884DCD00E1FD0D /* slichot1.txt in Resources */,
 				4D3724DC2BC4723D003BAFAD /* סב.txt in Resources */,
 				4D3724D72BC4723D003BAFAD /* סח.txt in Resources */,
 				4D610F7A2C4F9D6F009B785E /* קיא.txt in Resources */,
@@ -986,6 +1021,7 @@
 				4DDBC1D02BBBD3DA006E39D4 /* לד.txt in Resources */,
 				4DDBC1BD2BBBD3DA006E39D4 /* כח.txt in Resources */,
 				4D3725072BC47A50003BAFAD /* פ.txt in Resources */,
+				4DFDF3032C886A5400E1FD0D /* slichot6.txt in Resources */,
 				4D3725532BC6911C003BAFAD /* צח.txt in Resources */,
 				4DDBC1D12BBBD3DA006E39D4 /* לז.txt in Resources */,
 				4DDBC1B92BBBD3DA006E39D4 /* לו.txt in Resources */,
@@ -1016,6 +1052,7 @@
 				4D610FA32C4FA554009B785E /* קלה.txt in Resources */,
 				4D610FBC2C4FA554009B785E /* קמד.txt in Resources */,
 				4D37250A2BC47A50003BAFAD /* פז.txt in Resources */,
+				4DFDF2FF2C8869F700E1FD0D /* slichot4.txt in Resources */,
 				4D3724FF2BC47A50003BAFAD /* פד.txt in Resources */,
 				4D3724BA2BC44E3F003BAFAD /* מו.txt in Resources */,
 				4D3725452BC6911C003BAFAD /* קד.txt in Resources */,
@@ -1036,6 +1073,7 @@
 				4DDBC1C52BBBD3DA006E39D4 /* ד.txt in Resources */,
 				4D610F782C4F9D6F009B785E /* קטז.txt in Resources */,
 				4D3725492BC6911C003BAFAD /* ק.txt in Resources */,
+				4DFDF3012C886A1600E1FD0D /* slichot5.txt in Resources */,
 				4DDBC1BE2BBBD3DA006E39D4 /* יד.txt in Resources */,
 				4D610F822C4F9D6F009B785E /* קיג.txt in Resources */,
 				4DDBC1BF2BBBD3DA006E39D4 /* כו.txt in Resources */,
@@ -1044,6 +1082,7 @@
 				4D3724E92BC4723D003BAFAD /* סה.txt in Resources */,
 				4D37254D2BC6911C003BAFAD /* צו.txt in Resources */,
 				4D37250B2BC47A50003BAFAD /* פג.txt in Resources */,
+				4DFDF2F52C885B2C00E1FD0D /* Shachar.txt in Resources */,
 				4DDBC1C62BBBD3DA006E39D4 /* לט.txt in Resources */,
 				4D3724BB2BC44E3F003BAFAD /* נ.txt in Resources */,
 				4D3724E22BC4723D003BAFAD /* נט.txt in Resources */,
@@ -1051,6 +1090,7 @@
 				4D610FBE2C4FA554009B785E /* קמ.txt in Resources */,
 				4D3724B92BC44E3F003BAFAD /* מט.txt in Resources */,
 				4D610FB32C4FA554009B785E /* קמח.txt in Resources */,
+				4DFDF2FD2C8869D600E1FD0D /* slichot3.txt in Resources */,
 				4DDBC1B62BBBD3DA006E39D4 /* א.txt in Resources */,
 				4DDBC1C42BBBD3DA006E39D4 /* כד.txt in Resources */,
 				4D3724EA2BC4723D003BAFAD /* סו.txt in Resources */,
@@ -1072,7 +1112,6 @@
 				4D3724E02BC4723D003BAFAD /* סד.txt in Resources */,
 				4D610F7B2C4F9D6F009B785E /* קיד.txt in Resources */,
 				4DDBC1BA2BBBD3DA006E39D4 /* לב.txt in Resources */,
-				4D37255B2BC6C667003BAFAD /* shachar.txt in Resources */,
 				4DDBC1CA2BBBD3DA006E39D4 /* ה.txt in Resources */,
 				4D37254B2BC6911C003BAFAD /* צ.txt in Resources */,
 				4D610F832C4F9D6F009B785E /* קיב.txt in Resources */,
@@ -1166,6 +1205,7 @@
 				4D575EC72C6384E6006C5D98 /* HebrewViewModel.swift in Sources */,
 				4D81496D2BB9C0CA00DA919E /* Siddur_JudaisimApp.swift in Sources */,
 				4D8149CB2BB9D65700DA919E /* TehillimView.swift in Sources */,
+				4DFDF2E72C88477E00E1FD0D /* SlichotPageView.swift in Sources */,
 				4DBBF7B32C7EFFEB0091C580 /* AlertHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

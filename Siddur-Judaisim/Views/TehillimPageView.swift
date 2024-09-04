@@ -91,9 +91,9 @@ struct EpisodeDetailView: View {
             
             if let textContent = loadContent(fileName: episode.name) {
                 Text(textContent.string)
-                //                    .font(.custom("Guttman Drogolin-Bold", size: textSize))
-                //                    .font(.custom("Guttman Drogolin", size: textSize))
-                    .font(.custom("Guttman Vilna-Bold", size: appSettings.textSize))
+//                    .font(.custom("Guttman Drogolin-Bold", size: textSize))
+                    .font(.custom("Guttman Drogolin", size: appSettings.textSize))
+//                    .font(.custom("Guttman Vilna-Bold", size: appSettings.textSize))
                     .padding()
                     .foregroundColor(CustomPalette.black.color)
                 

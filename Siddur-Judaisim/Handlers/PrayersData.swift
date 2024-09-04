@@ -21,17 +21,25 @@ struct Prayer: Identifiable, Decodable, Hashable {
 
 struct MockPray {
     
-    let dailyPrayers: [Prayer] = [.init(name: NSLocalizedString("Shachar", comment: "")),
-                                  .init(name: NSLocalizedString("Shacharit", comment: "")),
-                                  .init(name: NSLocalizedString("Shacharit+", comment: "")),
-                                  .init(name: NSLocalizedString("Mincha", comment: "")),
-                                  .init(name: NSLocalizedString("Arvit", comment: "")),
-                                  .init(name: NSLocalizedString("Bedtime-Shema", comment: "")),
-                                  .init(name: NSLocalizedString("Tikkun-Chatzot", comment: ""))]
+    let dailyPrayers: [Prayer] = [.init(name: "Shachar"),
+                                  .init(name: "Shacharit"),
+                                  .init(name: "Shacharit+"),
+                                  .init(name: "Mincha"),
+                                  .init(name: "Arvit"),
+                                  .init(name: "Bedtime-Shema"),
+                                  .init(name: "Tikkun-Chatzot"),]
     
-    let mazonPrayers: [Prayer] = [.init(name: NSLocalizedString("Birchat-Hamazon", comment: "")),
-                                  .init(name: NSLocalizedString("Borei-Nefashot", comment: "")),
-                                  .init(name: NSLocalizedString("Me'ein-Shalosh", comment: ""))]
+    let mazonPrayers: [Prayer] = [.init(name: "Birchat-Hamazon"),
+                                  .init(name: "Borei-Nefashot"),
+                                  .init(name: "Me'ein-Shalosh"),]
+    
+    let slichot: [Prayer] = [.init(name: "slichot1"),
+                             .init(name: "slichot2"),
+                             .init(name: "slichot3"),
+                             .init(name: "slichot4"),
+                             .init(name: "slichot5"),
+                             .init(name: "slichot6"),
+                             .init(name: "slichot7"),]
     
     let temp: String = ""
     

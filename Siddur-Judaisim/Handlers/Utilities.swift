@@ -18,7 +18,60 @@ func loadContent(fileName: String) -> NSAttributedString? {
     return NSAttributedString(string: string)
 }
 
-
+//func loadContent(fileName: String) -> NSAttributedString? {
+//    guard let fileURL = Bundle.main.url(forResource: fileName, withExtension: "rtf") else {
+//        print("File not found: \(fileName).rtf")
+//        return nil
+//    }
+//    
+//    do {
+//        let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
+//            .documentType: NSAttributedString.DocumentType.rtf
+//        ]
+//        let attributedString = try NSAttributedString(url: fileURL, options: options, documentAttributes: nil)
+//        print("RTF content loaded successfully for file: \(fileName)")
+//        return attributedString
+//    } catch {
+//        print("Error loading RTF content: \(error)")
+//        return nil
+//    }
+//}
+//
+//struct AttributedTextView: UIViewRepresentable {
+//    let attributedString: NSAttributedString
+//    let customFontName: String
+//    let fontSize: CGFloat
+//
+//    func makeUIView(context: Context) -> UITextView {
+//        let textView = UITextView()
+//        textView.isEditable = false
+//        textView.isScrollEnabled = true // Enable scrolling to view all content
+////        textView.backgroundColor = .clear // Make the background transparent
+//        textView.textColor = UIColor(CustomPalette.black.color)
+//        textView.textAlignment = .right // Align right for RTL content
+//        textView.translatesAutoresizingMaskIntoConstraints = false
+//
+//        // Set the attributed text
+//        textView.attributedText = attributedString
+//        
+//        // Apply the custom font
+//        if let customFont = UIFont(name: customFontName, size: fontSize) {
+//            textView.font = customFont
+//        } else {
+//            textView.font = UIFont.systemFont(ofSize: fontSize) // Fallback to system font
+//        }
+//        
+//        textView.adjustsFontForContentSizeCategory = true
+//
+//        return textView
+//    }
+//
+//    func updateUIView(_ uiView: UITextView, context: Context) {
+//        uiView.attributedText = attributedString
+//        uiView.sizeToFit() // Make sure to size the UITextView to fit its content
+//        uiView.layoutIfNeeded()
+//    }
+//}
 
 
 enum CustomPalette: String {

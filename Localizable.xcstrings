@@ -392,6 +392,9 @@
         }
       }
     },
+    "CONTENT_FAIL_LOADING" : {
+
+    },
     "CURRENT_DATE_ZMANIM" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -629,6 +632,9 @@
           }
         }
       }
+    },
+    "Failed to load the content." : {
+
     },
     "FAVORITES_LOC_STRING" : {
       "extractionState" : "manual",
@@ -1181,6 +1187,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "סידור"
+          }
+        }
+      }
+    },
+    "SLICHOT_LOC" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slichot"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סליחות"
           }
         }
       }
