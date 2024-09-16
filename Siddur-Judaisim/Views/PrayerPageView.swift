@@ -68,6 +68,7 @@ struct PrayerDetailView: View {
 //                    .font(.custom("Guttman Vilna-Bold", size: appSettings.textSize))
                     .padding()
                     .foregroundColor(CustomPalette.black.color)
+//                    .multilineTextAlignment(.center)
                 
             } else {
                 Text("Failed to load the content.")
@@ -81,6 +82,7 @@ struct PrayerDetailView: View {
         
     }
 }
+
 
 //struct PrayerDetailView: View {
 //    var prayer: Prayer

@@ -83,7 +83,7 @@ struct EpisodeDetailView: View {
     var body: some View {
         ScrollView {
             Text(NSLocalizedString("TEHILLIM_EP_LOC", comment: "") + " \(episode.name)")
-                .bold().font(.custom("Guttman Vilna-Bold", size: appSettings.textSize * 1.5))
+                .bold().font(.custom("Guttman Drogolin", size: appSettings.textSize * 1.5))
                 .padding(.bottom, 1)
                 .foregroundColor(CustomPalette.black.color)
             
@@ -96,7 +96,7 @@ struct EpisodeDetailView: View {
 //                    .font(.custom("Guttman Vilna-Bold", size: appSettings.textSize))
                     .padding()
                     .foregroundColor(CustomPalette.black.color)
-                
+//                    .multilineTextAlignment(.center)
                 
             } else {
                 Text("CONTANT_FAIL_LOADING")

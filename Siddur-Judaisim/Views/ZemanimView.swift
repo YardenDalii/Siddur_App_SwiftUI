@@ -433,78 +433,92 @@ struct AddLocationView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                List {
-                    ForEach(geocodingHelper.searchResults, id: \.self) { result in
-                        Button(action: {
-                            selectedLocation = result
-                            geocodingHelper.getCoordinate(addressString: result.title) { coordinate in
-                                if let coordinate = coordinate {
-                                    coordinates = coordinate
-                                    searchQuery = result.title
-                                }
-                            }
-                        }) {
-                            VStack(alignment: .leading) {
-                                Text(result.title)
-                                    .font(.headline)
-                                Text(result.subtitle)
-                                    .font(.subheadline)
-                                    .foregroundColor(.gray)
-                            }
-                        }
-                    }
-                    
-                    if let coordinates = coordinates {
-                        Section {
-                            Picker("SYMBOL_SELECTION_ZMANIM", selection: $selectedSymbol) {
-                                ForEach(symbols, id: \.self) { symbol in
-                                    Image(systemName: symbol)
-                                        .tag(symbol)
-                                }
-                            }
-                            .pickerStyle(SegmentedPickerStyle())
-                            .padding()
-                            
+            ZStack {
+                VStack {
+                    List {
+                        ForEach(geocodingHelper.searchResults, id: \.self) { result in
                             Button(action: {
-                                if let selectedLocation = selectedLocation {
-                                    let newLocation = LocationItem(
-                                        name: selectedLocation.title,
-                                        symbol: selectedSymbol,
-                                        latitude: coordinates.latitude,
-                                        longitude: coordinates.longitude
-                                    )
-                                    locationManager.savedLocations.append(newLocation)
-                                    locationManager.saveLocations()
-                                    dismiss()
+                                selectedLocation = result
+                                geocodingHelper.getCoordinate(addressString: result.title) { coordinate in
+                                    if let coordinate = coordinate {
+                                        coordinates = coordinate
+                                        searchQuery = result.title
+                                    }
                                 }
                             }) {
-                                Text("ADD_LOCATION_BUTTON_ZMANIM")
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                                    .padding()
-                                    .frame(maxWidth: .infinity)
-                                    .background(Color.blue)
-                                    .cornerRadius(10)
-                                    .padding(.horizontal)
+                                VStack(alignment: .leading) {
+                                    Text(result.title)
+                                        .font(.headline)
+                                        .foregroundStyle(.black)
+                                    Text(result.subtitle)
+                                        .font(.subheadline)
+                                        .foregroundStyle(.gray)
+                                }
+                            }
+                        }
+                        
+                        if let coordinates = coordinates {
+                            Section {
+                                Picker("SYMBOL_SELECTION_ZMANIM", selection: $selectedSymbol) {
+                                    ForEach(symbols, id: \.self) { symbol in
+                                        Image(systemName: symbol)
+                                            .tag(symbol)
+                                    }
+                                }
+                                .pickerStyle(SegmentedPickerStyle())
+                                .padding()
+                                
+                                Button(action: {
+                                    if let selectedLocation = selectedLocation {
+                                        let newLocation = LocationItem(
+                                            name: selectedLocation.title,
+                                            symbol: selectedSymbol,
+                                            latitude: coordinates.latitude,
+                                            longitude: coordinates.longitude
+                                        )
+                                        locationManager.savedLocations.append(newLocation)
+                                        locationManager.saveLocations()
+                                        dismiss()
+                                    }
+                                }) {
+                                    Text("ADD_LOCATION_BUTTON_ZMANIM")
+                                        .font(.headline)
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .frame(maxWidth: .infinity)
+                                        .background(CustomPalette.blue.color)
+                                        .cornerRadius(10)
+                                        .padding(.horizontal)
+                                }
                             }
                         }
                     }
+//                    .listStyle(InsetGroupedListStyle())
+                    .background(
+                        Image("pageBG")
+                            .resizable()
+                            .scaledToFill()
+                            .ignoresSafeArea()
+                    )
+                    .scrollContentBackground(.hidden)
+                    
                 }
-                .listStyle(InsetGroupedListStyle())
                 .searchable(text: $searchQuery, placement: .navigationBarDrawer(displayMode: .automatic), prompt: "SEARCH_ADDRESS_PROMPT")
                 .onChange(of: searchQuery) { oldValue, newValue in
                     geocodingHelper.updateSearch(query: newValue)
                 }
                 .navigationTitle("ADD_LOCATION_BUTTON_ZMANIM")
+                .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
+                    ToolbarItem(placement: .topBarTrailing) {
                         Button("CANCEL_BUTTON") {
                             dismiss()
                         }
+                        .foregroundStyle(CustomPalette.golden.color)
                     }
                 }
             }
+            
         }
     }
 }

@@ -25,6 +25,7 @@ struct SlichotPageView: View {
     //                            .font(.custom("Guttman Vilna-Bold", size: appSettings.textSize))
                                 .padding()
                                 .foregroundColor(CustomPalette.black.color)
+//                                .multilineTextAlignment(.center)
                         } else {
                             Text("CONTENT_FAIL_LOADING")
                         }
