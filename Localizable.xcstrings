@@ -1,7 +1,7 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "(item.category ?? \"\")" : {
+    "" : {
       "localizations" : {
         "he" : {
           "stringUnit" : {
@@ -120,6 +120,40 @@
         }
       }
     },
+    "ADDITIONS_FOR_SHACHARIT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "After Shacharit"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תפילות אחר שחרית"
+          }
+        }
+      }
+    },
+    "ALENU" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alenu"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עלינו לשבח"
+          }
+        }
+      }
+    },
     "alotHaShacar" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -133,6 +167,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "עלות השחר"
+          }
+        }
+      }
+    },
+    "AMIDA" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Amida"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תפילת עמידה"
           }
         }
       }
@@ -171,6 +222,57 @@
         }
       }
     },
+    "ASHREI" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ashrei"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אשרי יושבי ביתך"
+          }
+        }
+      }
+    },
+    "BARECHU" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Barechu"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ברכו"
+          }
+        }
+      }
+    },
+    "BEDTIME_SHEMA" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedtime Shema"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "שמע שעל המיטה"
+          }
+        }
+      }
+    },
     "Bedtime-Shema" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -188,6 +290,23 @@
         }
       }
     },
+    "BEIT_YAAKOV" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beit Yaakov"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בית יעקב"
+          }
+        }
+      }
+    },
     "Birchat-Hamazon" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -201,6 +320,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ברכת המזון"
+          }
+        }
+      }
+    },
+    "BLESSING_OF_THE_MOON" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blessing Of The Moon"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ברכת הלבנה"
           }
         }
       }
@@ -391,9 +527,6 @@
           }
         }
       }
-    },
-    "CONTENT_FAIL_LOADING" : {
-
     },
     "CURRENT_DATE_ZMANIM" : {
       "extractionState" : "manual",
@@ -633,9 +766,6 @@
         }
       }
     },
-    "Failed to load the content." : {
-
-    },
     "FAVORITES_LOC_STRING" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -703,6 +833,23 @@
         }
       }
     },
+    "HANNA'S_PRAYER" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hanna’s Prayer"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ותתפלל חנה"
+          }
+        }
+      }
+    },
     "havdalah" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -733,6 +880,74 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ספריית Hebcal API"
+          }
+        }
+      }
+    },
+    "HODU" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hodu"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הודו"
+          }
+        }
+      }
+    },
+    "INCENSE_OFFERING" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Incense Offering"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פטום הקטורת"
+          }
+        }
+      }
+    },
+    "KAVEH" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaveh"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "קוה"
+          }
+        }
+      }
+    },
+    "LESHEM_YICHUD" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LeShem Yichud"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לשם יחוד"
           }
         }
       }
@@ -801,22 +1016,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "חפש איזור"
-          }
-        }
-      }
-    },
-    "MAZON_PRAYES_LOC" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Birchat Hamazon"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ברכת המזון"
           }
         }
       }
@@ -922,6 +1121,57 @@
         }
       }
     },
+    "MODEH_ANI" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modeh Ani"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מודה אני"
+          }
+        }
+      }
+    },
+    "MORNING_BLESSINGS" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Morning Blessings"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ברכות השחר"
+          }
+        }
+      }
+    },
+    "MORNING_PRAYER" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Morning Prayer"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שחרית"
+          }
+        }
+      }
+    },
     "NO_PASUK_PROMPT" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -952,6 +1202,57 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "אין אירועים קרובים."
+          }
+        }
+      }
+    },
+    "OFFERINGS" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Korbanot"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "קרבנות"
+          }
+        }
+      }
+    },
+    "ORDER_OF_TALIT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tallit"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "טלית"
+          }
+        }
+      }
+    },
+    "ORDER_OF_TEFILLIN" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tefillin"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תפילין"
           }
         }
       }
@@ -1007,6 +1308,40 @@
         }
       }
     },
+    "PESUKEI_D'ZIMRA" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pesukei D’zmira"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פסוקי דזמרה"
+          }
+        }
+      }
+    },
+    "PETICHAT_ELIYAHU" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Petticoat Eliyahu"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פתיחת אליהו"
+          }
+        }
+      }
+    },
     "plagHaMincha" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1020,6 +1355,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "פלג (גר״א)"
+          }
+        }
+      }
+    },
+    "PRAYER_PARTS_LOC" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prayer Parts"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "חלקי התפילה"
+          }
+        }
+      }
+    },
+    "PREPARATORY_PRAYERS" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preparatory Prayers"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סדר השכמת הבוקר"
           }
         }
       }
@@ -1276,6 +1645,23 @@
         }
       }
     },
+    "SONG_OF_THE_DAY" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shir Shel Yom"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שיר של יום"
+          }
+        }
+      }
+    },
     "SORT_BOOK_LOC" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1463,6 +1849,23 @@
         }
       }
     },
+    "TEN_REMEMBRANCES" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ten Remembrances"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עשר זכיות"
+          }
+        }
+      }
+    },
     "TEXT_SIZE_LOC_STRING" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1480,6 +1883,91 @@
         }
       }
     },
+    "THE_MIDNIGHT_RITE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tikkun Chatzot"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תיקון חצות"
+          }
+        }
+      }
+    },
+    "THE_SHEMA" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shema"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "קריאת שמע"
+          }
+        }
+      }
+    },
+    "THIRTEEN_PRINCIPLES_OF_FAITH" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thirteen Principles Of Faith"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שלשה עשר עיקרים"
+          }
+        }
+      }
+    },
+    "TIKKUN_LEAH" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tikkun Leah"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תיקון לאה"
+          }
+        }
+      }
+    },
+    "TIKKUN_RACHEL" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tikkun Rachel"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תיקון רחל"
+          }
+        }
+      }
+    },
     "Tikkun-Chatzot" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1493,6 +1981,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "תיקון חצות"
+          }
+        }
+      }
+    },
+    "TORAH_BLESSINGS" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Torah Blessings"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ברכות התורה"
+          }
+        }
+      }
+    },
+    "TORAH_READING" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Torah Reading"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "קריאת התורה"
           }
         }
       }
@@ -1527,6 +2049,91 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "צאת הכוכבים"
+          }
+        }
+      }
+    },
+    "UVA_LESION" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uva Lezion"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ובא לציון גואל"
+          }
+        }
+      }
+    },
+    "VIDUI" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confession"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "וידוי"
+          }
+        }
+      }
+    },
+    "WEEKDAY_ARVIT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arvit"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ערבית"
+          }
+        }
+      }
+    },
+    "WEEKDAY_MINCHA" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mincha"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מנחה"
+          }
+        }
+      }
+    },
+    "WEEKDAY_SHACHARIT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shacharit"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שחרית"
           }
         }
       }

@@ -24,6 +24,7 @@ struct Siddur_JudaisimApp: App {
                 .preferredColorScheme(.light)
                 .environmentObject(AppSettings())
                 .environmentObject(LocationManager())
+                .environmentObject(SiddurLoader())
         }
         //        CarPlayScene()
     }
@@ -87,5 +88,6 @@ class AppSettings: ObservableObject {
     @AppStorage("textSize") var textSize: Double = 16
     @AppStorage("userPasuk") var userPasuk: String = ""
     //    @AppStorage("currentLocation") var userLocation: String
+    @Published var language: String = Locale.current.language.languageCode?.identifier ?? "en"
 }
 

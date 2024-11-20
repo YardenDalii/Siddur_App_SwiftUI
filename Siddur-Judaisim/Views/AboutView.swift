@@ -7,16 +7,18 @@
 
 import SwiftUI
 
+// AboutView
 struct AboutView: View {
-    
     @State private var isTapped: [CreditURL: Bool] = Dictionary(uniqueKeysWithValues: CreditURL.allCases.map { ($0, false) })
     
     var body: some View {
         NavigationView {
             List {
-                Section(header: Text("ACKS_CREDITS")){
+                Section(header: Text(NSLocalizedString("ACKS_CREDITS", comment: ""))) {
                     ForEach(CreditURL.allCases, id: \.self) { credit in
-                        CreditURLItem(label: NSLocalizedString(credit.label, comment: ""), imageName: credit.imageName, bgColor: credit.bgColor)
+                        CreditURLItem(label: NSLocalizedString(credit.label, comment: ""),
+                                      imageName: credit.imageName,
+                                      bgColor: credit.bgColor)
                             .contentShape(Rectangle())
                             .onTapGesture {
                                 isTapped[credit] = true
@@ -38,23 +40,19 @@ struct AboutView: View {
             )
             .scrollContentBackground(.hidden)
         }
-        .navigationBarTitle("ABOUT_LOC_STRING", displayMode: .inline)
+        .navigationBarTitle(NSLocalizedString("ABOUT_LOC_STRING", comment: ""), displayMode: .inline)
     }
     
-    
     private func openCreditURL(credit: CreditURL) {
-        guard let url = URL(string: credit.rawValue),
-              UIApplication.shared.canOpenURL(url) else {
+        guard let url = URL(string: credit.rawValue), UIApplication.shared.canOpenURL(url) else {
             return
         }
         UIApplication.shared.open(url)
     }
 }
 
-
-
+// CreditURLItem component
 struct CreditURLItem: View {
-    
     var label: String
     var imageName: String
     var bgColor: Color
@@ -71,7 +69,6 @@ struct CreditURLItem: View {
             }
             Text(NSLocalizedString(label, comment: ""))
             Spacer()
-            
             Image(systemName: NSLocalizedString("SETTINGS-ARROW-ICOM", comment: ""))
                 .resizable()
                 .bold()
@@ -81,12 +78,9 @@ struct CreditURLItem: View {
     }
 }
 
-
-
+// CreditURL Enum
 enum CreditURL: CaseIterable {
-    case hebcalApi
-    case pasuk
-    case tehillim
+    case hebcalApi, pasuk, tehillim
     
     var rawValue: String {
         switch self {
@@ -131,6 +125,10 @@ enum CreditURL: CaseIterable {
             return CustomPalette.darkBlue.color
         }
     }
+}
+
+#Preview {
+    AboutView()
 }
 
 // NSLocalizedString(, comment: "")

@@ -7,12 +7,16 @@
 
 import SwiftUI
 import Hebcal
+import WebKit
 
 
 struct SiddurView: View {
     
     @EnvironmentObject var appSettings: AppSettings
     @EnvironmentObject var locationManager: LocationManager
+    
+    @EnvironmentObject var siddurData: SiddurLoader
+
     
     @State private var isLoading = true
     
@@ -69,56 +73,6 @@ struct SiddurView: View {
 }
 
 
-
-
-
-struct PrayersView: View {
-    
-    @EnvironmentObject var appSettings: AppSettings
-    var prayers = MockPray()
-    
-    var body: some View {
-        NavigationStack {
-            List {
-                prayerSection(title: NSLocalizedString("DAILY_PRAYES_LOC", comment: ""), prayers: prayers.dailyPrayers)
-                prayerSection(title: NSLocalizedString("MAZON_PRAYES_LOC", comment: ""), prayers: prayers.mazonPrayers)
-                Section {
-                    NavigationLink(destination: SlichotPageView(prayers: prayers.slichot)) {
-                        Text(NSLocalizedString("SLICHOT_LOC", comment: ""))
-                    }
-                }
-//                prayerSection(title: NSLocalizedString("SLICHOT_LOC", comment: ""), prayers: prayers.slichot)
-
-            }
-//            .listStyle(PlainListStyle())
-            .background(
-                Image("pageBG")
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
-            )
-            .scrollContentBackground(.hidden) // ***
-            .navigationTitle("Siddur")
-            .navigationBarItems(trailing: Text("Mizrach"))
-        }
-    }
-    
-    @ViewBuilder
-    private func prayerSection(title: String, prayers: [Prayer]) -> some View {
-        Section(header: Text(title).bold()) {
-            ForEach(prayers) { prayer in
-                NavigationLink(destination: PrayerPageView(prayerID: prayer.id, prayers: prayers)) {
-                    Text(NSLocalizedString(prayer.name, comment: ""))
-                }
-            }
-        }
-//        .listRowBackground(Color.white)
-        
-    }
-
-}
-
-
 class SelectedPrayerModel: ObservableObject {
     @Published var index: Int = 0
 }
@@ -126,10 +80,55 @@ class SelectedPrayerModel: ObservableObject {
 // NSLocalizedString(, comment: "")
 
 
+struct PrayersView: View {
+    @EnvironmentObject var appSettings: AppSettings
+    @StateObject private var siddurLoader = SiddurLoader()
+    @State private var sections: [String: [String]] = PrayerSections
+
+    var body: some View {
+        NavigationStack {
+            List {
+                ForEach(sections.keys.sorted(), id: \.self) { sectionTitle in
+                    prayerSection(
+                        title: NSLocalizedString(sectionTitle, comment: ""),
+                        prayerTitles: sections[sectionTitle] ?? []
+                    )
+                }
+            }
+            .background(
+                Image("pageBG")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
+            )
+            .scrollContentBackground(.hidden)
+            .navigationTitle("Siddur")
+            .navigationBarItems(trailing: Text("Mizrach"))
+            .onAppear {
+                siddurLoader.loadJSON()
+            }
+        }
+    }
+
+    @ViewBuilder
+    private func prayerSection(title: String, prayerTitles: [String]) -> some View {
+        Section(header: Text(title).bold()) {
+            ForEach(prayerTitles, id: \.self) { prayerTitle in
+                if let prayer = siddurLoader.siddur.first(where: { $0.title == prayerTitle }) {
+                    NavigationLink(destination: PrayerPageView(prayerID: prayer.id, prayers: siddurLoader.siddur)) {
+                        Text(NSLocalizedString(prayer.title, comment: ""))
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 
 #Preview {
     SiddurView()
         .environmentObject(LocationManager())
         .environmentObject(AppSettings())
-    
+        .environmentObject(SiddurLoader())
 }
