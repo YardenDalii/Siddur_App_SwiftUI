@@ -12,6 +12,9 @@ import CoreLocation
 @main
 struct Siddur_JudaisimApp: App {
     
+//    @StateObject private var appSettings = AppSettings()
+//    @StateObject private var siddurLoader = SiddurLoader()
+    
     init() {
         setupAppearance()
         NotificationManager.instance.requestAuthorization()
@@ -24,7 +27,7 @@ struct Siddur_JudaisimApp: App {
                 .preferredColorScheme(.light)
                 .environmentObject(AppSettings())
                 .environmentObject(LocationManager())
-                .environmentObject(SiddurLoader())
+//                .environmentObject(SiddurLoader())
         }
         //        CarPlayScene()
     }
@@ -81,13 +84,34 @@ struct Siddur_JudaisimApp: App {
 
 
 
-
 class AppSettings: ObservableObject {
-    // App User Preferences
     @Published var currentDate = Date()
+    
+    // App User Preferences
     @AppStorage("textSize") var textSize: Double = 16
     @AppStorage("userPasuk") var userPasuk: String = ""
-    //    @AppStorage("currentLocation") var userLocation: String
+    
+    // UI Preferences
+    @AppStorage("selectedFontName") var selectedFontName: String = "System" // Default to the system font
     @Published var language: String = Locale.current.language.languageCode?.identifier ?? "en"
+
+    // User's Selected Location
+    @AppStorage("selectedLatitude") var selectedLatitude: Double = 0.0
+    @AppStorage("selectedLongitude") var selectedLongitude: Double = 0.0
+
+    // User's Prayer Version Preference
+    @AppStorage("selectedPrayerVersionRawValue") private var selectedPrayerVersionRawValue: String = PrayerVersion.mizrah.rawValue
+    @AppStorage("smartSiddur") var smartSiddur: Bool = false
+    
+    // Computed property for PrayerVersion
+    var selectedPrayerVersion: PrayerVersion {
+        get {
+            PrayerVersion(rawValue: selectedPrayerVersionRawValue) ?? .mizrah
+        }
+        set {
+            selectedPrayerVersionRawValue = newValue.rawValue
+        }
+    }
 }
+
 

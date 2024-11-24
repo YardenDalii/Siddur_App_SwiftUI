@@ -16,7 +16,8 @@ struct AboutView: View {
             List {
                 Section(header: Text(NSLocalizedString("ACKS_CREDITS", comment: ""))) {
                     ForEach(CreditURL.allCases, id: \.self) { credit in
-                        CreditURLItem(label: NSLocalizedString(credit.label, comment: ""),
+                        CreditURLItem(label: credit.label,
+                                      description: credit.description,
                                       imageName: credit.imageName,
                                       bgColor: credit.bgColor)
                             .contentShape(Rectangle())
@@ -54,6 +55,7 @@ struct AboutView: View {
 // CreditURLItem component
 struct CreditURLItem: View {
     var label: String
+    var description: String
     var imageName: String
     var bgColor: Color
     
@@ -67,7 +69,14 @@ struct CreditURLItem: View {
                     .frame(width: 24, height: 24)
                     .foregroundColor(.white)
             }
-            Text(NSLocalizedString(label, comment: ""))
+            VStack(alignment: .leading, spacing: 4) {
+                Text(NSLocalizedString(label, comment: ""))
+                    .font(.headline)
+                Text(NSLocalizedString(description, comment: ""))
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+            }
+            .padding(.horizontal)
             Spacer()
             Image(systemName: NSLocalizedString("SETTINGS-ARROW-ICOM", comment: ""))
                 .resizable()
@@ -80,7 +89,7 @@ struct CreditURLItem: View {
 
 // CreditURL Enum
 enum CreditURL: CaseIterable {
-    case hebcalApi, pasuk, tehillim
+    case hebcalApi, pasuk, tehillim, sefaria
     
     var rawValue: String {
         switch self {
@@ -90,6 +99,8 @@ enum CreditURL: CaseIterable {
             return "https://www.hebcal.com/home/developer-apis"
         case .tehillim:
             return "https://tehilim.co"
+        case .sefaria:
+            return "https://www.sefaria.org.il/"
         }
     }
     
@@ -101,6 +112,21 @@ enum CreditURL: CaseIterable {
             return "Hebcal-Credit"
         case .tehillim:
             return "TEHILLIM_CREDITS_LOC"
+        case .sefaria:
+            return "SEFARIA_CREDITS_LOC"
+        }
+    }
+    
+    var description: String {
+        switch self {
+        case .pasuk:
+            return "PASUK_CREDITS_DESC"
+        case .hebcalApi:
+            return "HEBCAL_CREDITS_DESC"
+        case .tehillim:
+            return "TEHILLIM_CREDITS_DESC"
+        case .sefaria:
+            return "SEFARIA_CREDITS_DESC"
         }
     }
     
@@ -112,16 +138,20 @@ enum CreditURL: CaseIterable {
             return "hebcal_logo"
         case .tehillim:
             return "tehilim.co_logo"
+        case .sefaria:
+            return "sefaria_logo"
         }
     }
     
     var bgColor: Color {
         switch self {
         case .pasuk:
-            return .white
+            return CustomPalette.hebcal.color
         case .hebcalApi:
             return CustomPalette.hebcal.color
         case .tehillim:
+            return CustomPalette.darkBlue.color
+        case .sefaria:
             return CustomPalette.darkBlue.color
         }
     }

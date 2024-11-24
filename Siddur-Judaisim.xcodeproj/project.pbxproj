@@ -132,7 +132,6 @@
 		4D8149982BB9C0F600DA919E /* Hebcal in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8149972BB9C0F600DA919E /* Hebcal */; };
 		4D81499A2BB9C14700DA919E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8149992BB9C14700DA919E /* SettingsView.swift */; };
 		4D81499C2BB9C16A00DA919E /* PrayerPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81499B2BB9C16A00DA919E /* PrayerPageView.swift */; };
-		4D81499E2BB9C19100DA919E /* PrayersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81499D2BB9C19100DA919E /* PrayersData.swift */; };
 		4D8149A22BB9C1CB00DA919E /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8149A12BB9C1CB00DA919E /* AboutView.swift */; };
 		4D8149A62BB9C25E00DA919E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 4D8149A52BB9C25E00DA919E /* Localizable.xcstrings */; };
 		4D8149AB2BB9CDC300DA919E /* TehillimPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8149AA2BB9CDC300DA919E /* TehillimPageView.swift */; };
@@ -194,6 +193,9 @@
 		4DDBC1F72BBC0C29006E39D4 /* Guttman Drogolin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1F52BBC0C29006E39D4 /* Guttman Drogolin-Bold.ttf */; };
 		4DDBC2012BBD9EF0006E39D4 /* tehilim.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC2002BBD9EF0006E39D4 /* tehilim.json */; };
 		4DF6A9532CEA6C0A008DF0DD /* SiddurEdotHaMizrach.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DF6A9522CEA6C0A008DF0DD /* SiddurEdotHaMizrach.json */; };
+		4DF6A95D2CF0897C008DF0DD /* FontSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6A95C2CF0897C008DF0DD /* FontSelectionView.swift */; };
+		4DF6A95F2CF0941E008DF0DD /* SiddurSettingsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6A95E2CF0941E008DF0DD /* SiddurSettingsUtils.swift */; };
+		4DF6A9612CF09CDE008DF0DD /* SiddurLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6A9602CF09CDE008DF0DD /* SiddurLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -370,7 +372,6 @@
 		4D8149892BB9C0CB00DA919E /* Siddur_JudaisimUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Siddur_JudaisimUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4D8149992BB9C14700DA919E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4D81499B2BB9C16A00DA919E /* PrayerPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerPageView.swift; sourceTree = "<group>"; };
-		4D81499D2BB9C19100DA919E /* PrayersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersData.swift; sourceTree = "<group>"; };
 		4D8149A12BB9C1CB00DA919E /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		4D8149A52BB9C25E00DA919E /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		4D8149AA2BB9CDC300DA919E /* TehillimPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TehillimPageView.swift; sourceTree = "<group>"; };
@@ -432,6 +433,9 @@
 		4DDBC1F52BBC0C29006E39D4 /* Guttman Drogolin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Guttman Drogolin-Bold.ttf"; sourceTree = "<group>"; };
 		4DDBC2002BBD9EF0006E39D4 /* tehilim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tehilim.json; sourceTree = "<group>"; };
 		4DF6A9522CEA6C0A008DF0DD /* SiddurEdotHaMizrach.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiddurEdotHaMizrach.json; sourceTree = "<group>"; };
+		4DF6A95C2CF0897C008DF0DD /* FontSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSelectionView.swift; sourceTree = "<group>"; };
+		4DF6A95E2CF0941E008DF0DD /* SiddurSettingsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiddurSettingsUtils.swift; sourceTree = "<group>"; };
+		4DF6A9602CF09CDE008DF0DD /* SiddurLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiddurLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -760,13 +764,14 @@
 		4D9BCB552BBE5EC0004FA4F5 /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
-				4D81499D2BB9C19100DA919E /* PrayersData.swift */,
 				4D8A115B2BC29A6300907B01 /* TehillimViewModel.swift */,
 				4D575EC62C6384E6006C5D98 /* HebrewViewModel.swift */,
 				4D9BCB562BBE5F0C004FA4F5 /* NotificationHandler.swift */,
 				4D575EC92C638650006C5D98 /* LocationManagerModel.swift */,
 				4D37255C2BC6C746003BAFAD /* Utilities.swift */,
 				4DBBF7B22C7EFFEB0091C580 /* AlertHandler.swift */,
+				4DF6A95E2CF0941E008DF0DD /* SiddurSettingsUtils.swift */,
+				4DF6A9602CF09CDE008DF0DD /* SiddurLoader.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -812,6 +817,7 @@
 				4D8149992BB9C14700DA919E /* SettingsView.swift */,
 				4D8149A12BB9C1CB00DA919E /* AboutView.swift */,
 				4D9BCB582BBE8F13004FA4F5 /* ZemanimView.swift */,
+				4DF6A95C2CF0897C008DF0DD /* FontSelectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1146,7 +1152,6 @@
 			files = (
 				4D8149AB2BB9CDC300DA919E /* TehillimPageView.swift in Sources */,
 				4D8A115C2BC29A6300907B01 /* TehillimViewModel.swift in Sources */,
-				4D81499E2BB9C19100DA919E /* PrayersData.swift in Sources */,
 				4D37255D2BC6C746003BAFAD /* Utilities.swift in Sources */,
 				4D9BCB572BBE5F0C004FA4F5 /* NotificationHandler.swift in Sources */,
 				4D9BCB592BBE8F13004FA4F5 /* ZemanimView.swift in Sources */,
@@ -1154,6 +1159,9 @@
 				4D81499A2BB9C14700DA919E /* SettingsView.swift in Sources */,
 				4D81496F2BB9C0CA00DA919E /* SiddurView.swift in Sources */,
 				4D81499C2BB9C16A00DA919E /* PrayerPageView.swift in Sources */,
+				4DF6A95F2CF0941E008DF0DD /* SiddurSettingsUtils.swift in Sources */,
+				4DF6A9612CF09CDE008DF0DD /* SiddurLoader.swift in Sources */,
+				4DF6A95D2CF0897C008DF0DD /* FontSelectionView.swift in Sources */,
 				4D575ECA2C638650006C5D98 /* LocationManagerModel.swift in Sources */,
 				4D575EC72C6384E6006C5D98 /* HebrewViewModel.swift in Sources */,
 				4D81496D2BB9C0CA00DA919E /* Siddur_JudaisimApp.swift in Sources */,

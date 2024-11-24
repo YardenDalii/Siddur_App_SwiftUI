@@ -15,7 +15,7 @@ struct SiddurView: View {
     @EnvironmentObject var appSettings: AppSettings
     @EnvironmentObject var locationManager: LocationManager
     
-    @EnvironmentObject var siddurData: SiddurLoader
+//    @EnvironmentObject var siddurData: SiddurLoader
 
     
     @State private var isLoading = true
@@ -30,7 +30,7 @@ struct SiddurView: View {
                     .tabItem {
                         Image(systemName: selectedTab == 0 ? "text.book.closed.fill" : "text.book.closed")
                             .environment(\.symbolVariants, .none)
-                        Text("Siddur")
+                        Text("SIDDUR_LOC")
                     }
                     .tag(0)
                 
@@ -77,45 +77,81 @@ class SelectedPrayerModel: ObservableObject {
     @Published var index: Int = 0
 }
 
+
 // NSLocalizedString(, comment: "")
+
 
 
 struct PrayersView: View {
     @EnvironmentObject var appSettings: AppSettings
-    @StateObject private var siddurLoader = SiddurLoader()
+    @State private var siddurData: [Prayer] = []
     @State private var sections: [String: [String]] = PrayerSections
 
     var body: some View {
         NavigationStack {
             List {
-                ForEach(sections.keys.sorted(), id: \.self) { sectionTitle in
+                ForEach(OrderedSectionKeys, id: \.self) { sectionTitle in
                     prayerSection(
                         title: NSLocalizedString(sectionTitle, comment: ""),
                         prayerTitles: sections[sectionTitle] ?? []
                     )
                 }
             }
-            .background(
-                Image("pageBG")
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
-            )
+            .background(ImageBackgroundView())
             .scrollContentBackground(.hidden)
-            .navigationTitle("Siddur")
-            .navigationBarItems(trailing: Text("Mizrach"))
+            .navigationTitle("SIDDUR_LOC")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    prayerVersionMenu
+                }
+            }
             .onAppear {
-                siddurLoader.loadJSON()
+                // Load prayers when the view appears
+                reloadPrayers()
             }
         }
+    }
+
+    /// Toolbar menu for selecting prayer versions
+    private var prayerVersionMenu: some View {
+        Menu {
+            ForEach(PrayerVersion.allCases, id: \.self) { version in
+                Button(action: {
+                    // Update selected version and reload prayers
+                    appSettings.selectedPrayerVersion = version
+                    reloadPrayers()
+                }) {
+                    HStack {
+                        Text(version.displayName)
+                        if appSettings.selectedPrayerVersion == version {
+                            Image(systemName: "checkmark")
+                                .foregroundColor(.blue)
+                        }
+                    }
+                }
+            }
+        } label: {
+            Text(NSLocalizedString(appSettings.selectedPrayerVersion.displayName, comment: ""))
+                .bold()
+                .foregroundStyle(CustomPalette.golden.color)
+        }
+    }
+
+    /// Reload prayers based on user settings
+    private func reloadPrayers() {
+        siddurData = loadPrayers(
+            fileName: appSettings.selectedPrayerVersion.fileName,
+            smart: appSettings.smartSiddur,
+            userPasuk: appSettings.userPasuk
+        )
     }
 
     @ViewBuilder
     private func prayerSection(title: String, prayerTitles: [String]) -> some View {
         Section(header: Text(title).bold()) {
             ForEach(prayerTitles, id: \.self) { prayerTitle in
-                if let prayer = siddurLoader.siddur.first(where: { $0.title == prayerTitle }) {
-                    NavigationLink(destination: PrayerPageView(prayerID: prayer.id, prayers: siddurLoader.siddur)) {
+                if let prayer = siddurData.first(where: { $0.title == prayerTitle }) {
+                    NavigationLink(destination: PrayerPageView(prayerID: prayer.id, prayers: siddurData)) {
                         Text(NSLocalizedString(prayer.title, comment: ""))
                     }
                 }
@@ -125,10 +161,20 @@ struct PrayersView: View {
 }
 
 
+struct ImageBackgroundView: View {
+    var body: some View {
+        Image("pageBG")
+            .resizable()
+            .scaledToFill()
+            .ignoresSafeArea()
+    }
+}
+
+
 
 #Preview {
     SiddurView()
         .environmentObject(LocationManager())
         .environmentObject(AppSettings())
-        .environmentObject(SiddurLoader())
+//        .environmentObject(SiddurLoader())
 }

@@ -53,6 +53,16 @@
         }
       }
     },
+    "Abcde" : {
+      "localizations" : {
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abcde"
+          }
+        }
+      }
+    },
     "ABOUT_LOC_STRING" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -133,6 +143,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "תפילות אחר שחרית"
+          }
+        }
+      }
+    },
+    "AL_HAMIHYA" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Me’ein Shalosh"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ברכת מעין שלוש"
           }
         }
       }
@@ -222,6 +249,23 @@
         }
       }
     },
+    "ASHKENAZ_LOC" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ashkenaz"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אשכנז"
+          }
+        }
+      }
+    },
     "ASHREI" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -267,7 +311,7 @@
         },
         "he" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "שמע שעל המיטה"
           }
         }
@@ -337,6 +381,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ברכת הלבנה"
+          }
+        }
+      }
+    },
+    "BLESSINGS_ON_ENJOYMENTS" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Borei Nefashot"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בורא נפשות"
           }
         }
       }
@@ -507,6 +568,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "חצות הלילה"
+          }
+        }
+      }
+    },
+    "CHOOSE_FONT_LOC" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose Font"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בחר גופן"
           }
         }
       }
@@ -816,7 +894,7 @@
         }
       }
     },
-    "Find-Pasuk" : {
+    "FIND_PASUK_LOC" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -829,6 +907,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "כדי למצוא פסוק לפי השם היכנס אל: https://he.wikisource.org/wiki/פסוק_המתחיל_ומסתיים_באות"
+          }
+        }
+      }
+    },
+    "FONT_SELECTION_LOC" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Text Font"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "גופן הטקסט"
           }
         }
       }
@@ -863,6 +958,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "צאת השבת"
+          }
+        }
+      }
+    },
+    "HEBCAL_CREDITS_DESC" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This app uses the Hebcal API to fetch Jewish times, dates, and holidays. Visit Hebcal for more information."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אפליקציה זו משתמשת ב־Hebcal API כדי לקבל זמני יהדות, תאריכים וחגים. למידע נוסף בקרו ב־Hebcal."
           }
         }
       }
@@ -1105,12 +1217,13 @@
         }
       }
     },
-    "Mizrach" : {
+    "MIZRAH_LOC" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mizrach"
+            "value" : "Mizrah"
           }
         },
         "he" : {
@@ -1257,6 +1370,23 @@
         }
       }
     },
+    "PASUK_CREDITS_DESC" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This app provides a feature to search for a “pasuk” (verse) starting and ending with specific letters, using the Wikisource database. Visit Wikisource for more information."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אפליקציה זו מאפשרת לחפש פסוק שמתחיל ומסתיים באותיות מסוימות באמצעות מאגר המידע של ויקיטקסט. למידע נוסף בקרו ב־ויקיטקסט."
+          }
+        }
+      }
+    },
     "Pasuk-Credit" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1359,6 +1489,39 @@
         }
       }
     },
+    "POST_MEAL_BLESSING" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Birchat Hamazon"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ברכת המזון"
+          }
+        }
+      }
+    },
+    "PRAYER_NOT_FOUND_LOC" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prayer not found"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לא נמצא טקסט"
+          }
+        }
+      }
+    },
     "PRAYER_PARTS_LOC" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1438,6 +1601,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "חפש עיר או כתובת.."
+          }
+        }
+      }
+    },
+    "SEFARIA_CREDITS_DESC" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This app uses Jewish texts and prayers sourced from Sefaria, a free library of Jewish texts. Visit Sefaria to explore their full collection."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אפליקציה זו משתמשת בטקסטים ותפילות ממאגר המידע של ספריא, ספרייה חינמית לטקסטים יהודיים. למידע נוסף בקרו ב־ספריא."
+          }
+        }
+      }
+    },
+    "SEFARIA_CREDITS_LOC" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sefaria"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ספריא"
           }
         }
       }
@@ -1545,6 +1742,23 @@
       }
     },
     "Siddur" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siddur"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סידור"
+          }
+        }
+      }
+    },
+    "SIDDUR_LOC" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1730,6 +1944,23 @@
         }
       }
     },
+    "SPAIN_LOC" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sfarad"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ספרד"
+          }
+        }
+      }
+    },
     "sunrise" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1794,6 +2025,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "מערכת"
+          }
+        }
+      }
+    },
+    "TEHILLIM_CREDITS_DESC" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The texts of Tehillim in this app are provided by Tehilim.co. Visit the site for additional resources and features."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "טקסטי התהילים באפליקציה זו סופקו על ידי Tehilim.co. בקרו באתר למידע נוסף ולמשאבים נוספים."
           }
         }
       }
@@ -2098,7 +2346,7 @@
         },
         "he" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "ערבית"
           }
         }
@@ -2151,6 +2399,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "זמנים"
+          }
+        }
+      }
+    },
+    "אבגדה" : {
+      "localizations" : {
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אבגדה"
           }
         }
       }

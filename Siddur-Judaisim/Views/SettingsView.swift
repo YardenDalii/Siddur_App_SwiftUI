@@ -14,21 +14,25 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             List {
+                
                 Section(header: Text("SETTINGS_LOC_STRING")) {
-                  
+                    IconNavLink(iconImage: "textformat.characters",
+                                linkName: "FONT_SELECTION_LOC",
+                                iconColor: .purple,
+                                destination: FontSelectionView())
+                    
                     IconNavLink(iconImage: "globe",
                                 linkName: "APP_LANG_LOC",
                                 iconColor: Color.blue,
                                 destination: LanguageSettingsView())
                 }
 
-                
-                Section(footer: Text("Find-Pasuk")) {
+                Section(footer: Text("FIND_PASUK_LOC")) {
                     IconNavLink(iconImage: "quote.bubble.fill",
                                 linkName: "PERSONAL_PASUK_LOC",
                                 iconColor: Color.brown,
                                 destination: PasukView(userPasuk: $appSettings.userPasuk))
-                    .environmentObject(appSettings)
+
                     
                     if appSettings.userPasuk.isEmpty {
                         Text(NSLocalizedString("NO_PASUK_PROMPT", comment: ""))
@@ -56,12 +60,7 @@ struct SettingsView: View {
 //                        .listRowBackground(Color.clear)
                 }
             }
-            .background(
-                Image("pageBG")
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
-            )
+            .background(ImageBackgroundView())
             .scrollContentBackground(.hidden)
             .navigationTitle("SETTINGS_LOC_STRING")
         }
@@ -128,12 +127,7 @@ struct PasukView: View {
                 }
             )
         }
-        .background(
-            Image("pageBG")
-                .resizable()
-                .scaledToFill()
-                .ignoresSafeArea()
-        )
+        .background(ImageBackgroundView())
         .scrollContentBackground(.hidden)
         .navigationBarTitle("PERSONAL_PASUK_LOC", displayMode: .inline)
     }
@@ -168,5 +162,3 @@ struct LanguageSettingsView: View {
     SettingsView()
         .environmentObject(AppSettings())
 }
-
-

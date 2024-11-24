@@ -322,6 +322,7 @@ struct AddLocationView: View {
                                     if let coordinate = coordinate {
                                         coordinates = coordinate
                                         searchQuery = result.title
+                                        dismissKeyboard()
                                     }
                                 }
                             }) {
@@ -373,14 +374,9 @@ struct AddLocationView: View {
                         }
                     }
 //                    .listStyle(InsetGroupedListStyle())
-                    .background(
-                        Image("pageBG")
-                            .resizable()
-                            .scaledToFill()
-                            .ignoresSafeArea()
-                    )
+                    .padding(.top, 8)
+                    .background(ImageBackgroundView())
                     .scrollContentBackground(.hidden)
-                    
                 }
                 .searchable(text: $searchQuery, placement: .navigationBarDrawer(displayMode: .automatic), prompt: "SEARCH_ADDRESS_PROMPT")
                 .onChange(of: searchQuery) { oldValue, newValue in
@@ -399,6 +395,10 @@ struct AddLocationView: View {
             }
             
         }
+    }
+    
+    private func dismissKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 

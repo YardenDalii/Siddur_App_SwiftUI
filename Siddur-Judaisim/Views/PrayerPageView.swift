@@ -23,7 +23,7 @@ struct PrayerPageView: View {
             if let prayer = prayers.first(where: { $0.id == prayerID }) {
                 PrayerDetailView(prayer: prayer, scrollToPart: $scrollToPartIndex)
             } else {
-                Text(NSLocalizedString("PRAYER_NOT_FOUND", comment: ""))
+                Text(NSLocalizedString("PRAYER_NOT_FOUND_LOC", comment: ""))
                     .font(.headline)
                     .foregroundColor(.gray)
             }
@@ -66,6 +66,7 @@ struct PrayerPageView: View {
     }
 }
 
+
 struct PrayerDetailView: View {
     var prayer: Prayer
     @EnvironmentObject var appSettings: AppSettings
@@ -76,13 +77,9 @@ struct PrayerDetailView: View {
             ScrollView {
                 ForEach(prayer.prayers) { section in
                     VStack(alignment: .leading, spacing: 10) {
-//                        DynamicStyledText(input: section.title) // Render section title
-//                            .environmentObject(appSettings)
-//                            .padding(.bottom, 5)
-
                         ForEach(section.text, id: \.self) { text in
-                            DynamicStyledText(input: text, customFontName: "Guttman Drogolin")
-                                .padding(.bottom, 5)
+                            DynamicStyledText(input: text, customFontName: appSettings.selectedFontName)
+                                .padding(.bottom, 8)
                         }
                     }
                     .padding()
@@ -90,12 +87,7 @@ struct PrayerDetailView: View {
                 }
             }
             .environment(\.layoutDirection, .rightToLeft)
-            .background {
-                Image("pageBG")
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
-            }
+            .background(ImageBackgroundView())
             .onChange(of: scrollToPart) { oldPart, part in
                 if let part = part {
                     proxy.scrollTo(part, anchor: .top)
