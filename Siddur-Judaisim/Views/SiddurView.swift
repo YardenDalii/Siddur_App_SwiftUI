@@ -122,7 +122,7 @@ struct PrayersView: View {
                     reloadPrayers()
                 }) {
                     HStack {
-                        Text(version.displayName)
+                        Text(NSLocalizedString(version.displayName, comment: ""))
                         if appSettings.selectedPrayerVersion == version {
                             Image(systemName: "checkmark")
                                 .foregroundColor(.blue)

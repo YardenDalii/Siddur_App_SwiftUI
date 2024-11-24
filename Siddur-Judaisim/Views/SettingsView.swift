@@ -26,7 +26,16 @@ struct SettingsView: View {
                                 iconColor: Color.blue,
                                 destination: LanguageSettingsView())
                 }
-
+                
+                Section(header: Text("PERSONAL_SETTINGS_LOC"), footer: Text("SMART_SIDDUR_DESC_LOC")) {
+//                    HStack {
+                        Toggle(isOn: $appSettings.smartSiddur) {
+                            Text("SMART_SIDDUR_TOGGLE_LOC")
+//                        }
+                                .disabled(true)
+                            
+                    }
+                }
                 Section(footer: Text("FIND_PASUK_LOC")) {
                     IconNavLink(iconImage: "quote.bubble.fill",
                                 linkName: "PERSONAL_PASUK_LOC",
@@ -52,12 +61,6 @@ struct SettingsView: View {
                                 linkName: "ABOUT_LOC_STRING",
                                 iconColor: Color.green,
                                 destination: AboutView())
-//                        .background(
-//                            RoundedRectangle(cornerRadius: 10)
-//                                .stroke(Color.gray, lineWidth: 0.5)
-//                                .frame(width: 353,height: 44)
-//                        )
-//                        .listRowBackground(Color.clear)
                 }
             }
             .background(ImageBackgroundView())

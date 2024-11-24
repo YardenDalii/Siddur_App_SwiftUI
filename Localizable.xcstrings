@@ -1438,6 +1438,23 @@
         }
       }
     },
+    "PERSONAL_SETTINGS_LOC" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personal Settings"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הגדרות אישיות"
+          }
+        }
+      }
+    },
     "PESUKEI_D'ZIMRA" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1741,22 +1758,6 @@
         }
       }
     },
-    "Siddur" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Siddur"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "סידור"
-          }
-        }
-      }
-    },
     "SIDDUR_LOC" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1787,6 +1788,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "סליחות"
+          }
+        }
+      }
+    },
+    "SMART_SIDDUR_DESC_LOC" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smart Siddur will render the relevant prayer part to the current date, toggling it off will render the text as a normal Siddur."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סידור חכם יציג את חלקי התפילה הרלוונטיים לאותו היום, ביטול אופציה זו יציג את הסידור עם כל התוספות"
+          }
+        }
+      }
+    },
+    "SMART_SIDDUR_TOGGLE_LOC" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smart Siddur"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סידור חכם"
           }
         }
       }
@@ -1955,7 +1990,7 @@
         },
         "he" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "ספרד"
           }
         }
