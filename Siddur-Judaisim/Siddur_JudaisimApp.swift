@@ -71,6 +71,7 @@ struct Siddur_JudaisimApp: App {
         UITabBar.appearance().standardAppearance = tabBarAppearance
         UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
         
+        
         // Trigger UI updates to apply the new appearance
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
             for window in windowScene.windows {
@@ -98,6 +99,15 @@ class AppSettings: ObservableObject {
     // User's Selected Location
     @AppStorage("selectedLatitude") var selectedLatitude: Double = 0.0
     @AppStorage("selectedLongitude") var selectedLongitude: Double = 0.0
+    @AppStorage("selectedLocation") private var storedLocation: String = ""
+        
+    var selectedLocation: String {
+        get { storedLocation }
+        set {
+            storedLocation = newValue
+            objectWillChange.send() // Force state update
+        }
+    }
 
     // User's Prayer Version Preference
     @AppStorage("selectedPrayerVersionRawValue") private var selectedPrayerVersionRawValue: String = PrayerVersion.mizrah.rawValue

@@ -11,7 +11,7 @@ import SwiftUI
 
 enum PrayerVersion: String, CaseIterable {
     case mizrah = "SiddurEdotHaMizrach"
-    case sfarad = "SfaradPrayers"
+    case sfarad = "SiddurSfarad"
     case ashkenaz = "AshkenazPrayers"
 
     var displayName: String {

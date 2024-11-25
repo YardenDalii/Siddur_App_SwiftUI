@@ -25,7 +25,7 @@ struct Prayer: Identifiable {
 
 
 
-let OrderedSectionKeys = ["DAILY_PRAYES_LOC", "POST_MEAL_BLESSING", "Holiday Prayers"]
+let OrderedSectionKeys = ["DAILY_PRAYES_LOC", "POST_MEAL_BLESSING", "BRACHOT_LOC", "HOLIDAY_PRAYERS",]
 
 let PrayerSections: [String: [String]] = [
     "DAILY_PRAYES_LOC": [
@@ -34,9 +34,13 @@ let PrayerSections: [String: [String]] = [
     "POST_MEAL_BLESSING": [
         "POST_MEAL_BLESSING", "AL_HAMIHYA", "BLESSINGS_ON_ENJOYMENTS"
     ],
-    "Holiday Prayers": [
-        "Purim", "Hanukkah", "Rosh Hodesh", "Counting of the Omer"
-    ]
+    "BRACHOT_LOC": [
+        "ASHER_YATZAR", "TRAVELER'S_PRAYER", "BLESSING_OF_THE_MOON", "MEZUZA"
+    ],
+    "HOLIDAY_PRAYERS": [
+        "ROSH_HODESH", "FESTIVALS_PRAYERS", "PURIM", "HANUKKAH", "NISSAN", "COUNTING_OF_THE_OMER"
+    ],
+
 ]
 
 

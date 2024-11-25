@@ -1,25 +1,15 @@
 
 import SwiftUI
 
+
 struct TehillimView: View {
-    
     @EnvironmentObject var appSettings: AppSettings
     @StateObject var TehillimModel = TehillimViewModel()
-    
+
     @State private var searchText = ""
-    
+
     let columns = Array(repeating: GridItem(.flexible()), count: 4)
-    
-    
-    init() {
-        // Customize the appearance of the search field prompt text color and background
-        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).attributedPlaceholder = NSAttributedString(
-            string: NSLocalizedString("EPISODE_NUM_PROMPT", comment: ""),
-            attributes: [.foregroundColor: UIColor.lightGray]
-        )
-    }
-    
-    
+
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -32,7 +22,9 @@ struct TehillimView: View {
                 Image("pageBG")
             }
             .navigationTitle("TEHILLIM_LOC_STRING")
-            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "EPISODE_NUM_PROMPT")
+            .searchable(text: $searchText,
+                        placement: .navigationBarDrawer(displayMode: .always),
+                        prompt: "EPISODE_NUM_PROMPT")
             .onChange(of: searchText) { oldValue, newValue in
                 TehillimModel.searchText = newValue
             }
@@ -44,7 +36,7 @@ struct TehillimView: View {
             }
         }
     }
-    
+
     var sortMenu: some View {
         Menu {
             Button("SORT_DAY_LOC", action: { TehillimModel.sortCriterion = .day })
