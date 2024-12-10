@@ -303,6 +303,23 @@
         }
       }
     },
+    "AVINU_MALKEINU" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avinu Malkeinu"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אבינו מלכנו"
+          }
+        }
+      }
+    },
     "BARECHI_NAFSHI" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -575,6 +592,40 @@
         }
       }
     },
+    "BRAITA_D'RABI_YISHMAEL" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Braita D’rabi Yishmael"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "רבי ישמעאל"
+          }
+        }
+      }
+    },
+    "BURNING_HAMETZ" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Burning Chametz"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סדר שריפת חמץ"
+          }
+        }
+      }
+    },
     "Cancel" : {
 
     },
@@ -608,6 +659,74 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "הדלקת נרות"
+          }
+        }
+      }
+    },
+    "CHAPTER_OF_FEAR" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chapter Of Fear Of God"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פרשת היראה"
+          }
+        }
+      }
+    },
+    "CHAPTER_OF_MANNA" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chapter Of Manna"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פרשת המן"
+          }
+        }
+      }
+    },
+    "CHAPTER_OF_REPENTANCE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chapter Of Repentance"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "פרשת התשובה"
+          }
+        }
+      }
+    },
+    "CHAPTER_OF_SONG" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chapter Of Song"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פרק שירה"
           }
         }
       }
@@ -927,6 +1046,23 @@
         }
       }
     },
+    "ENTERING_SUKKAH" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prayer Upon Entering Sukkah"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ברכת כניסה לסוכה"
+          }
+        }
+      }
+    },
     "EPISODE_NUM_PROMPT" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1198,6 +1334,23 @@
         }
       }
     },
+    "KADDISH" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaddish"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "קדיש"
+          }
+        }
+      }
+    },
     "KAVEH" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1211,6 +1364,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "קוה"
+          }
+        }
+      }
+    },
+    "KROVETZ_L'PURIM" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krovetz L’Purim"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "קרובץ לפורים"
+          }
+        }
+      }
+    },
+    "L'DAVID_HASHEM" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mizmor L’David Hashem"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מזמור לדוד ה׳"
           }
         }
       }
@@ -1538,6 +1725,23 @@
         }
       }
     },
+    "MOTZAEI_SHABBAT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Motzaei Shabbat"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ערבית למוצ״ש"
+          }
+        }
+      }
+    },
     "MUSSAF_F" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1670,6 +1874,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "תפילין"
+          }
+        }
+      }
+    },
+    "PARASHAT_ZACHOR" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parashat Zachor"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "פרשת זכור"
+          }
+        }
+      }
+    },
+    "PASSOVER_OFFERING" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passover Offering"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "קרבן פסח"
           }
         }
       }
@@ -1945,6 +2183,40 @@
         }
       }
     },
+    "RAHUM_MON_N_THU" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rahum"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "והוא רחום"
+          }
+        }
+      }
+    },
+    "RAV_SHIMSHON_LETTER" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Letter of Rav Shimshon of Ostropol"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אגרת רבינו שמשון מגיד מאוסטרופוליא"
+          }
+        }
+      }
+    },
     "REMOVE_FAVS" : {
       "localizations" : {
         "en" : {
@@ -1973,6 +2245,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ברירת מחדל"
+          }
+        }
+      }
+    },
+    "RETURNING_SEFER_TORAH" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Returning Sefer Torah"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "החזרת ספר תורה"
           }
         }
       }
@@ -2007,6 +2296,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "חפש עיר או כתובת.."
+          }
+        }
+      }
+    },
+    "SEARCH_FOR_HAMETZ" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search For Chametz"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סדר בדיקת חמץ"
           }
         }
       }
@@ -2245,6 +2551,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "סידור"
+          }
+        }
+      }
+    },
+    "SIX_REMEMBERANCES" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Six Rememberances"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שש זכירות"
           }
         }
       }
@@ -2521,6 +2844,23 @@
         }
       }
     },
+    "SUPPLICATIONS_AFTER_PRAYERS" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supplications After Prayers"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "בקשות לאחר התפילה"
+          }
+        }
+      }
+    },
     "SYMBOL_SELECTION_ZMANIM" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -2551,6 +2891,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "מערכת"
+          }
+        }
+      }
+    },
+    "TACHANUN" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tachanun"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תחנון"
           }
         }
       }
@@ -2635,7 +2992,7 @@
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "עשר זכיות"
+            "value" : "עשר זכירות"
           }
         }
       }
@@ -2687,6 +3044,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "קריאת שמע"
+          }
+        }
+      }
+    },
+    "THE'NASI_READINGS" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The ‘Nasi’ Readings"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "פרשת הנשיאים"
           }
         }
       }
@@ -2789,6 +3163,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "קריאת התורה"
+          }
+        }
+      }
+    },
+    "TORAH_READING_FAST_DAY" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Torah Reading For Fast Days"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "קריאת התורה בימי תענית"
+          }
+        }
+      }
+    },
+    "TORAH_READING_R" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Torah Readings for Rosh Chodesh"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "קריאת התורה לראש חודש"
           }
         }
       }
@@ -2925,6 +3333,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "שחרית"
+          }
+        }
+      }
+    },
+    "YISHTABACH" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yishtabach"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ישתבח"
+          }
+        }
+      }
+    },
+    "YIZKOR" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yizkor"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "יזכור"
           }
         }
       }
