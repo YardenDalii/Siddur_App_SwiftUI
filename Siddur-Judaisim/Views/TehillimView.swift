@@ -9,7 +9,16 @@ struct TehillimView: View {
     @State private var searchText = ""
 
     let columns = Array(repeating: GridItem(.flexible()), count: 4)
-
+    
+    init() {
+        // Customize UISearchTextField appearance
+        let textFieldAppearance = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
+        textFieldAppearance.attributedPlaceholder = NSAttributedString(
+            string: NSLocalizedString("EPISODE_NUM_PROMPT", comment: ""),
+            attributes: [.foregroundColor: UIColor.white]
+        )
+    }
+    
     var body: some View {
         NavigationStack {
             ScrollView {

@@ -137,6 +137,7 @@
 		4D8149AB2BB9CDC300DA919E /* TehillimPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8149AA2BB9CDC300DA919E /* TehillimPageView.swift */; };
 		4D8149CB2BB9D65700DA919E /* TehillimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8149CA2BB9D65700DA919E /* TehillimView.swift */; };
 		4D8A115C2BC29A6300907B01 /* TehillimViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A115B2BC29A6300907B01 /* TehillimViewModel.swift */; };
+		4D9B73192D0837EA00833755 /* LocationSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B73182D0837EA00833755 /* LocationSelectionView.swift */; };
 		4D9BCB572BBE5F0C004FA4F5 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9BCB562BBE5F0C004FA4F5 /* NotificationHandler.swift */; };
 		4D9BCB592BBE8F13004FA4F5 /* ZemanimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9BCB582BBE8F13004FA4F5 /* ZemanimView.swift */; };
 		4D9BCB802BBEB6C1004FA4F5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9BCB602BBEA1EA004FA4F5 /* WidgetKit.framework */; };
@@ -378,6 +379,7 @@
 		4D8149AA2BB9CDC300DA919E /* TehillimPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TehillimPageView.swift; sourceTree = "<group>"; };
 		4D8149CA2BB9D65700DA919E /* TehillimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TehillimView.swift; sourceTree = "<group>"; };
 		4D8A115B2BC29A6300907B01 /* TehillimViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TehillimViewModel.swift; sourceTree = "<group>"; };
+		4D9B73182D0837EA00833755 /* LocationSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSelectionView.swift; sourceTree = "<group>"; };
 		4D9BCB562BBE5F0C004FA4F5 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		4D9BCB582BBE8F13004FA4F5 /* ZemanimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZemanimView.swift; sourceTree = "<group>"; };
 		4D9BCB602BBEA1EA004FA4F5 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -821,6 +823,7 @@
 				4D8149A12BB9C1CB00DA919E /* AboutView.swift */,
 				4D9BCB582BBE8F13004FA4F5 /* ZemanimView.swift */,
 				4DF6A95C2CF0897C008DF0DD /* FontSelectionView.swift */,
+				4D9B73182D0837EA00833755 /* LocationSelectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1156,6 +1159,7 @@
 			files = (
 				4D8149AB2BB9CDC300DA919E /* TehillimPageView.swift in Sources */,
 				4D8A115C2BC29A6300907B01 /* TehillimViewModel.swift in Sources */,
+				4D9B73192D0837EA00833755 /* LocationSelectionView.swift in Sources */,
 				4D37255D2BC6C746003BAFAD /* Utilities.swift in Sources */,
 				4D9BCB572BBE5F0C004FA4F5 /* NotificationHandler.swift in Sources */,
 				4D9BCB592BBE8F13004FA4F5 /* ZemanimView.swift in Sources */,

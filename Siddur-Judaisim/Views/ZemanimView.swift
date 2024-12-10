@@ -310,6 +310,15 @@ struct AddLocationView: View {
     
     let symbols = ["location.fill", "star.fill", "mappin.and.ellipse", "house.fill"]
     
+    init() {
+        // Customize UISearchTextField appearance
+        let textFieldAppearance = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
+        textFieldAppearance.attributedPlaceholder = NSAttributedString(
+            string: NSLocalizedString("SEARCH_ADDRESS_PROMPT", comment: ""),
+            attributes: [.foregroundColor: UIColor.white]
+        )
+    }
+    
     var body: some View {
         NavigationView {
             ZStack {

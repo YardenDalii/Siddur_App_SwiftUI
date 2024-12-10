@@ -12,9 +12,6 @@ import CoreLocation
 @main
 struct Siddur_JudaisimApp: App {
     
-//    @StateObject private var appSettings = AppSettings()
-//    @StateObject private var siddurLoader = SiddurLoader()
-    
     init() {
         setupAppearance()
         NotificationManager.instance.requestAuthorization()
@@ -29,7 +26,6 @@ struct Siddur_JudaisimApp: App {
                 .environmentObject(LocationManager())
 //                .environmentObject(SiddurLoader())
         }
-        //        CarPlayScene()
     }
     
     
@@ -42,9 +38,6 @@ struct Siddur_JudaisimApp: App {
         // Always use dark mode colors for UI components
         navigationBarAppearance.backgroundColor = UIColor(CustomPalette.darkBrown.color)
         tabBarAppearance.backgroundColor = UIColor(CustomPalette.darkBrown.color)
-        
-        // Set the accent color
-        
         
         // Adjust text color based on the system's appearance
         
@@ -71,6 +64,8 @@ struct Siddur_JudaisimApp: App {
         UITabBar.appearance().standardAppearance = tabBarAppearance
         UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
         
+//        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = UIColor(CustomPalette.lightBrown.color)
+
         
         // Trigger UI updates to apply the new appearance
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
@@ -123,5 +118,3 @@ class AppSettings: ObservableObject {
         }
     }
 }
-
-
