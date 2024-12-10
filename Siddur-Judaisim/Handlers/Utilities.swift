@@ -76,6 +76,7 @@ enum CustomPalette: String {
     case lightGray = "9EAAA5"
     case golden = "B09C7B"
     case blue = "419EAE"
+    case lightBlue = "ADD8E6"
     case darkBlue = "08344c"
     
     

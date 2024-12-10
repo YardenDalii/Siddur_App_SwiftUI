@@ -35,7 +35,7 @@ struct SettingsView: View {
                     }, label: {
                         HStack {
                             ZStack {
-                                RoundedRectangle(cornerRadius: 6).fill(Color.red)
+                                RoundedRectangle(cornerRadius: 6).fill(Color.yellow)
                                     .frame(width: 28, height: 28)
                                 Image(systemName: "house.fill").foregroundColor(.white)
                             }
@@ -70,6 +70,7 @@ struct SettingsView: View {
                                 Image(systemName: "character.book.closed.fill").foregroundColor(.white)
                             }
                             Text(NSLocalizedString("SMART_SIDDUR_TOGGLE_LOC", comment: ""))
+                                .foregroundStyle(Color.gray)
                         }
                     }
                     .disabled(true)
