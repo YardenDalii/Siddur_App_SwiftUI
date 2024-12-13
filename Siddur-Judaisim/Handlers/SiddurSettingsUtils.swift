@@ -12,7 +12,7 @@ import SwiftUI
 enum PrayerVersion: String, CaseIterable {
     case mizrah = "SiddurEdotHaMizrach"
     case sfarad = "SiddurSfarad"
-    case ashkenaz = "AshkenazPrayers"
+//    case ashkenaz = "AshkenazPrayers"
 
     var displayName: String {
         switch self {
@@ -20,15 +20,15 @@ enum PrayerVersion: String, CaseIterable {
             return "MIZRAH_LOC"
         case .sfarad:
             return "SPAIN_LOC"
-        case .ashkenaz:
-            return "ASHKENAZ_LOC"
+//        case .ashkenaz:
+//            return "ASHKENAZ_LOC"
         }
     }
 
     /// File name for the prayer JSON
     var fileName: String {
         switch self {
-        case .mizrah, .sfarad, .ashkenaz:
+        case .mizrah, .sfarad://, .ashkenaz:
             return self.rawValue
         }
     }

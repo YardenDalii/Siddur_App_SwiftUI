@@ -12,12 +12,5 @@
 		<string>Guttman Vilna-Bold.ttf</string>
 		<string>Guttman Drogolin-Bold.ttf</string>
 	</array>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>fetch</string>
-		<string>location</string>
-		<string>processing</string>
-		<string>remote-notification</string>
-	</array>
 </dict>
 </plist>

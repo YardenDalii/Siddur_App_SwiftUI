@@ -14,8 +14,8 @@ struct Siddur_JudaisimApp: App {
     
     init() {
         setupAppearance()
-        NotificationManager.instance.requestAuthorization()
-        NotificationManager.instance.scheduleTestNotification()
+//        NotificationManager.instance.requestAuthorization()
+//        NotificationManager.instance.scheduleTestNotification()
     }
     
     var body: some Scene {

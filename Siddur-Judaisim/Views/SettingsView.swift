@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MapKit
+import MessageUI
 
 
 struct SettingsView: View {
@@ -17,10 +18,38 @@ struct SettingsView: View {
         NavigationStack {
             List {
                 
+                Section(header: Text("")) {
+                    VStack(spacing: 10) {
+                        VStack(spacing: 10) {
+                                Image("Icon")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 70, height: 70)
+                                    .clipShape(RoundedRectangle(cornerRadius: 15))
+
+                            Text("SIDDUR_APP_ABOUT_LOC")
+                                .multilineTextAlignment(.center)
+                                .padding(.top, 8)
+                                .padding(.horizontal)
+                                .font(.caption)
+                        }
+                    }
+                    IconNavLink(iconImage: "info.circle.fill",
+                                linkName: "ABOUT_LOC_STRING",
+                                iconColor: Color.purple,
+                                destination: AboutView())
+                    
+                    IconNavLink(iconImage: "envelope.fill",
+                                linkName: "CONTACT_LOC",
+                                iconColor: Color.mint,
+                                destination: ContactDevView())
+                    
+                }
+                
                 Section(header: Text("SETTINGS_LOC_STRING")) {
                     IconNavLink(iconImage: "textformat.characters",
                                 linkName: "FONT_SELECTION_LOC",
-                                iconColor: .purple,
+                                iconColor: .green,
                                 destination: FontSelectionView())
                     
                     IconNavLink(iconImage: "globe",
@@ -93,26 +122,18 @@ struct SettingsView: View {
                             .padding(.leading, 37)
                     }
                 }
-                
-                
-                
-                Section(header: Text("ABOUT_LOC_STRING")) {
-                    IconNavLink(iconImage: "info.circle.fill",
-                                linkName: "ABOUT_LOC_STRING",
-                                iconColor: Color.green,
-                                destination: AboutView())
-                }
+               
+                    
             }
             .background(ImageBackgroundView())
             .scrollContentBackground(.hidden)
             .navigationTitle("SETTINGS_LOC_STRING")
+            .navigationBarTitleDisplayMode(.inline)
             .onChange(of: appSettings.selectedLocation) { oldValue, newValue in
                 appSettings.selectedLocation = newValue
             }
         }
     }
-    
-    
 }
 
 
@@ -179,6 +200,49 @@ struct PasukView: View {
     }
 }
 
+
+struct ContactDevView: View {
+    
+    @Environment(\.dismiss) var dismiss
+
+    
+    var body: some View {
+        NavigationView {}
+            .onAppear {
+                sendFeedbackEmail()
+                dismiss()
+            }
+    }
+    
+    private func sendFeedbackEmail() {
+        if let mailURL = createFeedbackMailURL() {
+            if UIApplication.shared.canOpenURL(mailURL) {
+                UIApplication.shared.open(mailURL)
+            } else {
+                // Handle cases where the mail app cannot open
+                print("Cannot send email: Mail app not available.")
+            }
+        }
+    }
+    
+    
+    private func createFeedbackMailURL() -> URL? {
+        let subject = "Feedback for Suddir-Judaisim"
+        let body = """
+        Hi,
+        
+        I would like to share my thoughts about your app. Here's what I think:
+        
+        [Your feedback here]
+        """
+        
+        let formattedSubject = subject.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        let formattedBody = body.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        
+        let emailString = "mailto:\(feedbackEmail)?subject=\(formattedSubject)&body=\(formattedBody)"
+        return URL(string: emailString)
+    }
+}
 
 
 struct LanguageSettingsView: View {

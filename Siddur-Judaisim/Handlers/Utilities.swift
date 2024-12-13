@@ -111,3 +111,6 @@ extension Color {
         self.init(red: r, green: g, blue: b)
     }
 }
+
+
+var feedbackEmail = "yarden.dali11@gmail.com"

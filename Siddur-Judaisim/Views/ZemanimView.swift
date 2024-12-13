@@ -151,9 +151,14 @@ struct ExpandableCardView: View {
                                                     .foregroundColor(.black)
                                             } else {
                                                 ForEach(Array(upcomingEvents), id: \.eventName) { event in
-                                                    Text("\(NSLocalizedString(event.eventName, comment: "")): \(event.localTimeString)")
-                                                        .font(.subheadline)
-                                                        .foregroundColor(.black)
+                                                    HStack {
+                                                        Text(NSLocalizedString(event.eventName, comment: ""))
+                                                        Spacer()
+                                                        Text(event.localTimeString)
+                                                    }
+                                                    .foregroundStyle(.black)
+                                                    .font(.subheadline)
+                                                    .padding(.trailing)
                                                 }
                                             }
                                         }

@@ -22,6 +22,7 @@
       }
     },
     "%@: %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -784,6 +785,23 @@
     },
     "Confirm Location" : {
 
+    },
+    "CONTACT_LOC" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contact The Developer"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "צור קשר"
+          }
+        }
+      }
     },
     "CONTANT_FAIL_LOADING" : {
       "extractionState" : "manual",
@@ -2534,6 +2552,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "שבע ברכות"
+          }
+        }
+      }
+    },
+    "SIDDUR_APP_ABOUT_LOC" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This app brings the beauty of Jewish prayer and tradition to your fingertips, with a complete daily Siddur and tools for accurate Jewish times."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "האפליקציה הזו מביאה את טקסט התפילה והמסורת היהודית לכף ידך, עם סידור יומי מלא וכלים לחישוב זמני היום המדויקים."
           }
         }
       }
