@@ -1,0 +1,11 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+
+# Your rule content
+write code while following SwiftUI docs: https://developer.apple.com/documentation/swiftui/
+
+- You can @ files here
+- You can use markdown but dont have to

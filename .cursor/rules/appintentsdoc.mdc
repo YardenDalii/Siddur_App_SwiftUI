@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+for App Intents follow the docs here: https://developer.apple.com/documentation/appintents

@@ -100,6 +100,7 @@ struct PrayersView: View {
             .background(ImageBackgroundView())
             .scrollContentBackground(.hidden)
             .navigationTitle("SIDDUR_LOC")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     prayerVersionMenu

@@ -31,6 +31,7 @@ struct TehillimView: View {
                 Image("pageBG")
             }
             .navigationTitle("TEHILLIM_LOC_STRING")
+            .navigationBarTitleDisplayMode(.inline)
             .searchable(text: $searchText,
                         placement: .navigationBarDrawer(displayMode: .always),
                         prompt: "EPISODE_NUM_PROMPT")
