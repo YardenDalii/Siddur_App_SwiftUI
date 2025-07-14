@@ -8,8 +8,7 @@
 import SwiftUI
 import Hebcal
 import MapKit
-
-
+import UIKit
 
 struct ZemanimView: View {
     @EnvironmentObject var appSettings: AppSettings
@@ -21,9 +20,11 @@ struct ZemanimView: View {
     
     @State var localLocation: LocationItem?
     
+    
     var body: some View {
         NavigationStack {
             VStack {
+                
                 if localLocation != nil {
                     ScrollView {
                         VStack {
@@ -52,7 +53,8 @@ struct ZemanimView: View {
                 }
             }
             .background(ImageBackgroundView())
-            .navigationTitle("ZEMANIM")
+            .navigationTitle("")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {
@@ -62,16 +64,16 @@ struct ZemanimView: View {
                             .foregroundStyle(CustomPalette.golden.color)
                     }
                 }
-                
-                ToolbarItem(placement: .topBarLeading) {
-                    if Locale.current.identifier.starts(with: "en") {
-                        Text(HDate(date: appSettings.currentDate, calendar: .current).render(lang: TranslationLang.en))
+                ToolbarItem(placement: .principal) {
+                    VStack(spacing: 1) {
+                        Text("ZEMANIM")
+                            .font(.system(size: 28, weight: .bold, design: .rounded))
+//                            .foregroundStyle(CustomPalette.golden.color)
+                        Text(Locale.current.identifier.starts(with: "en") ? HDate(date: appSettings.currentDate, calendar: .current).render(lang: TranslationLang.en) : HDate(date: appSettings.currentDate, calendar: .current).render(lang: TranslationLang.he))
+                            .font(.system(size: 16, weight: .medium, design: .rounded))
                             .foregroundStyle(CustomPalette.lightGray.color)
-                            .bold()
-                    } else {
-                        Text(HDate(date: appSettings.currentDate, calendar: .current).render(lang: TranslationLang.he))
-                            .foregroundStyle(CustomPalette.lightGray.color)
-                            .bold()
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.7)
                     }
                 }
             }
@@ -110,17 +112,33 @@ struct ExpandableCardView: View {
     let item: LocationItem
     @StateObject private var viewModel = HebrewTimeModel()
     @State private var isExpanded = false
+    @State private var hasAppeared = false
+    
+    private var chevronRotation: Double {
+        isExpanded ? 180 : 0
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
             ZStack(alignment: .topLeading) {
+                // Accent bar on the left side
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(CustomPalette.golden.color)
+                    .frame(width: isExpanded ? 6 : 0)
+                    .animation(.bouncy(duration: 0.5, extraBounce: 0.15), value: isExpanded)
+                    .padding(.vertical, 6)
+                    .padding(.leading, 4)
+                    .offset(x: 0, y: 0)
+                
                 VStack(alignment: .leading) {
-                    if !isExpanded {
-                        Button {
-                            withAnimation {
-                                isExpanded.toggle()
-                            }
-                        } label: {
+                    Button {
+                        let generator = UIImpactFeedbackGenerator(style: .light)
+                        generator.impactOccurred()
+                        withAnimation(.bouncy(duration: 0.5, extraBounce: 0.15)) {
+                            isExpanded.toggle()
+                        }
+                    } label: {
+                        if !isExpanded {
                             HStack {
                                 VStack(alignment: .leading) {
                                     
@@ -134,6 +152,8 @@ struct ExpandableCardView: View {
                                         Spacer()
                                         
                                         Image(systemName:"chevron.down")
+                                            .rotationEffect(.degrees(chevronRotation))
+                                            .animation(.easeInOut(duration: 0.3), value: chevronRotation)
                                             .foregroundStyle(.black)
                                             .padding(.trailing, 10)
                                     }
@@ -172,26 +192,8 @@ struct ExpandableCardView: View {
                                 .padding(16)
                                 .padding(.leading, 10)
                             }
-                            
                             .frame(height: 140)
-                            .background(
-                                LinearGradient(
-                                    gradient: Gradient(colors: [
-                                        Color(red: 0.9, green: 0.85, blue: 0.8),  // Light beige/brownish tone
-                                        Color(red: 0.8, green: 0.7, blue: 0.6)    // Soft light brown
-                                    ]),
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
-                                )
-                            )
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                        }
-                    } else {
-                        Button {
-                            withAnimation {
-                                isExpanded.toggle()
-                            }
-                        } label: {
+                        } else {
                             VStack {
                                 HStack {
                                     Image(systemName: "\(item.symbol)")
@@ -203,7 +205,9 @@ struct ExpandableCardView: View {
                                     
                                     Spacer()
                                     
-                                    Image(systemName:"chevron.up")
+                                    Image(systemName:"chevron.down")
+                                        .rotationEffect(.degrees(chevronRotation))
+                                        .animation(.easeInOut(duration: 0.3), value: chevronRotation)
                                         .foregroundStyle(.black)
                                         .padding(.trailing, 10)
                                 }
@@ -213,27 +217,46 @@ struct ExpandableCardView: View {
                             }
                             .padding(16)
                         }
-                        
                     }
-                    
+                    .transition(
+                        .asymmetric(
+                            insertion: .move(edge: .top).combined(with: .scale(scale: 0.9, anchor: .top)).combined(with: .opacity),
+                            removal: .move(edge: .top).combined(with: .scale(scale: 0.9, anchor: .top)).combined(with: .opacity)
+                        )
+                    )
                 }
+                .background(
+                    ZStack {
+                        // Blur glass background
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(.ultraThinMaterial)
+                        
+                        // Gradient overlay
+                        LinearGradient(
+                            gradient: Gradient(colors: [
+                                Color(red: 0.9, green: 0.85, blue: 0.8).opacity(0.8),
+                                Color(red: 0.8, green: 0.7, blue: 0.6).opacity(0.8)
+                            ]),
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    }
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 20))
             }
             .frame(maxHeight: isExpanded ? .infinity : 150)
-            .background(
-                LinearGradient(
-                    gradient: Gradient(colors: [
-                        Color(red: 0.9, green: 0.85, blue: 0.8),  // Light beige/brownish tone
-                        Color(red: 0.8, green: 0.7, blue: 0.6)    // Soft light brown
-                    ]),
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-            )
-            .clipShape(RoundedRectangle(cornerRadius: 20))
+            .shadow(color: .black.opacity(0.08), radius: 12, x: 0, y: 4)
         }
+        .opacity(hasAppeared ? 1 : 0)
+        .scaleEffect(hasAppeared ? 1 : 0.92)
+        .animation(.bouncy(duration: 0.5, extraBounce: 0.15), value: isExpanded)
         .onAppear {
             viewModel.fetchZmanim(latitude: item.latitude, longitude: item.longitude)
             viewModel.fetchShabbatTimes(latitude: item.latitude, longitude: item.longitude)
+            withAnimation(.bouncy(duration: 0.65, extraBounce: 0.18)) {
+                hasAppeared = true
+            }
         }
     }
 }
@@ -422,3 +445,4 @@ struct AddLocationView: View {
         .environmentObject(AppSettings())
         .environmentObject(LocationManager())
 }
+

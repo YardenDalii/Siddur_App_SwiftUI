@@ -67,9 +67,16 @@ struct PrayersView: View {
             }
             .background(ImageBackgroundView())
             .scrollContentBackground(.hidden)
-            .navigationTitle("SIDDUR_LOC")
+//            .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
+                ToolbarItem(placement: .principal) {
+                    VStack(spacing: 1) {
+                        Text("SIDDUR_LOC")
+                            .font(.system(size: 28, weight: .bold, design: .rounded))
+//                            .foregroundStyle(CustomPalette.golden.color)
+                    }
+                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     prayerVersionMenu
                 }

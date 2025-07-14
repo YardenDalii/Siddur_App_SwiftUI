@@ -19,9 +19,17 @@ struct PrayerPageView: View {
         NavigationStack {
             if let prayer = prayers.first(where: { $0.id == prayerID }) {
                 PrayerDetailView(prayer: prayer, scrollToPart: $scrollToPartIndex)
-                    .navigationTitle(NSLocalizedString(prayer.title, comment: ""))
-                    .navigationBarTitleDisplayMode(.inline)
+//                    .navigationTitle(NSLocalizedString(prayer.title, comment: ""))
+//                    .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            VStack(spacing: 1) {
+                                Text(NSLocalizedString(prayer.title, comment: ""))
+                                    .font(.system(size: 28, weight: .bold, design: .rounded))
+            //                            .foregroundStyle(CustomPalette.golden.color)
+                            }
+                        }
+                        
                         ToolbarItemGroup(placement: .navigationBarTrailing) {
                             textSizeAdjustmentMenu
                             partsMenu

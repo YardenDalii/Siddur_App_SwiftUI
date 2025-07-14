@@ -40,12 +40,19 @@ struct TehillimView: View {
                     .ignoresSafeArea()
             }
             .searchable(text: $searchText, prompt: "EPISODE_NUM_PROMPT")
-            .navigationTitle("TEHILLIM_LOC_STRING")
+//            .navigationTitle("TEHILLIM_LOC_STRING")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 TehillimModel.updateSortAndFilter()
             }
             .toolbar {
+                ToolbarItem(placement: .principal) {
+                    VStack(spacing: 1) {
+                        Text("TEHILLIM_LOC_STRING")
+                            .font(.system(size: 28, weight: .bold, design: .rounded))
+//                            .foregroundStyle(CustomPalette.golden.color)
+                    }
+                }
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     sortMenu
                 }

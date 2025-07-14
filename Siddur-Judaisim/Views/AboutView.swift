@@ -41,7 +41,16 @@ struct AboutView: View {
             )
             .scrollContentBackground(.hidden)
         }
-        .navigationBarTitle(NSLocalizedString("ABOUT_LOC_STRING", comment: ""), displayMode: .inline)
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                VStack(spacing: 1) {
+                    Text("ABOUT_LOC_STRING")
+                        .font(.system(size: 28, weight: .bold, design: .rounded))
+//                            .foregroundStyle(CustomPalette.golden.color)
+                }
+            }
+        }
     }
     
     private func openCreditURL(credit: CreditURL) {

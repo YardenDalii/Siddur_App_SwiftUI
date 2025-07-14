@@ -28,8 +28,17 @@ struct FontSelectionView: View {
         }
         .background(ImageBackgroundView())
         .scrollContentBackground(.hidden)
-        .navigationTitle("CHOOSE_FONT_LOC")
+//        .navigationTitle("CHOOSE_FONT_LOC")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                VStack(spacing: 1) {
+                    Text("CHOOSE_FONT_LOC")
+                        .font(.system(size: 28, weight: .bold, design: .rounded))
+//                            .foregroundStyle(CustomPalette.golden.color)
+                }
+            }
+        }
     }
 }
 

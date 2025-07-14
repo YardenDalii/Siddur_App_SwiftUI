@@ -37,8 +37,16 @@ struct TehillimPageView: View {
                 }
             }
         }
-        .navigationBarTitle(NSLocalizedString(groupName, comment: ""), displayMode: .inline)
+//        .navigationBarTitle(NSLocalizedString(groupName, comment: ""), displayMode: .inline)
         .toolbar {
+            ToolbarItem(placement: .principal) {
+                VStack(spacing: 1) {
+                    Text(NSLocalizedString(groupName, comment: ""))
+                        .font(.system(size: 28, weight: .bold, design: .rounded))
+//                            .foregroundStyle(CustomPalette.golden.color)
+                }
+            }
+
             ToolbarItemGroup(placement: .navigationBarTrailing) {
                 favoriteButton
                 textSizeAdjustmentMenu

@@ -127,8 +127,18 @@ struct SettingsView: View {
             }
             .background(ImageBackgroundView())
             .scrollContentBackground(.hidden)
-            .navigationTitle("SETTINGS_LOC_STRING")
+//            .navigationTitle("SETTINGS_LOC_STRING")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    VStack(spacing: 1) {
+                        Text("SETTINGS_LOC_STRING")
+                            .font(.system(size: 28, weight: .bold, design: .rounded))
+    //                            .foregroundStyle(CustomPalette.golden.color)
+                    }
+                }
+            }
+
             .onChange(of: appSettings.selectedLocation) { oldValue, newValue in
                 appSettings.selectedLocation = newValue
             }
@@ -196,7 +206,17 @@ struct PasukView: View {
         }
         .background(ImageBackgroundView())
         .scrollContentBackground(.hidden)
-        .navigationBarTitle("PERSONAL_PASUK_LOC", displayMode: .inline)
+//        .navigationBarTitle("PERSONAL_PASUK_LOC", displayMode: .inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                VStack(spacing: 1) {
+                    Text("PERSONAL_PASUK_LOC")
+                        .font(.system(size: 28, weight: .bold, design: .rounded))
+//                            .foregroundStyle(CustomPalette.golden.color)
+                }
+            }
+        }
+
     }
 }
 
