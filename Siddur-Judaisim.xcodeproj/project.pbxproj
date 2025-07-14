@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D2FA1A92E239D0500A81CB4 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 4D2FA1A82E239D0500A81CB4 /* AppIcon.icon */; };
 		4D3724B62BC44E3F003BAFAD /* מז.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724AD2BC44E3E003BAFAD /* מז.txt */; };
 		4D3724B72BC44E3F003BAFAD /* מח.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724AE2BC44E3E003BAFAD /* מח.txt */; };
 		4D3724B82BC44E3F003BAFAD /* מה.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3724AF2BC44E3E003BAFAD /* מה.txt */; };
@@ -249,6 +250,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D2FA1A82E239D0500A81CB4 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		4D3724AD2BC44E3E003BAFAD /* מז.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "מז.txt"; sourceTree = "<group>"; };
 		4D3724AE2BC44E3E003BAFAD /* מח.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "מח.txt"; sourceTree = "<group>"; };
 		4D3724AF2BC44E3E003BAFAD /* מה.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "מה.txt"; sourceTree = "<group>"; };
@@ -690,6 +692,7 @@
 		4D8149602BB9C0CA00DA919E = {
 			isa = PBXGroup;
 			children = (
+				4D2FA1A82E239D0500A81CB4 /* AppIcon.icon */,
 				4D8149A52BB9C25E00DA919E /* Localizable.xcstrings */,
 				4D81496B2BB9C0CA00DA919E /* Siddur-Judaisim */,
 				4D81497C2BB9C0CB00DA919E /* Siddur-JudaisimTests */,
@@ -918,7 +921,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1610;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					4D8149682BB9C0CA00DA919E = {
 						CreatedOnToolsVersion = 15.3;
@@ -1018,6 +1021,7 @@
 				4D610FB52C4FA554009B785E /* קל.txt in Resources */,
 				4DDBC1D92BBBD3DA006E39D4 /* כא.txt in Resources */,
 				4D37254A2BC6911C003BAFAD /* צב.txt in Resources */,
+				4D2FA1A92E239D0500A81CB4 /* AppIcon.icon in Resources */,
 				4D610FC12C4FA554009B785E /* קמט.txt in Resources */,
 				4D610FA32C4FA554009B785E /* קלה.txt in Resources */,
 				4D610FBC2C4FA554009B785E /* קמד.txt in Resources */,
@@ -1263,6 +1267,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = TWGJ6B7A5K;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -1286,6 +1291,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1327,6 +1333,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = TWGJ6B7A5K;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -1343,6 +1350,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1353,10 +1361,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Siddur-Judaisim/Preview Content\"";
-				DEVELOPMENT_TEAM = TWGJ6B7A5K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Siddur-Judaisim/Info.plist";
@@ -1369,6 +1377,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1391,10 +1400,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Siddur-Judaisim/Preview Content\"";
-				DEVELOPMENT_TEAM = TWGJ6B7A5K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Siddur-Judaisim/Info.plist";
@@ -1407,6 +1416,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1430,7 +1440,6 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TWGJ6B7A5K;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
@@ -1449,7 +1458,6 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TWGJ6B7A5K;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
@@ -1467,7 +1475,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TWGJ6B7A5K;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Yarden-Dali.Siddur-JudaisimUITests";
@@ -1484,7 +1491,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TWGJ6B7A5K;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Yarden-Dali.Siddur-JudaisimUITests";
@@ -1503,7 +1509,6 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TWGJ6B7A5K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZmanimWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ZmanimWidget;
@@ -1532,7 +1537,6 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TWGJ6B7A5K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZmanimWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ZmanimWidget;

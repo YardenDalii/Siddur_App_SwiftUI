@@ -102,9 +102,7 @@ struct EpisodeDetailView: View {
                 Text("CONTANT_FAIL_LOADING")
             }
         }
-        .background {
-            Image("pageBG")
-        }
+        .background(ImageBackgroundView())
         .padding(.top, 1)
         .environment(\.layoutDirection, .rightToLeft)
         

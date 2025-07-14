@@ -9,58 +9,32 @@ import SwiftUI
 import Hebcal
 import WebKit
 
-
 struct SiddurView: View {
     
     @EnvironmentObject var appSettings: AppSettings
     @EnvironmentObject var locationManager: LocationManager
-    
-//    @EnvironmentObject var siddurData: SiddurLoader
 
-    
-    @State private var isLoading = true
-    
     @State private var selectedTab = 0
     
     var body: some View {
-        ZStack {
-            TabView(selection: $selectedTab) {
-                
+        TabView(selection: $selectedTab) {
+            
+            Tab.init("SIDDUR_LOC", systemImage: selectedTab == 0 ? "text.book.closed.fill" : "text.book.closed", value: 0/*, role: <#T##TabRole?#>)*/) {
                 PrayersView()
-                    .tabItem {
-                        Image(systemName: selectedTab == 0 ? "text.book.closed.fill" : "text.book.closed")
-                            .environment(\.symbolVariants, .none)
-                        Text("SIDDUR_LOC")
-                    }
-                    .tag(0)
-                
-                
+            }
+
+            
+            Tab.init("TEHILLIM_LOC_STRING", systemImage: selectedTab == 1 ? "books.vertical.fill" : "books.vertical", value: 1/*, role: .search*/) {
                 TehillimView()
-                    .tabItem {
-                        Image(systemName: selectedTab == 1 ? "books.vertical.fill" : "books.vertical")
-                            .environment(\.symbolVariants, .none)
-                        Text("TEHILLIM_LOC_STRING")
-                    }
-                    .tag(1)
-                
+            }
+            
+            Tab.init("ZEMANIM", systemImage: selectedTab == 2 ? "deskclock.fill" : "deskclock", value: 2/*, role: <#T##TabRole?#>*/) {
                 ZemanimView()
-                    .tabItem{
-                        Image(systemName: selectedTab == 2 ? "deskclock.fill" : "deskclock")
-                            .environment(\.symbolVariants, .none)
-                        Text("ZEMANIM")
-                    }
-                    .tag(2)
-                
-                
+            }
+
+            
+            Tab.init("SETTINGS_LOC_STRING", systemImage: selectedTab == 3 ? "gearshape.fill" : "gearshape", value: 3/*, role: <#T##TabRole?#>*/) {
                 SettingsView()
-                    .tabItem {
-                        Image(systemName: selectedTab == 3 ? "gearshape.fill" : "gearshape")
-                            .environment(\.symbolVariants, .none)
-                        Text("SETTINGS_LOC_STRING")
-                        
-                    }
-                    .tag(3)
-                
             }
         }
         .onAppear {
@@ -72,15 +46,9 @@ struct SiddurView: View {
     }
 }
 
-
 class SelectedPrayerModel: ObservableObject {
     @Published var index: Int = 0
 }
-
-
-// NSLocalizedString(, comment: "")
-
-
 
 struct PrayersView: View {
     @EnvironmentObject var appSettings: AppSettings
@@ -107,21 +75,18 @@ struct PrayersView: View {
                 }
             }
             .onAppear {
-                // Load prayers when the view appears
                 reloadPrayers()
             }
         }
     }
 
-    /// Toolbar menu for selecting prayer versions
     private var prayerVersionMenu: some View {
         Menu {
             ForEach(PrayerVersion.allCases, id: \.self) { version in
-                Button(action: {
-                    // Update selected version and reload prayers
+                Button {
                     appSettings.selectedPrayerVersion = version
                     reloadPrayers()
-                }) {
+                } label: {
                     HStack {
                         Text(NSLocalizedString(version.displayName, comment: ""))
                         if appSettings.selectedPrayerVersion == version {
@@ -138,7 +103,6 @@ struct PrayersView: View {
         }
     }
 
-    /// Reload prayers based on user settings
     private func reloadPrayers() {
         siddurData = loadPrayers(
             fileName: appSettings.selectedPrayerVersion.fileName,
@@ -161,21 +125,26 @@ struct PrayersView: View {
     }
 }
 
-
 struct ImageBackgroundView: View {
     var body: some View {
-        Image("pageBG")
-            .resizable()
-            .scaledToFill()
-            .ignoresSafeArea()
+        Group {
+            if #available(iOS 26.0, *) {
+                Image("pageBG")
+                    .resizable()
+                    .scaledToFill()
+                    .backgroundExtensionEffect()
+            } else {
+                Image("pageBG")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
+            }
+        }
     }
 }
-
-
 
 #Preview {
     SiddurView()
         .environmentObject(LocationManager())
         .environmentObject(AppSettings())
-//        .environmentObject(SiddurLoader())
 }

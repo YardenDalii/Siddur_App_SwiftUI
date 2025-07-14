@@ -170,5 +170,3 @@ extension GeocodingHelper: MKLocalSearchCompleterDelegate {
         print("Search completer error: \(error.localizedDescription)")
     }
 }
-
-

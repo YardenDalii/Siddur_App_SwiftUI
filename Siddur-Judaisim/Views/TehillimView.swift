@@ -1,52 +1,58 @@
-
 import SwiftUI
-
 
 struct TehillimView: View {
     @EnvironmentObject var appSettings: AppSettings
-    @StateObject var TehillimModel = TehillimViewModel()
-
-    @State private var searchText = ""
-
-    let columns = Array(repeating: GridItem(.flexible()), count: 4)
+    @StateObject private var TehillimModel = TehillimViewModel()
     
-    init() {
-        // Customize UISearchTextField appearance
-        let textFieldAppearance = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
-        textFieldAppearance.attributedPlaceholder = NSAttributedString(
-            string: NSLocalizedString("EPISODE_NUM_PROMPT", comment: ""),
-            attributes: [.foregroundColor: UIColor.white]
-        )
+    @State private var searchText = ""
+    
+    var filteredEpisodeGroups: [EpisodeGroup] {
+        guard !searchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            return TehillimModel.episodeGroups
+        }
+        
+        let lowercasedSearch = searchText.lowercased()
+        
+        // Filter episodes within groups by searchText
+        let groupsWithFilteredEpisodes = TehillimModel.episodeGroups.compactMap { group in
+            let filteredEpisodes = group.episodes.filter { episode in
+                episode.name.lowercased().contains(lowercasedSearch)
+            }
+            if !filteredEpisodes.isEmpty {
+                return EpisodeGroup(id: group.id, title: group.title, episodes: filteredEpisodes)
+            } else {
+                return nil
+            }
+        }
+        return groupsWithFilteredEpisodes
     }
     
     var body: some View {
         NavigationStack {
             ScrollView {
-                ForEach(TehillimModel.episodeGroups) { group in
+                ForEach(filteredEpisodeGroups) { group in
                     EpisodeGroupView(group: group)
                         .environmentObject(TehillimModel)
                 }
             }
             .background {
-                Image("pageBG")
+                ImageBackgroundView()
+                    .ignoresSafeArea()
             }
+            .searchable(text: $searchText, prompt: "EPISODE_NUM_PROMPT")
             .navigationTitle("TEHILLIM_LOC_STRING")
             .navigationBarTitleDisplayMode(.inline)
-            .searchable(text: $searchText,
-                        placement: .navigationBarDrawer(displayMode: .always),
-                        prompt: "EPISODE_NUM_PROMPT")
-            .onChange(of: searchText) { oldValue, newValue in
-                TehillimModel.searchText = newValue
-            }
             .onAppear {
                 TehillimModel.updateSortAndFilter()
             }
             .toolbar {
-                sortMenu
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    sortMenu
+                }
             }
         }
     }
-
+    
     var sortMenu: some View {
         Menu {
             Button("SORT_DAY_LOC", action: { TehillimModel.sortCriterion = .day })
@@ -57,8 +63,6 @@ struct TehillimView: View {
         }
     }
 }
-
-
 
 struct Book: View {
     
@@ -72,8 +76,11 @@ struct Book: View {
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [CustomPalette.brown.color, Color.brown.opacity(0.7)]), startPoint: .topLeading, endPoint: .bottomTrailing)
                     .frame(width: 44, height: 150)
-                    .border(Color.black)
                     .cornerRadius(6)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 6)
+                            .stroke(.black)
+                    )
                     .containerRelativeFrame(.horizontal, count: 8, spacing: 11)
                 
                 VStack(spacing: 80) {
@@ -91,15 +98,15 @@ struct Book: View {
             }
         }
         .contextMenu {
-            Button(action: { TehillimModel.toggleFavorite(for: episode.id) }) {
+            Button {
+                TehillimModel.toggleFavorite(for: episode.id)
+            } label: {
                 Text(TehillimModel.isFavorite(episodeId: episode.id) ? "REMOVE_FAVS" : "ADD_FAVS")
                 Image(systemName: TehillimModel.isFavorite(episodeId: episode.id) ? "star.fill" : "star")
             }
         }
     }
 }
-
-
 
 struct Shelf: View {
     var body: some View {
@@ -109,8 +116,6 @@ struct Shelf: View {
             .shadow(radius: 1)
     }
 }
-
-
 
 struct EpisodeGroupView: View {
     let group: EpisodeGroup
@@ -123,7 +128,6 @@ struct EpisodeGroupView: View {
             
             ScrollView(.horizontal) {
                 HStack {
-                    
                     ForEach(group.episodes) { episode in
                         Book(episode: episode, episodeGroup: group)
                     }
@@ -135,12 +139,7 @@ struct EpisodeGroupView: View {
         .contentMargins(16, for: .scrollContent)
         .scrollTargetBehavior(.paging)
     }
-    
 }
-
-
-
-
 
 #Preview {
     TehillimView()

@@ -21,19 +21,12 @@
         }
       }
     },
-    "%@: %@" : {
-      "extractionState" : "stale",
+    "%@ %@" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "%1$@: %2$@"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
+            "value" : "%1$@ %2$@"
           }
         }
       }
@@ -356,23 +349,6 @@
       }
     },
     "BEDTIME_SHEMA" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bedtime Shema"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "שמע שעל המיטה"
-          }
-        }
-      }
-    },
-    "Bedtime-Shema" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -2454,23 +2430,6 @@
         }
       }
     },
-    "Shacharit" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shacharit"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "שחרית"
-          }
-        }
-      }
-    },
     "SHACHARIT" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -2484,23 +2443,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "שחרית"
-          }
-        }
-      }
-    },
-    "Shacharit+" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "After Shacharit"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "תפילה לאחר שחרית"
           }
         }
       }

@@ -51,9 +51,7 @@ struct ZemanimView: View {
                         .scaleEffect(2)
                 }
             }
-            .background {
-                Image("pageBG")
-            }
+            .background(ImageBackgroundView())
             .navigationTitle("ZEMANIM")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

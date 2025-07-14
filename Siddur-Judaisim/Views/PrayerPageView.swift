@@ -6,9 +6,6 @@
 //
 
 import SwiftUI
-import UIKit
-
-
 
 struct PrayerPageView: View {
     @EnvironmentObject var appSettings: AppSettings
@@ -19,33 +16,39 @@ struct PrayerPageView: View {
     @State private var scrollToPartIndex: String? = nil
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             if let prayer = prayers.first(where: { $0.id == prayerID }) {
                 PrayerDetailView(prayer: prayer, scrollToPart: $scrollToPartIndex)
+                    .navigationTitle(NSLocalizedString(prayer.title, comment: ""))
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItemGroup(placement: .navigationBarTrailing) {
+                            textSizeAdjustmentMenu
+                            partsMenu
+                        }
+                    }
             } else {
                 Text(NSLocalizedString("PRAYER_NOT_FOUND_LOC", comment: ""))
                     .font(.headline)
                     .foregroundColor(.gray)
+                    .navigationTitle("") // Empty title for consistency
+                    .navigationBarTitleDisplayMode(.inline)
             }
         }
-        .navigationBarTitle(NSLocalizedString(prayers.first(where: { $0.id == prayerID })!.title, comment: ""), displayMode: .inline)
-        .toolbar {
-            ToolbarItemGroup(placement: .navigationBarTrailing) {
-                textSizeAdjustmentMenu
-                partsMenu // Menu for part selection
-            }
-        }
+        .background(ImageBackgroundView())
     }
 
     private var textSizeAdjustmentMenu: some View {
         Menu {
-            Stepper("\(NSLocalizedString("TEXT_SIZE_LOC_STRING", comment: "")): \(Int(appSettings.textSize))", value: $appSettings.textSize, step: 1)
+            Stepper(NSLocalizedString("TEXT_SIZE_LOC_STRING", comment: "") + ": \(Int(appSettings.textSize))", value: $appSettings.textSize, step: 1)
 
-            Button(action: { appSettings.textSize = 23.0 }) {
+            Button {
+                appSettings.textSize = 23.0
+            } label: {
                 Text(NSLocalizedString("RESET_TO_DEFAULT", comment: ""))
             }
         } label: {
-            Label("TEXT_SIZE_LOC_STRING", systemImage: "textformat.size")
+            Label(NSLocalizedString("TEXT_SIZE_LOC_STRING", comment: ""), systemImage: "textformat.size")
         }
     }
 
@@ -53,24 +56,23 @@ struct PrayerPageView: View {
         Menu {
             if let prayer = prayers.first(where: { $0.id == prayerID }) {
                 ForEach(prayer.prayers) { section in
-                    Button(action: {
+                    Button {
                         scrollToPartIndex = section.title
-                    }) {
+                    } label: {
                         Text(NSLocalizedString(section.title, comment: ""))
                     }
                 }
             }
         } label: {
-            Label("PRAYER_PARTS_LOC", systemImage: "list.bullet")
+            Label(NSLocalizedString("PRAYER_PARTS_LOC", comment: ""), systemImage: "list.bullet")
         }
     }
 }
 
-
 struct PrayerDetailView: View {
     var prayer: Prayer
     @EnvironmentObject var appSettings: AppSettings
-    @Binding var scrollToPart: String? // Binding to listen for part selection
+    @Binding var scrollToPart: String?
 
     var body: some View {
         ScrollViewReader { proxy in
@@ -83,15 +85,15 @@ struct PrayerDetailView: View {
                         }
                     }
                     .padding()
-                    .id(section.title) // Add ID to use for scrolling
+                    .id(section.title)
                 }
             }
             .environment(\.layoutDirection, .rightToLeft)
             .background(ImageBackgroundView())
-            .onChange(of: scrollToPart) { oldPart, part in
-                if let part = part {
+            .onChange(of: scrollToPart) { oldValue, newValue in
+                if let part = newValue {
                     proxy.scrollTo(part, anchor: .top)
-                    scrollToPart = nil // Reset after scrolling
+                    scrollToPart = nil
                 }
             }
         }

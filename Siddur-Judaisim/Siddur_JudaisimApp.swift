@@ -13,7 +13,7 @@ import CoreLocation
 struct Siddur_JudaisimApp: App {
     
     init() {
-        setupAppearance()
+//        setupAppearance()
 //        NotificationManager.instance.requestAuthorization()
 //        NotificationManager.instance.scheduleTestNotification()
     }
