@@ -1,0 +1,110 @@
+{
+  "color-space-for-untagged-svg-colors" : "display-p3",
+  "fill" : "automatic",
+  "groups" : [
+    {
+      "blend-mode" : "normal",
+      "blur-material" : null,
+      "layers" : [
+        {
+          "fill" : {
+            "solid" : "display-p3:0.93066,0.91895,0.85938,1.00000"
+          },
+          "glass" : false,
+          "image-name" : "Download siddur_text.png",
+          "name" : "Download siddur_text",
+          "position" : {
+            "scale" : 0.7,
+            "translation-in-points" : [
+              41.8359375,
+              -254.2421875
+            ]
+          }
+        },
+        {
+          "glass" : true,
+          "image-name" : "Download resized star_of_david_layer 2.svg",
+          "name" : "Download resized star_of_david_layer 2",
+          "position" : {
+            "scale" : 1.2,
+            "translation-in-points" : [
+              39.65625,
+              19.28125
+            ]
+          }
+        },
+        {
+          "blend-mode" : "normal",
+          "fill" : "none",
+          "glass" : true,
+          "hidden" : false,
+          "image-name" : "image.png",
+          "name" : "image",
+          "opacity" : 1,
+          "position" : {
+            "scale" : 0.9,
+            "translation-in-points" : [
+              15.6484375,
+              29.7265625
+            ]
+          }
+        },
+        {
+          "blend-mode-specializations" : [
+            {
+              "appearance" : "dark",
+              "value" : "normal"
+            }
+          ],
+          "fill-specializations" : [
+            {
+              "value" : "none"
+            },
+            {
+              "appearance" : "dark",
+              "value" : {
+                "linear-gradient" : [
+                  "srgb:0.12984,0.12985,0.12984,1.00000",
+                  "extended-gray:0.31800,1.00000"
+                ]
+              }
+            }
+          ],
+          "glass" : true,
+          "hidden" : false,
+          "image-name" : "Download background_layer.svg",
+          "name" : "Download background_layer",
+          "position" : {
+            "scale" : 1.5,
+            "translation-in-points" : [
+              46.09375,
+              68.75
+            ]
+          }
+        }
+      ],
+      "opacity" : 1,
+      "position" : {
+        "scale" : 1,
+        "translation-in-points" : [
+          -10.3671875,
+          4.3359375
+        ]
+      },
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}
