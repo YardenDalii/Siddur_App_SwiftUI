@@ -28,6 +28,7 @@ struct SiddurView: View {
                 TehillimView()
             }
             
+            
             Tab.init("ZEMANIM", systemImage: selectedTab == 2 ? "deskclock.fill" : "deskclock", value: 2/*, role: <#T##TabRole?#>*/) {
                 ZemanimView()
             }

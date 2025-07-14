@@ -40,6 +40,7 @@ struct TehillimView: View {
                     .ignoresSafeArea()
             }
             .searchable(text: $searchText, prompt: "EPISODE_NUM_PROMPT")
+//            .searchable(text: $searchText, placement: .sidebar, prompt: "EPISODE_NUM_PROMPT")
 //            .navigationTitle("TEHILLIM_LOC_STRING")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
@@ -67,6 +68,7 @@ struct TehillimView: View {
             Button("SORT_FAV_LOC", action: { TehillimModel.sortCriterion = .favorite })
         } label: {
             Label("SORT_LOC_STRING", systemImage: "arrow.up.arrow.down")
+                .foregroundStyle(CustomPalette.golden.color)
         }
     }
 }

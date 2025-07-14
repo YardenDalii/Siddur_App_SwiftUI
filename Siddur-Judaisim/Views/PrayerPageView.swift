@@ -45,6 +45,7 @@ struct PrayerPageView: View {
         }
         .background(ImageBackgroundView())
     }
+    
 
     private var textSizeAdjustmentMenu: some View {
         Menu {
@@ -105,5 +106,7 @@ struct PrayerDetailView: View {
                 }
             }
         }
+        .background(ImageBackgroundView())
+
     }
 }
