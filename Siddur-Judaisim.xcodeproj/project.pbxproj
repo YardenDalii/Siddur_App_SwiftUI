@@ -195,6 +195,7 @@
 		4DDBC1F62BBC0C29006E39D4 /* Guttman Vilna-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1F42BBC0C29006E39D4 /* Guttman Vilna-Bold.ttf */; };
 		4DDBC1F72BBC0C29006E39D4 /* Guttman Drogolin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC1F52BBC0C29006E39D4 /* Guttman Drogolin-Bold.ttf */; };
 		4DDBC2012BBD9EF0006E39D4 /* tehilim.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBC2002BBD9EF0006E39D4 /* tehilim.json */; };
+		4DE49F882E25A493009E5A66 /* UtilityViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE49F872E25A483009E5A66 /* UtilityViews.swift */; };
 		4DF6A9532CEA6C0A008DF0DD /* SiddurEdotHaMizrach.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DF6A9522CEA6C0A008DF0DD /* SiddurEdotHaMizrach.json */; };
 		4DF6A95D2CF0897C008DF0DD /* FontSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6A95C2CF0897C008DF0DD /* FontSelectionView.swift */; };
 		4DF6A95F2CF0941E008DF0DD /* SiddurSettingsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6A95E2CF0941E008DF0DD /* SiddurSettingsUtils.swift */; };
@@ -438,6 +439,7 @@
 		4DDBC1F42BBC0C29006E39D4 /* Guttman Vilna-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Guttman Vilna-Bold.ttf"; sourceTree = "<group>"; };
 		4DDBC1F52BBC0C29006E39D4 /* Guttman Drogolin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Guttman Drogolin-Bold.ttf"; sourceTree = "<group>"; };
 		4DDBC2002BBD9EF0006E39D4 /* tehilim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tehilim.json; sourceTree = "<group>"; };
+		4DE49F872E25A483009E5A66 /* UtilityViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityViews.swift; sourceTree = "<group>"; };
 		4DF6A9522CEA6C0A008DF0DD /* SiddurEdotHaMizrach.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiddurEdotHaMizrach.json; sourceTree = "<group>"; };
 		4DF6A95C2CF0897C008DF0DD /* FontSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSelectionView.swift; sourceTree = "<group>"; };
 		4DF6A95E2CF0941E008DF0DD /* SiddurSettingsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiddurSettingsUtils.swift; sourceTree = "<group>"; };
@@ -818,6 +820,7 @@
 		4DDBC2032BBE5DB4006E39D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4DE49F872E25A483009E5A66 /* UtilityViews.swift */,
 				4D81496E2BB9C0CA00DA919E /* SiddurView.swift */,
 				4D81499B2BB9C16A00DA919E /* PrayerPageView.swift */,
 				4D8149CA2BB9D65700DA919E /* TehillimView.swift */,
@@ -1170,6 +1173,7 @@
 				4D8149A22BB9C1CB00DA919E /* AboutView.swift in Sources */,
 				4D81499A2BB9C14700DA919E /* SettingsView.swift in Sources */,
 				4D81496F2BB9C0CA00DA919E /* SiddurView.swift in Sources */,
+				4DE49F882E25A493009E5A66 /* UtilityViews.swift in Sources */,
 				4D81499C2BB9C16A00DA919E /* PrayerPageView.swift in Sources */,
 				4DF6A95F2CF0941E008DF0DD /* SiddurSettingsUtils.swift in Sources */,
 				4DF6A9612CF09CDE008DF0DD /* SiddurLoader.swift in Sources */,

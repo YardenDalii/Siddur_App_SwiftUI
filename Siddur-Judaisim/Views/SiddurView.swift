@@ -55,6 +55,7 @@ struct PrayersView: View {
     @EnvironmentObject var appSettings: AppSettings
     @State private var siddurData: [Prayer] = []
     @State private var sections: [String: [String]] = PrayerSections
+    @State private var currentSection: String = OrderedSectionKeys.first ?? ""
 
     var body: some View {
         NavigationStack {
@@ -62,21 +63,19 @@ struct PrayersView: View {
                 ForEach(OrderedSectionKeys, id: \.self) { sectionTitle in
                     prayerSection(
                         title: NSLocalizedString(sectionTitle, comment: ""),
-                        prayerTitles: sections[sectionTitle] ?? []
+                        prayerTitles: sections[sectionTitle] ?? [],
+                        sectionTitle: sectionTitle
                     )
                 }
             }
+            .coordinateSpace(name: "prayerListScroll")
             .background(ImageBackgroundView())
             .scrollContentBackground(.hidden)
 //            .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .principal) {
-                    VStack(spacing: 1) {
-                        Text("SIDDUR_LOC")
-                            .font(.system(size: 28, weight: .bold, design: .rounded))
-//                            .foregroundStyle(CustomPalette.golden.color)
-                    }
+                    NavTitleView(title: "SIDDUR_LOC")
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     prayerVersionMenu
@@ -84,6 +83,7 @@ struct PrayersView: View {
             }
             .onAppear {
                 reloadPrayers()
+                currentSection = OrderedSectionKeys.first ?? ""
             }
         }
     }
@@ -120,8 +120,22 @@ struct PrayersView: View {
     }
 
     @ViewBuilder
-    private func prayerSection(title: String, prayerTitles: [String]) -> some View {
-        Section(header: Text(title).bold()) {
+    private func prayerSection(title: String, prayerTitles: [String], sectionTitle: String) -> some View {
+        Section(header:
+            ZStack(alignment: .leading) {
+                Text(title).bold()
+                GeometryReader { geo in
+                    Color.clear
+                        .onAppear {
+                            updateSectionIfNeeded(title: sectionTitle, y: geo.frame(in: .named("prayerListScroll")).minY)
+                        }
+                        .onChange(of: geo.frame(in: .named("prayerListScroll")).minY) { newY in
+                            updateSectionIfNeeded(title: sectionTitle, y: newY)
+                        }
+                }
+                .frame(height: 0)
+            }
+        ) {
             ForEach(prayerTitles, id: \.self) { prayerTitle in
                 if let prayer = siddurData.first(where: { $0.title == prayerTitle }) {
                     NavigationLink(destination: PrayerPageView(prayerID: prayer.id, prayers: siddurData)) {
@@ -131,25 +145,15 @@ struct PrayersView: View {
             }
         }
     }
-}
 
-struct ImageBackgroundView: View {
-    var body: some View {
-        Group {
-            if #available(iOS 26.0, *) {
-                Image("pageBG")
-                    .resizable()
-                    .scaledToFill()
-                    .backgroundExtensionEffect()
-            } else {
-                Image("pageBG")
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
-            }
+    private func updateSectionIfNeeded(title: String, y: CGFloat) {
+        if y < 80 && y > 0 && currentSection != title {
+            currentSection = title
         }
     }
 }
+
+
 
 #Preview {
     SiddurView()

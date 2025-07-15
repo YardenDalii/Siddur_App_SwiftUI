@@ -5,6 +5,7 @@ struct TehillimView: View {
     @StateObject private var TehillimModel = TehillimViewModel()
     
     @State private var searchText = ""
+    @State private var currentGroupTitle: String = ""
     
     var filteredEpisodeGroups: [EpisodeGroup] {
         guard !searchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
@@ -31,33 +32,39 @@ struct TehillimView: View {
         NavigationStack {
             ScrollView {
                 ForEach(filteredEpisodeGroups) { group in
-                    EpisodeGroupView(group: group)
+                    TehillimGroupSection(group: group, updateCurrentGroupIfNeeded: updateCurrentGroupIfNeeded)
                         .environmentObject(TehillimModel)
                 }
             }
+            .coordinateSpace(name: "tehillimScroll")
             .background {
                 ImageBackgroundView()
                     .ignoresSafeArea()
             }
             .searchable(text: $searchText, prompt: "EPISODE_NUM_PROMPT")
-//            .searchable(text: $searchText, placement: .sidebar, prompt: "EPISODE_NUM_PROMPT")
-//            .navigationTitle("TEHILLIM_LOC_STRING")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 TehillimModel.updateSortAndFilter()
+                currentGroupTitle = filteredEpisodeGroups.first?.title ?? ""
             }
             .toolbar {
                 ToolbarItem(placement: .principal) {
-                    VStack(spacing: 1) {
-                        Text("TEHILLIM_LOC_STRING")
-                            .font(.system(size: 28, weight: .bold, design: .rounded))
-//                            .foregroundStyle(CustomPalette.golden.color)
-                    }
+                    NavTitleView(title: "TEHILLIM_LOC_STRING", section: currentGroupTitle)
                 }
-                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .topBarLeading) {
+                    
+                }
+                ToolbarSpacer(.fixed, placement: .topBarTrailing)
+                ToolbarItemGroup(placement: .topBarTrailing) {
                     sortMenu
                 }
             }
+        }
+    }
+    
+    private func updateCurrentGroupIfNeeded(title: String, y: CGFloat) {
+        if y < 80 && y > 0 && currentGroupTitle != title {
+            currentGroupTitle = title
         }
     }
     
@@ -67,7 +74,7 @@ struct TehillimView: View {
             Button("SORT_BOOK_LOC", action: { TehillimModel.sortCriterion = .book })
             Button("SORT_FAV_LOC", action: { TehillimModel.sortCriterion = .favorite })
         } label: {
-            Label("SORT_LOC_STRING", systemImage: "arrow.up.arrow.down")
+            Image(systemName: "arrow.up.arrow.down")
                 .foregroundStyle(CustomPalette.golden.color)
         }
     }
@@ -147,6 +154,44 @@ struct EpisodeGroupView: View {
         }
         .contentMargins(16, for: .scrollContent)
         .scrollTargetBehavior(.paging)
+    }
+}
+
+// MARK: - Group Section Helper
+private struct TehillimGroupSection: View {
+    let group: EpisodeGroup
+    let updateCurrentGroupIfNeeded: (String, CGFloat) -> Void
+    @EnvironmentObject var tehillimModel: TehillimViewModel
+    
+    var body: some View {
+        Section {
+            ZStack {
+                Text(NSLocalizedString(group.title, comment: ""))
+                    .font(.system(size: 20))
+                    .padding(.top, 5)
+                    .bold()
+                GeometryReader { geo in
+                    Color.clear
+                        .onAppear { updateCurrentGroupIfNeeded(group.title, geo.frame(in: .named("tehillimScroll")).minY) }
+                        .onChange(of: geo.frame(in: .named("tehillimScroll")).minY) { _, newY in
+                            updateCurrentGroupIfNeeded(group.title, newY)
+                        }
+                }
+                .frame(height: 0)
+            }
+            ScrollView(.horizontal) {
+                HStack {
+                    ForEach(group.episodes) { episode in
+                        Book(episode: episode, episodeGroup: group)
+                    }
+                }
+            }
+            .scrollTargetLayout()
+            Shelf()
+        }
+        .contentMargins(16, for: .scrollContent)
+        .scrollTargetBehavior(.paging)
+        .environmentObject(tehillimModel)
     }
 }
 
