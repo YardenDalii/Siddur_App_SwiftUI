@@ -1,5 +1,14 @@
 import SwiftUI
 
+private func hebrewGematria(_ hebrew: String) -> Int {
+    let letterValues: [Character: Int] = [
+        "א": 1, "ב": 2, "ג": 3, "ד": 4, "ה": 5, "ו": 6, "ז": 7, "ח": 8, "ט": 9, "י": 10,
+        "כ": 20, "ך": 20, "ל": 30, "מ": 40, "ם": 40, "נ": 50, "ן": 50, "ס": 60, "ע": 70, "פ": 80,
+        "ף": 80, "צ": 90, "ץ": 90, "ק": 100, "ר": 200, "ש": 300, "ת": 400
+    ]
+    return hebrew.reduce(0) { $0 + (letterValues[$1] ?? 0) }
+}
+
 struct TehillimView: View {
     @EnvironmentObject var appSettings: AppSettings
     @StateObject private var TehillimModel = TehillimViewModel()
@@ -13,11 +22,15 @@ struct TehillimView: View {
         }
         
         let lowercasedSearch = searchText.lowercased()
+        let searchNumber: Int? = Int(searchText.filter { $0.isNumber })
         
-        // Filter episodes within groups by searchText
+        // Filter episodes within groups by searchText or episode number
         let groupsWithFilteredEpisodes = TehillimModel.episodeGroups.compactMap { group in
             let filteredEpisodes = group.episodes.filter { episode in
-                episode.name.lowercased().contains(lowercasedSearch)
+                let name = episode.name.lowercased()
+                let matchesName = name.contains(lowercasedSearch)
+                let matchesNumber = searchNumber != nil && hebrewGematria(episode.name) == searchNumber
+                return matchesName || matchesNumber
             }
             if !filteredEpisodes.isEmpty {
                 return EpisodeGroup(id: group.id, title: group.title, episodes: filteredEpisodes)
@@ -51,9 +64,9 @@ struct TehillimView: View {
                 ToolbarItem(placement: .principal) {
                     NavTitleView(title: "TEHILLIM_LOC_STRING", section: currentGroupTitle)
                 }
-                ToolbarItem(placement: .topBarLeading) {
-                    
-                }
+//                ToolbarItem(placement: .topBarLeading) {
+//                    
+//                }
                 ToolbarSpacer(.fixed, placement: .topBarTrailing)
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     sortMenu
