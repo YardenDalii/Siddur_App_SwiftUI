@@ -129,7 +129,7 @@ struct PrayersView: View {
                         .onAppear {
                             updateSectionIfNeeded(title: sectionTitle, y: geo.frame(in: .named("prayerListScroll")).minY)
                         }
-                        .onChange(of: geo.frame(in: .named("prayerListScroll")).minY) { newY in
+                        .onChange(of: geo.frame(in: .named("prayerListScroll")).minY) { _, newY in
                             updateSectionIfNeeded(title: sectionTitle, y: newY)
                         }
                 }
