@@ -33,6 +33,8 @@ struct TehillimView: View {
         }
         return groupsWithFilteredEpisodes
     }
+//    @State private var showSearchBar = false
+
     
     var body: some View {
         NavigationStack {
@@ -47,7 +49,7 @@ struct TehillimView: View {
                 ImageBackgroundView()
                     .ignoresSafeArea()
             }
-            .searchable(text: $searchText, prompt: "EPISODE_NUM_PROMPT")
+            .searchable(text: $searchText,/* isPresented: $showSearchBar,*/ prompt: "EPISODE_NUM_PROMPT")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 TehillimModel.updateSortAndFilter()
@@ -57,8 +59,15 @@ struct TehillimView: View {
                 ToolbarItem(placement: .principal) {
                     NavTitleView(title: "TEHILLIM_LOC_STRING", section: currentGroupTitle)
                 }
+//                DefaultToolbarItem(kind: .search, placement: .bottomBar)
 //                ToolbarItem(placement: .topBarLeading) {
-//                    
+//                    Button {
+//                        withAnimation {
+//                            showSearchBar.toggle()
+//                        }
+//                    } label: {
+//                        Image(systemName: showSearchBar ? "xmark.circle" : "magnifyingglass")
+//                    }
 //                }
                 ToolbarSpacer(.fixed, placement: .topBarTrailing)
                 ToolbarItemGroup(placement: .topBarTrailing) {

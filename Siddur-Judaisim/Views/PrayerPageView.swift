@@ -19,8 +19,6 @@ struct PrayerPageView: View {
         NavigationStack {
             if let prayer = prayers.first(where: { $0.id == prayerID }) {
                 PrayerDetailView(prayer: prayer, scrollToPart: $scrollToPartIndex)
-//                    .navigationTitle(NSLocalizedString(prayer.title, comment: ""))
-//                    .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
                         ToolbarItem(placement: .principal) {
                             VStack(spacing: 1) {
@@ -88,7 +86,7 @@ struct PrayerDetailView: View {
             ScrollView {
                 ForEach(prayer.prayers) { section in
                     VStack(alignment: .leading, spacing: 10) {
-                        ForEach(section.text, id: \.self) { text in
+                        ForEach(Array(section.text.enumerated()), id: \.offset) { index, text in
                             DynamicStyledText(input: text, customFontName: appSettings.selectedFontName)
                                 .padding(.bottom, 8)
                         }

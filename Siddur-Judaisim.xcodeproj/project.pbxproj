@@ -1372,6 +1372,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Siddur-Judaisim/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Siddour-Judaisim";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Using your current location let you get day times in your location.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to provide better services";
@@ -1411,6 +1412,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Siddur-Judaisim/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Siddour-Judaisim";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Using your current location let you get day times in your location.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to provide better services";
