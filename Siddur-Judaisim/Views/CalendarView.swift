@@ -301,7 +301,7 @@ struct MonthCalendarView: View {
         }
         .onChange(of: selection) { _, newValue in
                 guard let date = newValue,
-                      let week = months.flatMap(\.days).first(where: { (week) -> Bool in
+                      let week = months.flatMap(\.weeks).first(where: { (week) -> Bool in
                           week.days.contains(date)
                       })
             else { return }
