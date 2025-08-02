@@ -709,6 +709,37 @@
 			path = Calendar;
 			sourceTree = "<group>";
 		};
+		4D4DAD8C2E3EAAA0003FC343 /* Prayers */ = {
+			isa = PBXGroup;
+			children = (
+				4D81499B2BB9C16A00DA919E /* PrayerPageView.swift */,
+				4D8149CA2BB9D65700DA919E /* TehillimView.swift */,
+				4D8149AA2BB9CDC300DA919E /* TehillimPageView.swift */,
+			);
+			path = Prayers;
+			sourceTree = "<group>";
+		};
+		4D4DAD8D2E3EAAC7003FC343 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4D8149A12BB9C1CB00DA919E /* AboutView.swift */,
+				4D8149992BB9C14700DA919E /* SettingsView.swift */,
+				4DF6A95C2CF0897C008DF0DD /* FontSelectionView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		4D4DAD8E2E3EAADD003FC343 /* Zemanim */ = {
+			isa = PBXGroup;
+			children = (
+				4D4DAD822E3CF828003FC343 /* Calendar */,
+				4D4DAD802E3CD774003FC343 /* CalendarView.swift */,
+				4D9BCB582BBE8F13004FA4F5 /* ZemanimView.swift */,
+				4D9B73182D0837EA00833755 /* LocationSelectionView.swift */,
+			);
+			path = Zemanim;
+			sourceTree = "<group>";
+		};
 		4D8149602BB9C0CA00DA919E = {
 			isa = PBXGroup;
 			children = (
@@ -737,7 +768,6 @@
 		4D81496B2BB9C0CA00DA919E /* Siddur-Judaisim */ = {
 			isa = PBXGroup;
 			children = (
-				4D4DAD822E3CF828003FC343 /* Calendar */,
 				4DDBC2032BBE5DB4006E39D4 /* Views */,
 				4D9BCB552BBE5EC0004FA4F5 /* Handlers */,
 				4D81496C2BB9C0CA00DA919E /* Siddur_JudaisimApp.swift */,
@@ -839,17 +869,11 @@
 		4DDBC2032BBE5DB4006E39D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4D4DAD8E2E3EAADD003FC343 /* Zemanim */,
+				4D4DAD8D2E3EAAC7003FC343 /* Settings */,
+				4D4DAD8C2E3EAAA0003FC343 /* Prayers */,
 				4DE49F872E25A483009E5A66 /* UtilityViews.swift */,
 				4D81496E2BB9C0CA00DA919E /* SiddurView.swift */,
-				4D81499B2BB9C16A00DA919E /* PrayerPageView.swift */,
-				4D8149CA2BB9D65700DA919E /* TehillimView.swift */,
-				4D8149AA2BB9CDC300DA919E /* TehillimPageView.swift */,
-				4D8149992BB9C14700DA919E /* SettingsView.swift */,
-				4D8149A12BB9C1CB00DA919E /* AboutView.swift */,
-				4D9BCB582BBE8F13004FA4F5 /* ZemanimView.swift */,
-				4DF6A95C2CF0897C008DF0DD /* FontSelectionView.swift */,
-				4D9B73182D0837EA00833755 /* LocationSelectionView.swift */,
-				4D4DAD802E3CD774003FC343 /* CalendarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

@@ -7,18 +7,18 @@
 import Foundation
 
 extension Calendar {
-    static func nearestMonday(from date: Date = .now) -> Date {
+    static func nearestSunday(from date: Date = .now) -> Date {
         let calendar = Calendar.current
         let weekday = calendar.component(.weekday, from: date)
-        let daysToSubtract = (weekday - 2 + 7) % 7
-        let theNearestMonday = calendar.date(byAdding: .day, value: -daysToSubtract, to: date)!
+        let daysToSubtract = (weekday - 1 + 7) % 7
+        let theNearestSunday = calendar.date(byAdding: .day, value: -daysToSubtract, to: date)!
         
-        var dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: theNearestMonday)
+        var dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: theNearestSunday)
         dateComponents.hour = 9
         dateComponents.minute = 0
         dateComponents.second = 0
         
-        return Calendar.current.date(from: dateComponents) ?? theNearestMonday
+        return Calendar.current.date(from: dateComponents) ?? theNearestSunday
     }
     
     static func currentWeek(from date: Date = .now) -> [Date] {

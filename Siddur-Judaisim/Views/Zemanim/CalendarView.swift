@@ -222,9 +222,9 @@ struct WeekCalendarView: View {
         _selection = selection
         self.isDragging = isDragging
         
-        let theNearestMonday = Calendar.nearestMonday(from: focused.wrappedValue.days.first ?? .now)
+        let theNearestSunday = Calendar.nearestSunday(from: focused.wrappedValue.days.first ?? .now)
         let currentWeek = Week(
-            days: Calendar.currentWeek(from: theNearestMonday),
+            days: Calendar.currentWeek(from: theNearestSunday),
             order: .current
         )
         

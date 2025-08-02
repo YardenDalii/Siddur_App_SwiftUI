@@ -30,7 +30,7 @@ struct ZemanimView: View {
     @State private var initialDragOffset: CGFloat? = nil
     @State private var verticalDragOffset: CGFloat = .zero
     
-    private let symbols = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    private let symbols = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     
     enum CalendarType {
         case week, month
