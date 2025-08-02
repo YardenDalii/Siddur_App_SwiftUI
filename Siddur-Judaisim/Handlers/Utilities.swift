@@ -114,3 +114,10 @@ extension Color {
 
 
 var feedbackEmail = "yarden.dali11@gmail.com"
+
+
+
+enum CalendarConstants {
+    static let dayHeight: CGFloat = 48
+    static let monthHeight: CGFloat = 48 * 5
+}

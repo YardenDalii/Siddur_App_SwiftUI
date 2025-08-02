@@ -74,6 +74,10 @@
 		4D3725542BC6911C003BAFAD /* קא.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3725432BC6911C003BAFAD /* קא.txt */; };
 		4D3725552BC6911C003BAFAD /* קה.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3725442BC6911C003BAFAD /* קה.txt */; };
 		4D37255D2BC6C746003BAFAD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37255C2BC6C746003BAFAD /* Utilities.swift */; };
+		4D4DAD812E3CD774003FC343 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DAD802E3CD774003FC343 /* CalendarView.swift */; };
+		4D4DAD842E3CF83A003FC343 /* CalendarExtantion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DAD832E3CF832003FC343 /* CalendarExtantion.swift */; };
+		4D4DAD862E3CFCBD003FC343 /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DAD852E3CFCAC003FC343 /* Month.swift */; };
+		4D4DAD882E3D028A003FC343 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DAD872E3D0285003FC343 /* Week.swift */; };
 		4D575EC72C6384E6006C5D98 /* HebrewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D575EC62C6384E6006C5D98 /* HebrewViewModel.swift */; };
 		4D575EC82C6384E6006C5D98 /* HebrewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D575EC62C6384E6006C5D98 /* HebrewViewModel.swift */; };
 		4D575ECA2C638650006C5D98 /* LocationManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D575EC92C638650006C5D98 /* LocationManagerModel.swift */; };
@@ -318,6 +322,10 @@
 		4D3725432BC6911C003BAFAD /* קא.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קא.txt"; sourceTree = "<group>"; };
 		4D3725442BC6911C003BAFAD /* קה.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "קה.txt"; sourceTree = "<group>"; };
 		4D37255C2BC6C746003BAFAD /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		4D4DAD802E3CD774003FC343 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		4D4DAD832E3CF832003FC343 /* CalendarExtantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtantion.swift; sourceTree = "<group>"; };
+		4D4DAD852E3CFCAC003FC343 /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
+		4D4DAD872E3D0285003FC343 /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
 		4D575EC62C6384E6006C5D98 /* HebrewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HebrewViewModel.swift; sourceTree = "<group>"; };
 		4D575EC92C638650006C5D98 /* LocationManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerModel.swift; sourceTree = "<group>"; };
 		4D575EDC2C63AE32006C5D98 /* CarPlay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CarPlay.framework; path = System/Library/Frameworks/CarPlay.framework; sourceTree = SDKROOT; };
@@ -691,6 +699,16 @@
 			path = Prayers;
 			sourceTree = "<group>";
 		};
+		4D4DAD822E3CF828003FC343 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				4D4DAD872E3D0285003FC343 /* Week.swift */,
+				4D4DAD852E3CFCAC003FC343 /* Month.swift */,
+				4D4DAD832E3CF832003FC343 /* CalendarExtantion.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		4D8149602BB9C0CA00DA919E = {
 			isa = PBXGroup;
 			children = (
@@ -719,6 +737,7 @@
 		4D81496B2BB9C0CA00DA919E /* Siddur-Judaisim */ = {
 			isa = PBXGroup;
 			children = (
+				4D4DAD822E3CF828003FC343 /* Calendar */,
 				4DDBC2032BBE5DB4006E39D4 /* Views */,
 				4D9BCB552BBE5EC0004FA4F5 /* Handlers */,
 				4D81496C2BB9C0CA00DA919E /* Siddur_JudaisimApp.swift */,
@@ -830,6 +849,7 @@
 				4D9BCB582BBE8F13004FA4F5 /* ZemanimView.swift */,
 				4DF6A95C2CF0897C008DF0DD /* FontSelectionView.swift */,
 				4D9B73182D0837EA00833755 /* LocationSelectionView.swift */,
+				4D4DAD802E3CD774003FC343 /* CalendarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1164,7 +1184,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D4DAD842E3CF83A003FC343 /* CalendarExtantion.swift in Sources */,
 				4D8149AB2BB9CDC300DA919E /* TehillimPageView.swift in Sources */,
+				4D4DAD882E3D028A003FC343 /* Week.swift in Sources */,
 				4D8A115C2BC29A6300907B01 /* TehillimViewModel.swift in Sources */,
 				4D9B73192D0837EA00833755 /* LocationSelectionView.swift in Sources */,
 				4D37255D2BC6C746003BAFAD /* Utilities.swift in Sources */,
@@ -1174,8 +1196,10 @@
 				4D81499A2BB9C14700DA919E /* SettingsView.swift in Sources */,
 				4D81496F2BB9C0CA00DA919E /* SiddurView.swift in Sources */,
 				4DE49F882E25A493009E5A66 /* UtilityViews.swift in Sources */,
+				4D4DAD812E3CD774003FC343 /* CalendarView.swift in Sources */,
 				4D81499C2BB9C16A00DA919E /* PrayerPageView.swift in Sources */,
 				4DF6A95F2CF0941E008DF0DD /* SiddurSettingsUtils.swift in Sources */,
+				4D4DAD862E3CFCBD003FC343 /* Month.swift in Sources */,
 				4DF6A9612CF09CDE008DF0DD /* SiddurLoader.swift in Sources */,
 				4DF6A95D2CF0897C008DF0DD /* FontSelectionView.swift in Sources */,
 				4D575ECA2C638650006C5D98 /* LocationManagerModel.swift in Sources */,
