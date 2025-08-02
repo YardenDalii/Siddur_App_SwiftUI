@@ -9,8 +9,117 @@ import SwiftUI
 
 
 struct CalendarView: View {
+    @Binding var title: String
+    @Binding var selection: Date?
+    @Binding var focusedWeek: Week
+    @Binding var calendarType: ZemanimView.CalendarType
+    @Binding var isDragging: Bool
+    @Binding var dragProgress: CGFloat
+    @Binding var initialDragOffset: CGFloat?
+    @Binding var verticalDragOffset: CGFloat
+
+    let symbols: [String]
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                ForEach(Array(symbols.enumerated()), id: \.element) { index, symbol in
+                    Text(symbol)
+                        .fontWeight(.medium)
+                        .frame(maxWidth: .infinity)
+                        .foregroundStyle(.secondary)
+                    if index != symbols.count - 1 {
+                        Spacer()
+                    }
+                }
+            }
+            .padding(.horizontal)
+
+            VStack {
+                switch calendarType {
+                case .week:
+                    WeekCalendarView(
+                        $title,
+                        selection: $selection,
+                        focused: $focusedWeek,
+                        isDragging: isDragging
+                    )
+                case .month:
+                    MonthCalendarView(
+                        $title,
+                        selection: $selection,
+                        focused: $focusedWeek,
+                        isDragging: isDragging,
+                        dragProgress: dragProgress
+                    )
+                }
+            }
+            .frame(height: CalendarConstants.dayHeight + verticalDragOffset)
+            .clipped()
+
+            Capsule()
+                .fill(.gray.mix(with: .white, by: 0.6))
+                .frame(width: 40, height: 4)
+                .padding(.bottom, 6)
+        }
+        .background(
+            UnevenRoundedRectangle(
+                cornerRadii: .init(bottomLeading: 16, bottomTrailing: 16)
+            )
+            .fill(.white)
+            .ignoresSafeArea()
+        )
+        .onChange(of: selection) { _, newValue in
+            guard let newValue else { return }
+            title = Calendar.monthAndYear(from: newValue)
+        }
+        .onChange(of: focusedWeek) { _, n in
+            print(n.id)
+        }
+        .gesture(
+            DragGesture(minimumDistance: .zero)
+                .onChanged { value in
+                    isDragging = true
+                    calendarType = verticalDragOffset == 0 ? .week : .month
+
+                    if initialDragOffset == nil {
+                        initialDragOffset = verticalDragOffset
+                    }
+
+                    verticalDragOffset = max(
+                        .zero,
+                        min(
+                            (initialDragOffset ?? 0) + value.translation.height,
+                            CalendarConstants.monthHeight - CalendarConstants.dayHeight
+                        )
+                    )
+                    dragProgress = verticalDragOffset / (CalendarConstants.monthHeight - CalendarConstants.dayHeight)
+                }
+                .onEnded { value in
+                    isDragging = false
+                    initialDragOffset = nil
+
+                    withAnimation {
+                        switch calendarType {
+                        case .week:
+                            if verticalDragOffset > CalendarConstants.monthHeight / 3 {
+                                verticalDragOffset = CalendarConstants.monthHeight - CalendarConstants.dayHeight
+                            } else {
+                                verticalDragOffset = 0
+                            }
+                        case .month:
+                            if verticalDragOffset < CalendarConstants.monthHeight / 3 {
+                                verticalDragOffset = 0
+                            } else {
+                                verticalDragOffset = CalendarConstants.monthHeight - CalendarConstants.dayHeight
+                            }
+                        }
+                        dragProgress = verticalDragOffset / (CalendarConstants.monthHeight - CalendarConstants.dayHeight)
+                    } completion: {
+                        calendarType = verticalDragOffset == 0 ? .week : .month
+                    }
+                }
+        )
     }
 }
 
@@ -343,6 +452,7 @@ extension MonthCalendarView {
 
 
 
-#Preview {
-    CalendarView()
-}
+//#Preview {
+//    CalendarView()
+//}
+

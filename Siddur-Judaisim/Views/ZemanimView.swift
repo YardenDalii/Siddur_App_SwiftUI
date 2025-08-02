@@ -20,11 +20,36 @@ struct ZemanimView: View {
     
     @State var localLocation: LocationItem?
     
+    @State private var selection: Date?
+    @State private var title: String = Calendar.monthAndYear(from: .now)
+    @State private var focusedWeek: Week = .current
+    @State private var calendarType: CalendarType = .week
+    @State private var isDragging: Bool = false
+    
+    @State private var dragProgress: CGFloat = .zero
+    @State private var initialDragOffset: CGFloat? = nil
+    @State private var verticalDragOffset: CGFloat = .zero
+    
+    private let symbols = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    
+    enum CalendarType {
+        case week, month
+    }
     
     var body: some View {
         NavigationStack {
+            CalendarView(
+                title: $title,
+                selection: $selection,
+                focusedWeek: $focusedWeek,
+                calendarType: $calendarType,
+                isDragging: $isDragging,
+                dragProgress: $dragProgress,
+                initialDragOffset: $initialDragOffset,
+                verticalDragOffset: $verticalDragOffset,
+                symbols: symbols
+            )
             VStack {
-                
                 if localLocation != nil {
                     ScrollView {
                         VStack {

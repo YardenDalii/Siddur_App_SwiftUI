@@ -94,8 +94,7 @@ struct DynamicStyledText: View {
         // Flush any remaining text
         if !currentText.isEmpty {
 //            result = result + applyStyles(currentText, stack: stack, baseFontSize: baseFontSize)
-//            result = Text("\(result) \(applyStyles(currentText, stack: stack, baseFontSize: baseFontSize))")
-            result = result + applyStyles(currentText, stack: stack, baseFontSize: baseFontSize)
+            result = Text("\(result)\(applyStyles(currentText, stack: stack, baseFontSize: baseFontSize))")
         }
 
         // Apply the outermost stack styles
