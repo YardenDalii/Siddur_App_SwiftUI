@@ -24,7 +24,7 @@ struct SiddurView: View {
             }
 
             
-            Tab.init("TEHILLIM_LOC_STRING", systemImage: selectedTab == 1 ? "books.vertical.fill" : "books.vertical", value: 1/*, role: .search*/) {
+            Tab.init("TEHILLIM_LOC_STRING", systemImage: selectedTab == 1 ? "books.vertical.fill" : "books.vertical", value: 1, role: .search) {
                 TehillimView()
             }
             

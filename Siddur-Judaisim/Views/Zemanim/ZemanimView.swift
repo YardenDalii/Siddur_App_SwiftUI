@@ -22,6 +22,7 @@ struct ZemanimView: View {
     
     @State private var selection: Date?
     @State private var title: String = Calendar.monthAndYear(from: .now)
+    @State private var hTitle: String = Calendar.hebrewMonthAndYear(from: .now)
     @State private var focusedWeek: Week = .current
     @State private var calendarType: CalendarType = .week
     @State private var isDragging: Bool = false
@@ -30,7 +31,7 @@ struct ZemanimView: View {
     @State private var initialDragOffset: CGFloat? = nil
     @State private var verticalDragOffset: CGFloat = .zero
     
-    private let symbols = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    private let symbols = ["DAYONE", "DAYTWO", "DAYTHREE", "DAYFOUR", "DAYFIVE", "DAYSIX", "DAYSEVEN"]
     
     enum CalendarType {
         case week, month
@@ -40,6 +41,7 @@ struct ZemanimView: View {
         NavigationStack {
             CalendarView(
                 title: $title,
+                hTitle: $hTitle,
                 selection: $selection,
                 focusedWeek: $focusedWeek,
                 calendarType: $calendarType,
@@ -89,16 +91,21 @@ struct ZemanimView: View {
                             .foregroundStyle(CustomPalette.golden.color)
                     }
                 }
+//                ToolbarItem(placement: .topBarLeading) {
+//                    Text(hTitle)
+//                        .fontWeight(.medium)
+//                        .foregroundStyle(CustomPalette.golden.color)
+//                        .frame(width: 120)
+//                }
                 ToolbarItem(placement: .principal) {
                     VStack(spacing: 1) {
                         Text("ZEMANIM")
                             .font(.system(size: 28, weight: .bold, design: .rounded))
-//                            .foregroundStyle(CustomPalette.golden.color)
-                        Text(Locale.current.identifier.starts(with: "en") ? HDate(date: appSettings.currentDate, calendar: .current).render(lang: TranslationLang.en) : HDate(date: appSettings.currentDate, calendar: .current).render(lang: TranslationLang.he))
-                            .font(.system(size: 16, weight: .medium, design: .rounded))
-                            .foregroundStyle(CustomPalette.lightGray.color)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.7)
+//                        Text(Locale.current.identifier.starts(with: "en") ? HDate(date: appSettings.currentDate, calendar: .current).render(lang: TranslationLang.en) : HDate(date: appSettings.currentDate, calendar: .current).render(lang: TranslationLang.he))
+//                            .font(.system(size: 16, weight: .medium, design: .rounded))
+//                            .foregroundStyle(CustomPalette.lightGray.color)
+//                            .lineLimit(1)
+//                            .minimumScaleFactor(0.7)
                     }
                 }
             }

@@ -5,6 +5,7 @@
 //  Created by Yarden Dali on 01/08/2025.
 //
 import Foundation
+import Hebcal
 
 extension Calendar {
     static func nearestSunday(from date: Date = .now) -> Date {
@@ -46,6 +47,30 @@ extension Calendar {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd"
         return formatter.string(from: date)
+    }
+    
+    static func hebrewDayNumber(from date: Date) -> String {
+        let hebrewCalendar = Calendar(identifier: .hebrew)
+        let day = hebrewCalendar.component(.day, from: date)
+        
+        let hebrewLetters = [
+            "א", "ב", "ג", "ד", "ה", "ו", "ז", "ח", "ט", "י",
+            "יא", "יב", "יג", "יד", "טו", "טז", "יז", "יח", "יט", "כ",
+            "כא", "כב", "כג", "כד", "כה", "כו", "כז", "כח", "כט", "ל"
+        ]
+        
+        guard day >= 1 && day <= 30 else { return "" }
+        return hebrewLetters[day - 1]
+    }
+    
+    static func hebrewMonthAndYear(from date: Date) -> String {
+        let hdate = HDate(date: date, calendar: .current)
+        let fullHebrewDate = hdate.render(lang: TranslationLang.he)
+        let components = fullHebrewDate.split(separator: " ")
+        if components.count >= 3 {
+            return components.dropFirst().joined(separator: " ")
+        }
+        return fullHebrewDate
     }
     
     static func dayLetter(from date: Date) -> String {

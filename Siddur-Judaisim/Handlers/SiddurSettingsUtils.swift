@@ -110,7 +110,7 @@ struct DynamicStyledText: View {
         for (tag, fontSize) in stack.reversed() {
             switch tag {
             case "b":
-                styledText = styledText.bold()
+                styledText = styledText.font(.custom(customFontName, size: fontSize)).bold()
             default:
                 styledText = styledText.font(.custom(customFontName, size: fontSize))
             }

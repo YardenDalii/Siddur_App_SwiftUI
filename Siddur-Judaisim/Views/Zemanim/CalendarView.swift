@@ -10,6 +10,7 @@ import SwiftUI
 
 struct CalendarView: View {
     @Binding var title: String
+    @Binding var hTitle: String
     @Binding var selection: Date?
     @Binding var focusedWeek: Week
     @Binding var calendarType: ZemanimView.CalendarType
@@ -23,8 +24,17 @@ struct CalendarView: View {
     var body: some View {
         VStack {
             HStack {
+                Text(hTitle)
+                    .fontWeight(.medium)
+                    .foregroundStyle(.secondary)
+                Text(title)
+                    .fontWeight(.medium)
+                    .foregroundStyle(.secondary)
+            }
+            .padding(.bottom, 5)
+            HStack {
                 ForEach(Array(symbols.enumerated()), id: \.element) { index, symbol in
-                    Text(symbol)
+                    Text(NSLocalizedString(symbol, comment: ""))
                         .fontWeight(.medium)
                         .frame(maxWidth: .infinity)
                         .foregroundStyle(.secondary)
@@ -34,12 +44,15 @@ struct CalendarView: View {
                 }
             }
             .padding(.horizontal)
-
+            
+            Divider()
+            
             VStack {
                 switch calendarType {
                 case .week:
                     WeekCalendarView(
                         $title,
+                        $hTitle,
                         selection: $selection,
                         focused: $focusedWeek,
                         isDragging: isDragging
@@ -47,6 +60,7 @@ struct CalendarView: View {
                 case .month:
                     MonthCalendarView(
                         $title,
+                        $hTitle,
                         selection: $selection,
                         focused: $focusedWeek,
                         isDragging: isDragging,
@@ -72,6 +86,7 @@ struct CalendarView: View {
         .onChange(of: selection) { _, newValue in
             guard let newValue else { return }
             title = Calendar.monthAndYear(from: newValue)
+            hTitle = Calendar.hebrewMonthAndYear(from: newValue)
         }
         .onChange(of: focusedWeek) { _, n in
             print(n.id)
@@ -130,20 +145,25 @@ struct DayView: View {
     
     var body: some View {
         VStack(spacing: 12) {
-            Text(Calendar.dayNumber(from: date))
-                .background {
-                    if date == selectedDate {
-                        Circle()
-                            .foregroundStyle(CustomPalette.lightBlue.color)
-                            .opacity(0.3)
-                            .frame(width: 40, height: 40)
-                    } else if Calendar.current.isDateInToday(date) {
-                        Circle()
-                            .foregroundStyle(CustomPalette.golden.color)
-                            .opacity(0.3)
-                            .frame(width: 40, height: 40)
-                    }
+            VStack {
+                Text(Calendar.dayNumber(from: date))
+                Text(Calendar.hebrewDayNumber(from: date))
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+            }
+            .background {
+                if date == selectedDate {
+                    Circle()
+                        .foregroundStyle(CustomPalette.lightBlue.color)
+                        .opacity(0.3)
+                        .frame(width: 40, height: 40)
+                } else if Calendar.current.isDateInToday(date) {
+                    Circle()
+                        .foregroundStyle(CustomPalette.golden.color)
+                        .opacity(0.3)
+                        .frame(width: 40, height: 40)
                 }
+            }
         }
         .foregroundStyle(selectedDate == date ? CustomPalette.lightBlue.color : .black)
         .font(.system(.body, design: .rounded, weight: .medium))
@@ -209,6 +229,7 @@ struct WeekCalendarView: View {
     let isDragging: Bool
     
     @Binding var title: String
+    @Binding var hTitle: String
     @Binding var focused: Week
     @Binding var selection: Date?
     
@@ -216,8 +237,9 @@ struct WeekCalendarView: View {
     @State private var position: ScrollPosition
     @State private var calendarWidth: CGFloat = .zero
     
-    init(_ title: Binding<String>, selection: Binding<Date?>, focused: Binding<Week>, isDragging: Bool) {
+    init(_ title: Binding<String>,_ hTitle:Binding<String>, selection: Binding<Date?>, focused: Binding<Week>, isDragging: Bool) {
         _title = title
+        _hTitle = hTitle
         _focused = focused
         _selection = selection
         self.isDragging = isDragging
@@ -275,6 +297,7 @@ struct WeekCalendarView: View {
                 return }
             focused = focusedWeek
             title = Calendar.monthAndYear(from: focusedWeek.days.last!)
+            hTitle = Calendar.hebrewMonthAndYear(from: focusedWeek.days.last!)
         }
         .onChange(of: selection) { _, newValue in
             guard let date = newValue,
@@ -329,6 +352,7 @@ struct MonthCalendarView: View {
     let dragProgress: CGFloat
     
     @Binding var title: String
+    @Binding var hTitle: String
     @Binding var focused: Week
     @Binding var selection: Date?
     
@@ -336,8 +360,9 @@ struct MonthCalendarView: View {
     @State private var position: ScrollPosition
     @State private var calendarWidth: CGFloat = .zero
     
-    init(_ title: Binding<String>, selection: Binding<Date?>, focused: Binding<Week>, isDragging: Bool, dragProgress: CGFloat) {
+    init(_ title: Binding<String>,_ hTitle: Binding<String>, selection: Binding<Date?>, focused: Binding<Week>, isDragging: Bool, dragProgress: CGFloat) {
         _title = title
+        _hTitle = hTitle
         _focused = focused
         _selection = selection
         self.isDragging = isDragging
@@ -407,6 +432,7 @@ struct MonthCalendarView: View {
             }
             
             title = Calendar.monthAndYear(from: focusedWeek.days.last!)
+            hTitle = Calendar.hebrewMonthAndYear(from: focusedWeek.days.last!)
         }
         .onChange(of: selection) { _, newValue in
                 guard let date = newValue,

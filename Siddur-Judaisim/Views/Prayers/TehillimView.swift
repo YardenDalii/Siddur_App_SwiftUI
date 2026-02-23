@@ -69,7 +69,9 @@ struct TehillimView: View {
 //                        Image(systemName: showSearchBar ? "xmark.circle" : "magnifyingglass")
 //                    }
 //                }
-                ToolbarSpacer(.fixed, placement: .topBarTrailing)
+                if #available(iOS 26.0, *) {
+                    ToolbarSpacer(.fixed, placement: .topBarTrailing)
+                }
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     sortMenu
                 }
