@@ -142,7 +142,12 @@ struct CalendarView: View {
 struct DayView: View {
     let date: Date
     @Binding var selectedDate: Date?
-    
+
+    private var isSelected: Bool {
+        guard let selectedDate else { return false }
+        return Calendar.current.isDate(date, inSameDayAs: selectedDate)
+    }
+
     var body: some View {
         VStack(spacing: 12) {
             VStack {
@@ -152,7 +157,7 @@ struct DayView: View {
                     .foregroundStyle(.secondary)
             }
             .background {
-                if date == selectedDate {
+                if isSelected {
                     Circle()
                         .foregroundStyle(CustomPalette.lightBlue.color)
                         .opacity(0.3)
@@ -165,7 +170,7 @@ struct DayView: View {
                 }
             }
         }
-        .foregroundStyle(selectedDate == date ? CustomPalette.lightBlue.color : .black)
+        .foregroundStyle(isSelected ? CustomPalette.lightBlue.color : .black)
         .font(.system(.body, design: .rounded, weight: .medium))
         .onTapGesture {
             withAnimation(.easeInOut) {
@@ -296,8 +301,10 @@ struct WeekCalendarView: View {
             guard let focusedWeek = weeks.first(where: { $0.id == (newValue.viewID as? String) }) else {
                 return }
             focused = focusedWeek
-            title = Calendar.monthAndYear(from: focusedWeek.days.last!)
-            hTitle = Calendar.hebrewMonthAndYear(from: focusedWeek.days.last!)
+            if let lastDay = focusedWeek.days.last {
+                title = Calendar.monthAndYear(from: lastDay)
+                hTitle = Calendar.hebrewMonthAndYear(from: lastDay)
+            }
         }
         .onChange(of: selection) { _, newValue in
             guard let date = newValue,
@@ -431,8 +438,10 @@ struct MonthCalendarView: View {
                 focused = focusedWeek
             }
             
-            title = Calendar.monthAndYear(from: focusedWeek.days.last!)
-            hTitle = Calendar.hebrewMonthAndYear(from: focusedWeek.days.last!)
+            if let lastDay = focusedWeek.days.last {
+                title = Calendar.monthAndYear(from: lastDay)
+                hTitle = Calendar.hebrewMonthAndYear(from: lastDay)
+            }
         }
         .onChange(of: selection) { _, newValue in
                 guard let date = newValue,

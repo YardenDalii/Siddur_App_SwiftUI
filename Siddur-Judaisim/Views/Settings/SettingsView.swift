@@ -139,9 +139,7 @@ struct SettingsView: View {
                 }
             }
 
-            .onChange(of: appSettings.selectedLocation) { oldValue, newValue in
-                appSettings.selectedLocation = newValue
-            }
+            // Removed self-assigning onChange that was causing unnecessary re-renders
         }
     }
 }
@@ -227,7 +225,7 @@ struct ContactDevView: View {
 
     
     var body: some View {
-        NavigationView {}
+        Color.clear
             .onAppear {
                 sendFeedbackEmail()
                 dismiss()
@@ -247,7 +245,7 @@ struct ContactDevView: View {
     
     
     private func createFeedbackMailURL() -> URL? {
-        let subject = "Feedback for Suddir-Judaisim"
+        let subject = "Feedback for Siddur-Judaisim"
         let body = """
         Hi,
         
@@ -270,10 +268,10 @@ struct LanguageSettingsView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        NavigationView {}
-        .onAppear {
-            openAppSettings()
-        }
+        Color.clear
+            .onAppear {
+                openAppSettings()
+            }
     }
     
     private func openAppSettings() {

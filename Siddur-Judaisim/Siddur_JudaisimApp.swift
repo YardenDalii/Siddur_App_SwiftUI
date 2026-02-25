@@ -11,19 +11,22 @@ import CoreLocation
 
 @main
 struct Siddur_JudaisimApp: App {
-    
+
+    @StateObject private var appSettings = AppSettings()
+    @StateObject private var locationManager = LocationManager()
+
     init() {
 //        setupAppearance()
 //        NotificationManager.instance.requestAuthorization()
 //        NotificationManager.instance.scheduleTestNotification()
     }
-    
+
     var body: some Scene {
         WindowGroup {
             SiddurView()
-                .preferredColorScheme(.light)
-                .environmentObject(AppSettings())
-                .environmentObject(LocationManager())
+                .preferredColorScheme(appSettings.colorSchemePreference)
+                .environmentObject(appSettings)
+                .environmentObject(locationManager)
 //                .environmentObject(SiddurLoader())
         }
     }
@@ -82,32 +85,54 @@ struct Siddur_JudaisimApp: App {
 
 class AppSettings: ObservableObject {
     @Published var currentDate = Date()
-    
+
     // App User Preferences
-    @AppStorage("textSize") var textSize: Double = 16
-    @AppStorage("userPasuk") var userPasuk: String = ""
-    
+    @Published var textSize: Double {
+        didSet { UserDefaults.standard.set(textSize, forKey: "textSize") }
+    }
+    @Published var userPasuk: String {
+        didSet { UserDefaults.standard.set(userPasuk, forKey: "userPasuk") }
+    }
+
     // UI Preferences
-    @AppStorage("selectedFontName") var selectedFontName: String = "System" // Default to the system font
+    @Published var selectedFontName: String {
+        didSet { UserDefaults.standard.set(selectedFontName, forKey: "selectedFontName") }
+    }
     @Published var language: String = Locale.current.language.languageCode?.identifier ?? "en"
 
-    // User's Selected Location
-    @AppStorage("selectedLatitude") var selectedLatitude: Double = 0.0
-    @AppStorage("selectedLongitude") var selectedLongitude: Double = 0.0
-    @AppStorage("selectedLocation") private var storedLocation: String = ""
-        
-    var selectedLocation: String {
-        get { storedLocation }
-        set {
-            storedLocation = newValue
-            objectWillChange.send() // Force state update
+    // Appearance setting
+    @Published var appearanceSetting: String {
+        didSet { UserDefaults.standard.set(appearanceSetting, forKey: "appearanceSettingKey") }
+    }
+
+    var colorSchemePreference: ColorScheme? {
+        switch appearanceSetting {
+        case "dark": return .dark
+        case "light": return .light
+        default: return nil // system default
         }
     }
 
+    // User's Selected Location
+    @Published var selectedLatitude: Double {
+        didSet { UserDefaults.standard.set(selectedLatitude, forKey: "selectedLatitude") }
+    }
+    @Published var selectedLongitude: Double {
+        didSet { UserDefaults.standard.set(selectedLongitude, forKey: "selectedLongitude") }
+    }
+    @Published var selectedLocation: String {
+        didSet { UserDefaults.standard.set(selectedLocation, forKey: "selectedLocation") }
+    }
+
     // User's Prayer Version Preference
-    @AppStorage("selectedPrayerVersionRawValue") private var selectedPrayerVersionRawValue: String = PrayerVersion.mizrah.rawValue
-    @AppStorage("smartSiddur") var smartSiddur: Bool = false
-    
+    @Published var smartSiddur: Bool {
+        didSet { UserDefaults.standard.set(smartSiddur, forKey: "smartSiddur") }
+    }
+
+    @Published var selectedPrayerVersionRawValue: String {
+        didSet { UserDefaults.standard.set(selectedPrayerVersionRawValue, forKey: "selectedPrayerVersionRawValue") }
+    }
+
     // Computed property for PrayerVersion
     var selectedPrayerVersion: PrayerVersion {
         get {
@@ -116,5 +141,18 @@ class AppSettings: ObservableObject {
         set {
             selectedPrayerVersionRawValue = newValue.rawValue
         }
+    }
+
+    init() {
+        let defaults = UserDefaults.standard
+        self.textSize = defaults.object(forKey: "textSize") as? Double ?? 20
+        self.userPasuk = defaults.string(forKey: "userPasuk") ?? ""
+        self.selectedFontName = defaults.string(forKey: "selectedFontName") ?? "System"
+        self.appearanceSetting = defaults.string(forKey: "appearanceSettingKey") ?? "light"
+        self.selectedLatitude = defaults.object(forKey: "selectedLatitude") as? Double ?? 0.0
+        self.selectedLongitude = defaults.object(forKey: "selectedLongitude") as? Double ?? 0.0
+        self.selectedLocation = defaults.string(forKey: "selectedLocation") ?? ""
+        self.smartSiddur = defaults.bool(forKey: "smartSiddur")
+        self.selectedPrayerVersionRawValue = defaults.string(forKey: "selectedPrayerVersionRawValue") ?? PrayerVersion.mizrah.rawValue
     }
 }

@@ -71,11 +71,14 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     func saveLocations() {
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
-        
+
         do {
             let data = try encoder.encode(savedLocations)
-            let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-            let filePath = paths[0].appendingPathComponent("locations.json")
+            guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+                print("Error: Could not find documents directory")
+                return
+            }
+            let filePath = documentsDirectory.appendingPathComponent("locations.json")
             try data.write(to: filePath, options: .atomicWrite)
             print("Saved successfully to \(filePath)")
         } catch {
@@ -85,7 +88,10 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     func loadLocations() {
         let fileManager = FileManager.default
-        let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
+        guard let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            savedLocations = []
+            return
+        }
         let filePath = documentsDirectory.appendingPathComponent("locations.json")
         
         if let data = try? Data(contentsOf: filePath) {

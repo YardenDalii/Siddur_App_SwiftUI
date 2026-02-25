@@ -8,14 +8,14 @@
 import Foundation
 import SwiftUI
 
-func loadContent(fileName: String) -> NSAttributedString? {
+func loadContent(fileName: String) -> String? {
     guard let path = Bundle.main.path(forResource: fileName, ofType: "txt"),
           let string = try? String(contentsOfFile: path, encoding: .utf8) else {
-        
+
         return nil //NSAttributedString(string: "nocontent")
     }
-    
-    return NSAttributedString(string: string)
+
+    return string
 }
 
 
@@ -113,7 +113,7 @@ extension Color {
 }
 
 
-var feedbackEmail = "yarden.dali11@gmail.com"
+let feedbackEmail = "yarden.dali11@gmail.com"
 
 
 

@@ -49,19 +49,21 @@ struct FontSelectionRow: View {
     var onSelect: () -> Void
 
     var body: some View {
-        HStack {
-            Text(font.displayName)
-            Spacer()
-            if isSelected {
-                Image(systemName: "checkmark")
-                    .foregroundColor(.blue)
-            }
-        }
-        .padding(.leading)
-        .contentShape(Rectangle()) // Make the entire row tappable
-        .onTapGesture {
+        Button {
             onSelect()
+        } label: {
+            HStack {
+                Text(font.displayName)
+                Spacer()
+                if isSelected {
+                    Image(systemName: "checkmark")
+                        .foregroundColor(.blue)
+                }
+            }
+            .padding(.leading)
+            .contentShape(Rectangle())
         }
+        .foregroundStyle(.primary)
     }
 }
 

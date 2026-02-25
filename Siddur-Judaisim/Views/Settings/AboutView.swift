@@ -12,35 +12,23 @@ struct AboutView: View {
     @State private var isTapped: [CreditURL: Bool] = Dictionary(uniqueKeysWithValues: CreditURL.allCases.map { ($0, false) })
     
     var body: some View {
-        NavigationView {
-            List {
-                Section(header: Text(NSLocalizedString("ACKS_CREDITS", comment: ""))) {
-                    ForEach(CreditURL.allCases, id: \.self) { credit in
+        List {
+            Section(header: Text(NSLocalizedString("ACKS_CREDITS", comment: ""))) {
+                ForEach(CreditURL.allCases, id: \.self) { credit in
+                    Button {
+                        openCreditURL(credit: credit)
+                    } label: {
                         CreditURLItem(label: credit.label,
                                       description: credit.description,
                                       imageName: credit.imageName,
                                       bgColor: credit.bgColor)
-                            .contentShape(Rectangle())
-                            .onTapGesture {
-                                isTapped[credit] = true
-                                openCreditURL(credit: credit)
-                                
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.17) {
-                                    isTapped[credit] = false
-                                }
-                            }
-                            .listRowBackground(isTapped[credit] ?? false ? Color.gray.opacity(0.3) : nil)
                     }
+                    .foregroundStyle(.primary)
                 }
             }
-            .background(
-                Image("pageBG")
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
-            )
-            .scrollContentBackground(.hidden)
         }
+        .background(ImageBackgroundView())
+        .scrollContentBackground(.hidden)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .principal) {

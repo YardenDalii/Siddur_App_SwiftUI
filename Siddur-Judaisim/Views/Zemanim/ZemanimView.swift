@@ -138,9 +138,7 @@ struct ZemanimView: View {
 
 
 struct ExpandableCardView: View {
-    
-    @AppStorage("appearanceSettingKey") var appearance: String = "light"
-    
+
     let item: LocationItem
     @StateObject private var viewModel = HebrewTimeModel()
     @State private var isExpanded = false
@@ -245,7 +243,7 @@ struct ExpandableCardView: View {
                                 }
                                 .padding(.leading, 10)
                                 
-                                TimeDetailView(location: item)
+                                TimeDetailView(viewModel: viewModel, location: item)
                             }
                             .padding(16)
                         }
@@ -296,20 +294,20 @@ struct ExpandableCardView: View {
 
 
 struct TimeDetailView: View {
-    @StateObject private var viewModel = HebrewTimeModel()
+    @ObservedObject var viewModel: HebrewTimeModel
     let location: LocationItem
-    
+
     var body: some View {
         VStack {
-            
-            if !self.viewModel.eventTimes.isEmpty {
+
+            if !viewModel.eventTimes.isEmpty {
                 VStack {
-                    Label("\(self.viewModel.parasha?.hebrew ?? "")", systemImage: "book.pages.fill")
+                    Label("\(viewModel.parasha?.hebrew ?? "")", systemImage: "book.pages.fill")
                         .bold()
                         .foregroundStyle(.black)
                     Divider()
-                    if !self.viewModel.shabbatTimes.isEmpty {
-                        ForEach(self.viewModel.shabbatTimes, id: \.title) { item in
+                    if !viewModel.shabbatTimes.isEmpty {
+                        ForEach(viewModel.shabbatTimes, id: \.title) { item in
                             HStack {
                                 Text(NSLocalizedString("\(item.category ?? "")", comment: "")).bold()
                                 Spacer()
@@ -322,14 +320,14 @@ struct TimeDetailView: View {
                         Text("FETCHING_SHABBAT_TIMES")
                     }
                 }
-                
-                
+
+
                 VStack {
                     Label("DAILY_TIMES_ZMANIM", systemImage: "clock.fill")
                         .bold()
                         .foregroundStyle(.black)
                     Divider()
-                    ForEach(self.viewModel.eventTimes, id: \.eventName) { event in
+                    ForEach(viewModel.eventTimes, id: \.eventName) { event in
                         HStack {
                             Text(NSLocalizedString(event.eventName, comment: "")).bold()
                             Spacer()
@@ -340,17 +338,13 @@ struct TimeDetailView: View {
                     }
                 }
                 .padding(.top, 10)
-                
+
             } else {
                 Text("FETCHING_ZMANIM")
             }
         }
         .padding()
         .cornerRadius(10)
-        .onAppear {
-            self.viewModel.fetchZmanim(latitude: location.latitude, longitude: location.longitude)
-            self.viewModel.fetchShabbatTimes(latitude: location.latitude, longitude: location.longitude)
-        }
     }
 }
 

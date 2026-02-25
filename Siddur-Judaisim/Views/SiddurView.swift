@@ -7,33 +7,33 @@
 
 import SwiftUI
 import Hebcal
-import WebKit
+//import WebKit
 
 struct SiddurView: View {
-    
+
     @EnvironmentObject var appSettings: AppSettings
     @EnvironmentObject var locationManager: LocationManager
 
     @State private var selectedTab = 0
-    
+
     var body: some View {
         TabView(selection: $selectedTab) {
-            
+
             Tab.init("SIDDUR_LOC", systemImage: selectedTab == 0 ? "text.book.closed.fill" : "text.book.closed", value: 0/*, role: <#T##TabRole?#>)*/) {
                 PrayersView()
             }
 
-            
-            Tab.init("TEHILLIM_LOC_STRING", systemImage: selectedTab == 1 ? "books.vertical.fill" : "books.vertical", value: 1, role: .search) {
+
+            Tab.init("TEHILLIM_LOC_STRING", systemImage: selectedTab == 1 ? "books.vertical.fill" : "books.vertical", value: 1/*, role: .search*/) {
                 TehillimView()
             }
-            
-            
+
+
             Tab.init("ZEMANIM", systemImage: selectedTab == 2 ? "deskclock.fill" : "deskclock", value: 2/*, role: <#T##TabRole?#>*/) {
                 ZemanimView()
             }
 
-            
+
             Tab.init("SETTINGS_LOC_STRING", systemImage: selectedTab == 3 ? "gearshape.fill" : "gearshape", value: 3/*, role: <#T##TabRole?#>*/) {
                 SettingsView()
             }
@@ -54,8 +54,10 @@ class SelectedPrayerModel: ObservableObject {
 struct PrayersView: View {
     @EnvironmentObject var appSettings: AppSettings
     @State private var siddurData: [Prayer] = []
+    @State private var siddurLookup: [String: Prayer] = [:]  // O(1) lookup instead of O(n) .first(where:)
     @State private var sections: [String: [String]] = PrayerSections
     @State private var currentSection: String = OrderedSectionKeys.first ?? ""
+    @State private var isLoading = false
 
     var body: some View {
         NavigationStack {
@@ -81,8 +83,8 @@ struct PrayersView: View {
                     prayerVersionMenu
                 }
             }
-            .onAppear {
-                reloadPrayers()
+            .task {
+                await reloadPrayersAsync()
                 currentSection = OrderedSectionKeys.first ?? ""
             }
         }
@@ -93,7 +95,11 @@ struct PrayersView: View {
             ForEach(PrayerVersion.allCases, id: \.self) { version in
                 Button {
                     appSettings.selectedPrayerVersion = version
-                    reloadPrayers()
+                    Task {
+                        // Invalidate cache when version changes
+                        await PrayerCache.shared.invalidate()
+                        await reloadPrayersAsync()
+                    }
                 } label: {
                     HStack {
                         Text(NSLocalizedString(version.displayName, comment: ""))
@@ -111,12 +117,17 @@ struct PrayersView: View {
         }
     }
 
-    private func reloadPrayers() {
-        siddurData = loadPrayers(
+    private func reloadPrayersAsync() async {
+        isLoading = true
+        let prayers = await loadPrayersAsync(
             fileName: appSettings.selectedPrayerVersion.fileName,
             smart: appSettings.smartSiddur,
             userPasuk: appSettings.userPasuk
         )
+        siddurData = prayers
+        // Build O(1) lookup dictionary
+        siddurLookup = Dictionary(uniqueKeysWithValues: prayers.map { ($0.title, $0) })
+        isLoading = false
     }
 
     @ViewBuilder
@@ -137,7 +148,7 @@ struct PrayersView: View {
             }
         ) {
             ForEach(prayerTitles, id: \.self) { prayerTitle in
-                if let prayer = siddurData.first(where: { $0.title == prayerTitle }) {
+                if let prayer = siddurLookup[prayerTitle] {
                     NavigationLink(destination: PrayerPageView(prayerID: prayer.id, prayers: siddurData)) {
                         Text(NSLocalizedString(prayer.title, comment: ""))
                     }
