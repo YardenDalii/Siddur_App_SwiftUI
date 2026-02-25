@@ -8,60 +8,38 @@
 import SwiftUI
 
 struct AppearanceSettingsView: View {
-    
-    @AppStorage("appearanceSettingKey") private var appearance: String = "light"
-    
+
+    @EnvironmentObject var appSettings: AppSettings
+
     let appearanceOptions = ["light", "dark", "system"]
-    
+
     @State private var selectedAppearanceOption: String?
-    
+
     var body: some View {
-        NavigationView {
-            List(appearanceOptions, id: \.self) { option in
+        List(appearanceOptions, id: \.self) { option in
+            Button {
+                appSettings.appearanceSetting = option
+            } label: {
                 HStack {
                     Text(NSLocalizedString(option.capitalized, comment: ""))
                     Spacer()
-                    
-                    if appearance == option {
+
+                    if appSettings.appearanceSetting == option {
                         Image(systemName: "checkmark")
                             .foregroundColor(.blue)
                     }
                 }
-                
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    self.selectedAppearanceOption = option
-                    setAppearance(option)
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.17) {
-                        self.selectedAppearanceOption = nil // Resets the temporary visual feedback
-                    }
-                }
-                .listRowBackground(self.selectedAppearanceOption == option ? Color.gray.opacity(0.3): nil)
             }
+            .foregroundStyle(.primary)
         }
+        .background(ImageBackgroundView())
+        .scrollContentBackground(.hidden)
         .navigationBarTitle("APPEARANCE_LOC_STRING", displayMode: .inline)
-        
-    }
-    
-    private func setAppearance(_ option: String) {
-        appearance = option
-        
-        DispatchQueue.main.async {
-            guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
-            
-            switch option {
-            case "light":
-                windowScene.windows.first?.overrideUserInterfaceStyle = .light
-            case "dark":
-                windowScene.windows.first?.overrideUserInterfaceStyle = .dark
-            default:
-                windowScene.windows.first?.overrideUserInterfaceStyle = .unspecified
-            }
-        }
     }
 }
 
 
 #Preview {
     AppearanceSettingsView()
+        .environmentObject(AppSettings())
 }

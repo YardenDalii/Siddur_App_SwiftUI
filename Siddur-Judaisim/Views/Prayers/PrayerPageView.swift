@@ -10,7 +10,7 @@ import SwiftUI
 struct PrayerPageView: View {
     @EnvironmentObject var appSettings: AppSettings
 
-    var prayerID: UUID
+    var prayerID: String
     var prayers: [Prayer]
 
     @State private var scrollToPartIndex: String? = nil
@@ -27,7 +27,7 @@ struct PrayerPageView: View {
             //                            .foregroundStyle(CustomPalette.golden.color)
                             }
                         }
-                        
+
                         ToolbarItemGroup(placement: .navigationBarTrailing) {
                             textSizeAdjustmentMenu
                             partsMenu
@@ -43,14 +43,14 @@ struct PrayerPageView: View {
         }
         .background(ImageBackgroundView())
     }
-    
+
 
     private var textSizeAdjustmentMenu: some View {
         Menu {
             Stepper(NSLocalizedString("TEXT_SIZE_LOC_STRING", comment: "") + ": \(Int(appSettings.textSize))", value: $appSettings.textSize, step: 1)
 
             Button {
-                appSettings.textSize = 23.0
+                appSettings.textSize = 20.0
             } label: {
                 Text(NSLocalizedString("RESET_TO_DEFAULT", comment: ""))
             }
@@ -62,7 +62,7 @@ struct PrayerPageView: View {
     private var partsMenu: some View {
         Menu {
             if let prayer = prayers.first(where: { $0.id == prayerID }) {
-                ForEach(prayer.prayers) { section in
+                ForEach(prayer.sections) { section in
                     Button {
                         scrollToPartIndex = section.title
                     } label: {
@@ -84,7 +84,7 @@ struct PrayerDetailView: View {
     var body: some View {
         ScrollViewReader { proxy in
             ScrollView {
-                ForEach(prayer.prayers) { section in
+                ForEach(prayer.sections) { section in
                     VStack(alignment: .leading, spacing: 10) {
                         ForEach(Array(section.text.enumerated()), id: \.offset) { index, text in
                             DynamicStyledText(input: text, customFontName: appSettings.selectedFontName)

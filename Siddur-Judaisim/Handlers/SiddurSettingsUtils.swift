@@ -67,7 +67,7 @@ struct DynamicStyledText: View {
 
                     if tagContent.hasPrefix("/") {
                         // Closing tag
-                        if !stack.isEmpty && stack.last!.0 == String(tagContent.dropFirst()) {
+                        if let lastTag = stack.last, lastTag.0 == String(tagContent.dropFirst()) {
                             stack.removeLast() // Pop the stack
                         }
                     } else {

@@ -26,7 +26,7 @@ struct TehillimView: View {
                 return matchesName || matchesNumber
             }
             if !filteredEpisodes.isEmpty {
-                return EpisodeGroup(id: group.id, title: group.title, episodes: filteredEpisodes)
+                return EpisodeGroup(title: group.title, episodes: filteredEpisodes)
             } else {
                 return nil
             }
